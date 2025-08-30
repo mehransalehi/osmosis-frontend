@@ -42,10 +42,12 @@ const defaultFlags: Record<AvailableFlags, boolean> = {
 export function useFeatureFlags() {
   const launchdarklyFlags: Record<AvailableFlags, boolean> = useFlags();
   const { isMobile } = useWindowSize();
-  const [isInitialized, setIsInitialized] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(true);
   const client = useLDClient();
 
   useEffect(() => {
+    // console.log("isInitialized : " + isInitialized);
+    // console.log("client : " + client);
     if (!isInitialized && client && process.env.NODE_ENV !== "test")
       client.waitForInitialization().then(() => setIsInitialized(true));
   }, [isInitialized, client]);

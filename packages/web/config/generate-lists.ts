@@ -100,10 +100,20 @@ async function generateChainListFile({
     environment === "mainnet" ? "MainnetChainIds" : "TestnetChainIds";
 
   if (!onlyTypes) {
+    const generatedChains = getChainList({
+      assetLists,
+      environment,
+      chains: chainList.chains,
+    })
+      .filter((chain): chain is NonNullable<typeof chain> => chain != null) // ← add this
+      .map((chain) => ({
+        ...chain,
+        features: chain.features ?? [], // ensure features array exists
+      }));
     content += `
       import type { Chain, ChainInfoWithExplorer } from "@osmosis-labs/types";
       export const ChainList: ( Omit<Chain, "chain_id"> & { chain_id: ${chainIdTypeName}; keplrChain: ChainInfoWithExplorer})[] = ${JSON.stringify(
-      getChainList({ assetLists, environment, chains: chainList.chains }),
+      generatedChains,
       null,
       2
     )};

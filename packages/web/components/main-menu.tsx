@@ -35,6 +35,8 @@ export const MainMenu: FunctionComponent<{
   secondaryMenuItems: MainLayoutMenu[];
   className?: string;
 }> = ({ menus, className, secondaryMenuItems }) => {
+  // console.log("WE ARE HEREEEEEEEEEEEEEEEEEEEEEEEE MENYUUUUUUUUUUUUUU");
+  // console.log(menus);
   return (
     <ul
       className={classNames(
