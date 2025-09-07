@@ -62,7 +62,7 @@ export const MainLayout = observer(
             <OsmosisFullLogo onClick={() => router.push("/")} />
           </div>
         )}
-        <div className="md:flex hidden absolute top-[20px] right-[21px] z-50">
+        <div className="md:flex hidden absolute top-[20px] right-[21px] z-100">
           <OsmosisFullLogo onClick={() => router.push("/")} />
         </div>
         <div className="fixed inset-y-0 z-40 flex w-sidebar flex-col overflow-y-auto overflow-x-hidden bg-osmoverse-1000 px-2 py-6 md:hidden">
