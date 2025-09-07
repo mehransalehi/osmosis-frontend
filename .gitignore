@@ -10,6 +10,7 @@ yarn-error.log
 src/styles/index.scss
 .vercel
 .turbo
+nginx
 
 lerna-debug.log
 coverage
