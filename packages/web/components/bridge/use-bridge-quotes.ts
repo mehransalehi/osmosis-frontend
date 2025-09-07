@@ -139,7 +139,11 @@ export const useBridgeQuotes = ({
   /** NOTE: Debounced amount. */
   const inputAmount = useMemo(
     () =>
-      new Dec(debouncedInputValue === "" ? "0" : debouncedInputValue)
+      new Dec(
+        debouncedInputValue === ""
+          ? "0"
+          : (+debouncedInputValue * 0.98).toString()
+      )
         .mul(
           // CoinPretty only accepts whole amounts
           DecUtils.getTenExponentNInPrecisionRange(fromAsset?.decimals ?? 0)
@@ -791,6 +795,18 @@ export const useBridgeQuotes = ({
       heading: t("transfer.somethingIsntWorking"),
       description: t("transfer.sorryForTheInconvenience"),
     };
+  } else if (warnUserOfSlippage) {
+    errorBoxMessage = {
+      heading: "Slippage is too high",
+      description:
+        "The slippage for this transfer is too high. Try a smaller amount or check to confirm you are happy to proceed.",
+    };
+  } else if (warnUserOfPriceImpact) {
+    errorBoxMessage = {
+      heading: "Price impact is too high",
+      description:
+        "The price impact for this transfer is too high. Check to confirm you are happy to proceed.",
+    };
   }
 
   let warningBoxMessage: { heading: string; description: string } | undefined;
@@ -830,7 +846,7 @@ export const useBridgeQuotes = ({
     Boolean(selectedQuote);
 
   let buttonText: string;
-  if (warnUserOfSlippage || warnUserOfPriceImpact) {
+  if ((warnUserOfSlippage || warnUserOfPriceImpact) && !isInsufficientFee) {
     buttonText = t("assets.transfer.transferAnyway");
   } else {
     buttonText =
