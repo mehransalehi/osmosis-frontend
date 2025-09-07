@@ -42,7 +42,7 @@ const defaultFlags: Record<AvailableFlags, boolean> = {
 export function useFeatureFlags() {
   const launchdarklyFlags: Record<AvailableFlags, boolean> = useFlags();
   const { isMobile } = useWindowSize();
-  const [isInitialized, setIsInitialized] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(true);
   const client = useLDClient();
 
   useEffect(() => {
