@@ -1,22 +1,22 @@
-version: "3.5"
+version: "3.8"
 
 services:
-  frontend:
-    build:
-      context: ../
-      dockerfile: ./Dockerfile
-    ports:
-      - "3000:3000"
-    profiles:
-      - default
-      - all
+  nextjs:
+    image: node:18-alpine
+    container_name: nextjs-app
+    working_dir: /usr/src/app
+    volumes:
+      - ./nextjs-app:/usr/src/app
+    expose:
+      - "3000"
+    restart: always
 
-  frontend-testnet:
-    build:
-      context: ../
-      dockerfile: ./Dockerfile.testnet
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-proxy
     ports:
-      - "3001:3000"
-    profiles:
-      - testnet
-      - all
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    restart: always

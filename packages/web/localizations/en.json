@@ -945,7 +945,7 @@
       "description": "An internal server error occurred."
     },
     "default": {
-      "title": "Trade on Osmosis Zone",
+      "title": "Trade on NNX Zone",
       "description": "Swap, earn, and build on the leading decentralized Cosmos exchange - The largest interchain DEX"
     },
     "apps": {
