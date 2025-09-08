@@ -101,7 +101,7 @@
     "banner": {
       "backToOsmosis": "Osmosis로 돌아가기",
       "externalLink": "Osmosis 앱을 떠나 외부 링크로 이동합니다.",
-      "externalLinkDisclaimer": "링크를 클릭함으로써, 당신은 Osmosis가 다른 ToS를 가질 수 있는 외부 페이지에 대한 서비스 품질을 보장하지 않음을 읽었고 이해한 것을 인정하는 것입니다.",
+      "externalLinkDisclaimer": "링크를 클릭함으로써, 당신은 NNX가 다른 ToS를 가질 수 있는 외부 페이지에 대한 서비스 품질을 보장하지 않음을 읽었고 이해한 것을 인정하는 것입니다.",
       "externalLinkModalTitle": "Osmosis 떠나기",
       "goToSite": "사이트로 가기",
       "doNotShowAgain": "다시 표시하지 않음",
@@ -116,7 +116,7 @@
     "getFeatured": "추천 받기",
     "featuredDescription": "앱 스토어에서 출시하여 수천 명의 사용자에게 액세스하세요. 나열되거나 추천받고 싶다면 연락하시면 연락드리겠습니다.",
     "applyButton": "신청",
-    "storeDisclaimer": "특정 콘텐츠는 Osmosis Labs 또는 그 어떤 계열사와도 관련이 없는 제3자에 의해 준비되었으며 Osmosis Labs는 그러한 콘텐츠에 대한 책임을 지지 않습니다. Osmosis Labs는 콘텐츠의 오류 또는 지연에 대해 책임을 지지 않으며, 어떤 콘텐츠에 의존하여 취한 조치에 대해서도 책임을 지지 않습니다. 정보는 정보 제공 목적으로만 제공되며 투자 자문이 아닙니다. 이는 특정 디지털 자산을 사거나 팔거나 특정 투자 전략을 채택할 것을 권장하는 것이 아닙니다. Osmosis Labs는 제공된 정보의 정확성, 적합성 또는 유효성 또는 특정 자산에 대한 어떠한 표현도 하지 않습니다. 표시된 가격은 설명 목적으로만 사용되며, 실제 암호화폐 가격 및 관련 통계는 달라질 수 있습니다. 제시된 데이터는 Osmosis Labs 거래소 및 선택한 다른 암호화폐 거래소에서 거래된 자산을 반영할 수 있습니다.",
+    "storeDisclaimer": "특정 콘텐츠는 NNX Labs 또는 그 어떤 계열사와도 관련이 없는 제3자에 의해 준비되었으며 NNX Labs는 그러한 콘텐츠에 대한 책임을 지지 않습니다. NNX Labs는 콘텐츠의 오류 또는 지연에 대해 책임을 지지 않으며, 어떤 콘텐츠에 의존하여 취한 조치에 대해서도 책임을 지지 않습니다. 정보는 정보 제공 목적으로만 제공되며 투자 자문이 아닙니다. 이는 특정 디지털 자산을 사거나 팔거나 특정 투자 전략을 채택할 것을 권장하는 것이 아닙니다. NNX Labs는 제공된 정보의 정확성, 적합성 또는 유효성 또는 특정 자산에 대한 어떠한 표현도 하지 않습니다. 표시된 가격은 설명 목적으로만 사용되며, 실제 암호화폐 가격 및 관련 통계는 달라질 수 있습니다. 제시된 데이터는 NNX Labs 거래소 및 선택한 다른 암호화폐 거래소에서 거래된 자산을 반영할 수 있습니다.",
     "allAppsHeader": "모든 앱"
   },
   "createFirstPositionCta": {
@@ -418,7 +418,7 @@
         "spendLimitSubDescription": "다른 모든 자산의 경우 수동 지갑 승인을 요구하기 전에 최대 거래 가치에 대한 제한을 설정하세요. 거래 수수료도 이 한도에 포함됩니다.",
         "fixedAmount": "정액",
         "shareOfBalance": "잔액의 점유율",
-        "shareOfBalanceDescription": "귀하의 Osmosis 총 잔액 중 현재 가치는 {shareOfBalance}"
+        "shareOfBalanceDescription": "귀하의 NNX 총 잔액 중 현재 가치는 {shareOfBalance}"
       },
       "sessionPeriodScreen": {
         "title": "세션 기간",
@@ -591,7 +591,7 @@
     "noResultsFor": "\" {query} \"에 대한 결과가 없습니다.",
     "adjust": "검색어를 조정해 보세요.",
     "noPools": "수영장 없음",
-    "poolsEmpty": "현재 Osmosis에는 {denom} 에 대한 풀이 없습니다."
+    "poolsEmpty": "현재 NNX에는 {denom} 에 대한 풀이 없습니다."
   },
   "stake": {
     "available": "사용 가능",
@@ -671,7 +671,7 @@
       },
       "existingUser": {
         "title": "이전에 스테이킹한 것 같습니다.",
-        "description": "귀하의 지갑 주소와 관련된 기존 스테이크 스쿼드를 감지했습니다. Osmosis에서 동일한 유효성 검사기를 유지하시겠습니까?",
+        "description": "귀하의 지갑 주소와 관련된 기존 스테이크 스쿼드를 감지했습니다. NNX에서 동일한 유효성 검사기를 유지하시겠습니까?",
         "buttonKeep": "기존 밸리데이터 유지",
         "buttonSelect": "새 밸리데이터 선택"
       }
@@ -795,7 +795,7 @@
     "selectWithdrawWallet": "{network} 지갑을 선택하세요.",
     "depositTakingLonger": "예상보다 입금이 늦어지고 있습니다",
     "withdrawalTakingLonger": "인출이 예상보다 오래 걸립니다",
-    "depositAssetDescription": "특정 자산을 입금할 때 Osmosis에서 받고 싶은 자산 버전을 선택할 수 있습니다.",
+    "depositAssetDescription": "특정 자산을 입금할 때 NNX에서 받고 싶은 자산 버전을 선택할 수 있습니다.",
     "withdrawAssetDescription": "특정 자산을 인출할 때 대상 네트워크에서 받고 싶은 자산 버전을 선택할 수 있습니다.",
     "estimatingTime": "추정 시간",
     "calculatingFees": "수수료 계산",
@@ -890,10 +890,10 @@
     "youNeedFundsToPay": "{chain} 에 대한 네트워크 및 브리징 비용을 지불하려면 자금이 필요합니다.",
     "assetsDepositsUnavailable": "{asset} 예금을 사용할 수 없습니다.",
     "assetWithdrawalsUnavailable": "{asset} 출금이 불가능합니다.",
-    "noAvailableDeposits": "현재 사용 가능한 경로나 공급자를 찾을 수 없습니다. 나중에 다시 시도하거나 다른 애플리케이션을 사용하여 자금을 Osmosis로 이체하세요.",
-    "noAvailableWithdrawals": "현재 사용 가능한 경로나 공급자를 찾을 수 없습니다. 나중에 다시 시도하거나 Osmosis에서 자금을 이체하려면 대체 애플리케이션을 설정하세요.",
+    "noAvailableDeposits": "현재 사용 가능한 경로나 공급자를 찾을 수 없습니다. 나중에 다시 시도하거나 다른 애플리케이션을 사용하여 자금을 NNX로 이체하세요.",
+    "noAvailableWithdrawals": "현재 사용 가능한 경로나 공급자를 찾을 수 없습니다. 나중에 다시 시도하거나 NNX에서 자금을 이체하려면 대체 애플리케이션을 설정하세요.",
     "somethingIsntWorking": "뭔가 작동하지 않습니다…",
-    "sorryForTheInconvenience": "불편을 드려 죄송합니다. 페이지를 새로 고치고 다시 시도하거나 다른 애플리케이션을 사용하여 자금을 Osmosis로 이체하세요.",
+    "sorryForTheInconvenience": "불편을 드려 죄송합니다. 페이지를 새로 고치고 다시 시도하거나 다른 애플리케이션을 사용하여 자금을 NNX로 이체하세요.",
     "assetIsCurrentlyUnstable": "{asset} 전송이 현재 불안정합니다.",
     "transferWillLikelyTakeLonger": "전송이 평소보다 오래 걸리거나 완전히 실패할 수 있습니다. 자신의 책임하에 진행하십시오.",
     "sendFromWalletOrExchange": "지갑이나 거래소에서 보내세요",
@@ -1071,7 +1071,7 @@
         "description": "포지션이 청산될 수 있을 때까지 본딩이 유지되는 기간입니다. 참고: 모든 전략 언본딩* 기간에 보상 분배가 있는 것은 아닙니다."
       },
       "strategy": {
-        "description": "다양한 플랫폼에서 호스팅되는 다양한 유형의 수익 창출 기회가 Osmosis에서 제공됩니다. 전략에 접근하려면 특정 자산을 예치해야 합니다."
+        "description": "다양한 플랫폼에서 호스팅되는 다양한 유형의 수익 창출 기회가 NNX에서 제공됩니다. 전략에 접근하려면 특정 자산을 예치해야 합니다."
       },
       "risk": {
         "description": "위험 평가에는 전략 및 기본 자산과 관련된 기준의 조합을 고려하는 것이 포함됩니다."
@@ -1215,7 +1215,7 @@
     "youNeed": "당신은 필요",
     "stablecoin": "스테이블코인",
     "quoteUpdated": "견적이 업데이트되었습니다.",
-    "fundsOsmosisToBuyAssets": "자산을 구매하기 위한 Osmosis 자금.",
+    "fundsOsmosisToBuyAssets": "자산을 구매하기 위한 NNX 자금.",
     "chooseAnOption": "계속하려면 옵션을 선택하세요.",
     "lowerSlippageToleranceRecommended": "낮은 미끄러짐 허용 오차를 권장합니다.",
     "tryHigherSlippage": "최대 미끄러짐 허용 오차를 더 높이십시오.",
@@ -1232,7 +1232,7 @@
     },
     "whatIsAStablecoin": {
       "title": "스테이블 코인이란 무엇입니까?",
-      "description": "스테이블코인은 안정적인 가격을 유지하기 위해 명목화폐나 금과 같은 다른 자산에 가치가 고정되어 있는 암호화폐의 일종입니다. Osmosis에서 자산을 사고 파는 데 사용되는 주요 스테이블코인은 USDC와 USDT입니다."
+      "description": "스테이블코인은 안정적인 가격을 유지하기 위해 명목화폐나 금과 같은 다른 자산에 가치가 고정되어 있는 암호화폐의 일종입니다. NNX에서 자산을 사고 파는 데 사용되는 주요 스테이블코인은 USDC와 USDT입니다."
     },
     "claimAll": "모두 청구",
     "addFunds": "자금 추가",
@@ -1279,11 +1279,11 @@
     },
     "swapFees": {
       "header": "스왑 수수료는 무엇인가요?",
-      "content": "이는 유동성 공급자에게 보상하고 네트워크를 유지하기 위해 Osmosis 프로토콜이 부과하는 수수료입니다."
+      "content": "이는 유동성 공급자에게 보상하고 네트워크를 유지하기 위해 NNX 프로토콜이 부과하는 수수료입니다."
     },
     "tradeRoute": {
       "header": "무역로란 무엇인가?",
-      "contentTop": " 거래하는 자산 간에 직접적인 시장이 없는 경우 Osmosis는 다른 자산과 일련의 거래를 통해 언제나 가장 좋은 가격을 얻어 거래를 성사시키려고 시도합니다.",
+      "contentTop": " 거래하는 자산 간에 직접적인 시장이 없는 경우 NNX는 다른 자산과 일련의 거래를 통해 언제나 가장 좋은 가격을 얻어 거래를 성사시키려고 시도합니다.",
       "contentBottom": "이용 가능한 유동성에 따른 최적의 효율성을 위해, 때로는 거래가 다양한 자산을 대상으로 여러 경로로 분할될 것입니다."
     },
     "outputDifference": {
@@ -1299,14 +1299,14 @@
   "previewAssetsEnabledForSession": "이 세션에서 미리보기 자산이 활성화되었습니다. 비활성화하려면 새 탭을 열거나 `show_preview_assets=false`를 추가합니다.",
   "alloyedAssets": {
     "title": "변종 감지됨",
-    "caption": "혼란스러운 자산 변형에 작별 인사를 전하세요. Osmosis에서 더욱 매끄러운 경험을 만나보세요.",
+    "caption": "혼란스러운 자산 변형에 작별 인사를 전하세요. NNX에서 더욱 매끄러운 경험을 만나보세요.",
     "remindMeLater": "나중에 다시 알려주세요",
     "dismiss": "해고하다",
     "convert": "전환하다"
   },
   "assetVariantsConversion": {
     "title": "자산 표준화",
-    "description": "더 큰 유연성과 호환성을 위해 다음 자산을 Osmosis의 표준화된 버전으로 변환하세요.",
+    "description": "더 큰 유연성과 호환성을 위해 다음 자산을 NNX의 표준화된 버전으로 변환하세요.",
     "learnMore": "더 알아보기",
     "errorLoading": "자산 변형을 로드하는 중에 오류가 발생했습니다. 나중에 다시 시도하세요.",
     "tooltipTitle": "Osmosis의 {coinName}",

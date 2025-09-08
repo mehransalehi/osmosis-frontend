@@ -100,8 +100,8 @@
   "app": {
     "banner": {
       "backToOsmosis": "Osmosis'e Geri Dön",
-      "externalLink": "Şimdi Osmosis uygulamasından ayrılıyorsun ve gitmek için",
-      "externalLinkDisclaimer": "Bağlantıyı tıklatarak, Osmosis'in dış sayfalar için hizmet kalitesi garantisi vermediğini okuduğunu ve anladığını kabul edersin.",
+      "externalLink": "Şimdi NNX uygulamasından ayrılıyorsun ve gitmek için",
+      "externalLinkDisclaimer": "Bağlantıyı tıklatarak, NNX'in dış sayfalar için hizmet kalitesi garantisi vermediğini okuduğunu ve anladığını kabul edersin.",
       "externalLinkModalTitle": "Osmosis'den Ayrılma",
       "goToSite": "Site'ye Git",
       "doNotShowAgain": "Bunu tekrar gösterme",
@@ -116,7 +116,7 @@
     "getFeatured": "Öne Çıkan Olun",
     "featuredDescription": "Uygulama mağazasında başlatın ve binlerce kullanıcıya erişin. Listelenmek veya öne çıkan olmak istiyorsanız, bize ulaşın ve iletişimde olacağız.",
     "applyButton": "Uygula",
-    "storeDisclaimer": "Belirli içerikler, Osmosis Labs veya bağlı ortaklıklarından herhangi biri ile bağlantılı olmayan üçüncü taraflar tarafından hazırlanmıştır ve Osmosis Labs, bu tür içeriklerden sorumlu değildir. Osmosis Labs, içerikteki hatalar veya gecikmelerden veya herhangi bir içeriğe dayalı olarak alınan eylemlerden sorumlu değildir. Bilgiler, yalnızca bilgilendirme amaçlı olarak sağlanmıştır ve yatırım tavsiyesi değildir. Bu, belirli bir dijital varlığı satın almak veya satmak veya belirli bir yatırım stratejisini kullanmak için bir öneri değildir. Osmosis Labs, sağlanan herhangi bir bilginin doğruluğu, uygunluğu veya geçerliliği veya belirli bir varlık için yapılan beyanlar konusunda hiçbir temsilde bulunmamaktadır. Gösterilen fiyatlar sadece gösterim amaçlıdır. Gerçek kripto para birimi fiyatları ve ilişkili istatistiklerde farklılıklar olabilir. Sunulan veriler, Osmosis Labs'in borsasında ve seçili diğer kripto para birimi borsalarında işlem gören varlıkları yansıtabilir.",
+    "storeDisclaimer": "Belirli içerikler, NNX Labs veya bağlı ortaklıklarından herhangi biri ile bağlantılı olmayan üçüncü taraflar tarafından hazırlanmıştır ve NNX Labs, bu tür içeriklerden sorumlu değildir. NNX Labs, içerikteki hatalar veya gecikmelerden veya herhangi bir içeriğe dayalı olarak alınan eylemlerden sorumlu değildir. Bilgiler, yalnızca bilgilendirme amaçlı olarak sağlanmıştır ve yatırım tavsiyesi değildir. Bu, belirli bir dijital varlığı satın almak veya satmak veya belirli bir yatırım stratejisini kullanmak için bir öneri değildir. NNX Labs, sağlanan herhangi bir bilginin doğruluğu, uygunluğu veya geçerliliği veya belirli bir varlık için yapılan beyanlar konusunda hiçbir temsilde bulunmamaktadır. Gösterilen fiyatlar sadece gösterim amaçlıdır. Gerçek kripto para birimi fiyatları ve ilişkili istatistiklerde farklılıklar olabilir. Sunulan veriler, NNX Labs'in borsasında ve seçili diğer kripto para birimi borsalarında işlem gören varlıkları yansıtabilir.",
     "allAppsHeader": "Tüm Uygulamalar"
   },
   "createFirstPositionCta": {
@@ -591,7 +591,7 @@
     "noResultsFor": "\" {query} \" için sonuç yok",
     "adjust": "Arama sorgunuzu ayarlamayı deneyin",
     "noPools": "Havuz yok",
-    "poolsEmpty": "Şu anda Osmosis'te {denom} için havuz yok"
+    "poolsEmpty": "Şu anda NNX'te {denom} için havuz yok"
   },
   "stake": {
     "available": "Mevcut",
@@ -671,7 +671,7 @@
       },
       "existingUser": {
         "title": "Daha önce stake etmişsin gibi görünüyor",
-        "description": "Cüzdan adresinizle ilişkili mevcut bir pay ekibi tespit ettik. Aynı doğrulayıcıları Osmosis'te tutmak ister misiniz?",
+        "description": "Cüzdan adresinizle ilişkili mevcut bir pay ekibi tespit ettik. Aynı doğrulayıcıları NNX'te tutmak ister misiniz?",
         "buttonKeep": "Mevcut Doğrulayıcıları Koru",
         "buttonSelect": "Yeni Doğrulayıcıları Seçin"
       }
@@ -795,7 +795,7 @@
     "selectWithdrawWallet": "{network} cüzdanını seçin",
     "depositTakingLonger": "Para yatırma işlemi beklenenden daha uzun sürüyor",
     "withdrawalTakingLonger": "Geri çekilmenin beklenenden daha uzun sürmesi",
-    "depositAssetDescription": "Belirli varlıkları yatırdığınızda, Osmosis'te varlığın hangi versiyonunu almak istediğinizi seçebilirsiniz.",
+    "depositAssetDescription": "Belirli varlıkları yatırdığınızda, NNX'te varlığın hangi versiyonunu almak istediğinizi seçebilirsiniz.",
     "withdrawAssetDescription": "Belirli varlıkları çekerken, hedef ağda varlığın hangi versiyonunu almak istediğinizi seçebilirsiniz.",
     "estimatingTime": "Tahmini süre",
     "calculatingFees": "Ücretlerin hesaplanması",
@@ -890,10 +890,10 @@
     "youNeedFundsToPay": "{chain} ağ ve köprüleme ücretlerini ödemek için paraya ihtiyacınız var.",
     "assetsDepositsUnavailable": "{asset} para yatırma işlemleri kullanılamıyor",
     "assetWithdrawalsUnavailable": "{asset} çekimleri kullanılamaz",
-    "noAvailableDeposits": "Şu anda mevcut rota veya sağlayıcı bulunamadı. Lütfen daha sonra tekrar deneyin veya paranızı Osmosis'e aktarmak için alternatif bir uygulama kullanın.",
-    "noAvailableWithdrawals": "Şu anda mevcut rota veya sağlayıcı bulunamadı. Lütfen daha sonra tekrar deneyin veya paranızı Osmosis'ten aktarmak için alternatif bir uygulama ayarlayın.",
+    "noAvailableDeposits": "Şu anda mevcut rota veya sağlayıcı bulunamadı. Lütfen daha sonra tekrar deneyin veya paranızı NNX'e aktarmak için alternatif bir uygulama kullanın.",
+    "noAvailableWithdrawals": "Şu anda mevcut rota veya sağlayıcı bulunamadı. Lütfen daha sonra tekrar deneyin veya paranızı NNX'ten aktarmak için alternatif bir uygulama ayarlayın.",
     "somethingIsntWorking": "Bir şeyler çalışmıyor…",
-    "sorryForTheInconvenience": "Rahatsızlıktan dolayı özür dileriz. Lütfen sayfayı yenileyip tekrar deneyin veya paranızı Osmosis'e aktarmak için alternatif bir uygulama kullanın.",
+    "sorryForTheInconvenience": "Rahatsızlıktan dolayı özür dileriz. Lütfen sayfayı yenileyip tekrar deneyin veya paranızı NNX'e aktarmak için alternatif bir uygulama kullanın.",
     "assetIsCurrentlyUnstable": "{asset} aktarımları şu anda kararsız",
     "transferWillLikelyTakeLonger": "Aktarımlar muhtemelen normalden daha uzun sürecek veya tamamen başarısız olabilecektir. Riski size ait olmak üzere devam edin.",
     "sendFromWalletOrExchange": "Cüzdanınızdan veya borsadan gönderin",
@@ -954,14 +954,14 @@
     },
     "disclaimer": {
       "title": "Ozmoz Sorumluluk Reddi",
-      "description": "Önde gelen merkezi olmayan Cosmos borsası Osmosis için sorumluluk reddi beyanını ve gizlilik politikasını okuyun"
+      "description": "Önde gelen merkezi olmayan Cosmos borsası NNX için sorumluluk reddi beyanını ve gizlilik politikasını okuyun"
     },
     "pool": {
       "title": "Havuz #"
     },
     "pools": {
       "title": "Osmoz Havuzları",
-      "description": "Önde gelen merkezi olmayan Cosmos borsası Osmosis'teki likidite havuzlarını keşfedin"
+      "description": "Önde gelen merkezi olmayan Cosmos borsası NNX'teki likidite havuzlarını keşfedin"
     }
   },
   "tokenInfos": {
@@ -1215,7 +1215,7 @@
     "youNeed": "ihtiyacın var",
     "stablecoin": "stabilcoin",
     "quoteUpdated": "Teklif güncellendi",
-    "fundsOsmosisToBuyAssets": "varlık satın almak için Osmosis'e fon sağlıyor.",
+    "fundsOsmosisToBuyAssets": "varlık satın almak için NNX'e fon sağlıyor.",
     "chooseAnOption": "Devam etmek için bir seçenek seçin.",
     "lowerSlippageToleranceRecommended": "Daha düşük bir kayma toleransı tavsiye edilir.",
     "tryHigherSlippage": "Daha yüksek bir maksimum kayma toleransı deneyin.",
@@ -1232,7 +1232,7 @@
     },
     "whatIsAStablecoin": {
       "title": "Stablecoin nedir?",
-      "description": "Stablecoin'ler, sabit bir fiyatı korumak için değeri fiat para birimi veya altın gibi başka bir varlığa sabitlenen bir tür kripto para birimidir. Osmosis'te varlık alım ve satımında kullanılan başlıca stablecoin'ler USDC ve USDT'dir."
+      "description": "Stablecoin'ler, sabit bir fiyatı korumak için değeri fiat para birimi veya altın gibi başka bir varlığa sabitlenen bir tür kripto para birimidir. NNX'te varlık alım ve satımında kullanılan başlıca stablecoin'ler USDC ve USDT'dir."
     },
     "claimAll": "Tümünü talep edin",
     "addFunds": "Fon Ekle",
@@ -1279,11 +1279,11 @@
     },
     "swapFees": {
       "header": "Swap ücretleri nelerdir?",
-      "content": "Bu, likidite sağlayıcılarını ödüllendirmek ve ağı sürdürmek amacıyla Osmosis protokolü tarafından tahsil edilen ücrettir."
+      "content": "Bu, likidite sağlayıcılarını ödüllendirmek ve ağı sürdürmek amacıyla NNX protokolü tarafından tahsil edilen ücrettir."
     },
     "tradeRoute": {
       "header": "Ticaret yolu nedir?",
-      "contentTop": " İşlem yaptığınız varlıklar arasında doğrudan bir piyasa yoksa Osmosis, belirli bir zamanda en iyi fiyatı elde etmek için diğer varlıklarla bir dizi işlem yaparak işlemi gerçekleştirmeye çalışacaktır.",
+      "contentTop": " İşlem yaptığınız varlıklar arasında doğrudan bir piyasa yoksa NNX, belirli bir zamanda en iyi fiyatı elde etmek için diğer varlıklarla bir dizi işlem yaparak işlemi gerçekleştirmeye çalışacaktır.",
       "contentBottom": "Mevcut likiditeye bağlı olarak optimum verimlilik için, bazen işlemler farklı varlıklarla birden fazla rotaya bölünecektir."
     },
     "outputDifference": {
@@ -1299,17 +1299,17 @@
   "previewAssetsEnabledForSession": "Bu oturum için önizleme varlıkları etkinleştirildi. Devre dışı bırakmak için yeni bir sekme açın veya `show_preview_assets=false` ekleyin.",
   "alloyedAssets": {
     "title": "Varyantlar Tespit Edildi",
-    "caption": "Tüm bu kafa karıştırıcı varlık varyantlarına elveda deyin. Osmosis'te daha sorunsuz bir deneyime merhaba deyin.",
+    "caption": "Tüm bu kafa karıştırıcı varlık varyantlarına elveda deyin. NNX'te daha sorunsuz bir deneyime merhaba deyin.",
     "remindMeLater": "Daha sonra hatırlat bana",
     "dismiss": "Azletmek",
     "convert": "Dönüştürmek"
   },
   "assetVariantsConversion": {
     "title": "Varlıkları Standartlaştırın",
-    "description": "Daha fazla esneklik ve uyumluluk için aşağıdaki varlıkları Osmosis'teki standart sürümlerine dönüştürün.",
+    "description": "Daha fazla esneklik ve uyumluluk için aşağıdaki varlıkları NNX'teki standart sürümlerine dönüştürün.",
     "learnMore": "Daha fazla bilgi edin",
     "errorLoading": "Varlık varyantları yüklenirken hata oluştu, lütfen daha sonra tekrar deneyin.",
-    "tooltipTitle": "{coinName} Osmosis'te",
+    "tooltipTitle": "{coinName} NNX'te",
     "tooltipDescription": "Osmosis, daha fazla esneklik ve kullanım kolaylığı için {coinDenom} değişkeninin çok sayıda çeşidini tek bir basit varlıkta birleştirir.",
     "convert": "Dönüştürmek",
     "conversionFees": "Dönüşüm ücretleri",

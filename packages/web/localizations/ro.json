@@ -99,10 +99,10 @@
   "copied": "Copiat!",
   "app": {
     "banner": {
-      "backToOsmosis": "Înapoi la Osmosis",
-      "externalLink": "Acum părăsiți aplicația Osmosis pentru a merge la",
-      "externalLinkDisclaimer": "Prin apăsarea acestui link, recunoști că ai citit și înțeles că Osmosis nu garantează calitatea serviciului pentru pagini externe care pot avea Termeni de Serviciu diferiți.",
-      "externalLinkModalTitle": "Părăsirea Osmosis",
+      "backToOsmosis": "Înapoi la NNX",
+      "externalLink": "Acum părăsiți aplicația NNX pentru a merge la",
+      "externalLinkDisclaimer": "Prin apăsarea acestui link, recunoști că ai citit și înțeles că NNX nu garantează calitatea serviciului pentru pagini externe care pot avea Termeni de Serviciu diferiți.",
+      "externalLinkModalTitle": "Părăsirea NNX",
       "goToSite": "Du-te la site",
       "doNotShowAgain": "Nu îmi mai arăta asta",
       "chainHalted": "Lanțul de osmoză este oprit, tranzacțiile sunt temporar dezactivate."
@@ -116,7 +116,7 @@
     "getFeatured": "Fii recomandat",
     "featuredDescription": "Lansează-te pe magazinul de aplicații și obține acces la mii de utilizatori. Dacă dorești să fii listat sau recomandat, contactează-ne și vom fi în legătură.",
     "applyButton": "Aplică",
-    "storeDisclaimer": "Anumite conținuturi au fost pregătite de terțe părți neafiliate cu Osmosis Labs sau cu oricare dintre afilierile sale, iar Osmosis Labs nu este responsabilă pentru astfel de conținuturi. Osmosis Labs nu este responsabilă pentru eventualele erori sau întârzieri în conținut sau pentru orice acțiuni întreprinse bazându-se pe orice conținut. Informațiile sunt furnizate numai în scop informativ și nu constituie sfaturi de investiții. Aceasta nu este o recomandare de a cumpăra sau vinde un anumit activ digital sau de a utiliza o anumită strategie de investiții. Osmosis Labs nu face nicio declarație cu privire la acuratețea, adecvarea sau validitatea oricăror informații furnizate sau pentru un anumit activ. Prețurile prezentate sunt doar în scop ilustrativ. Prețurile reale ale criptomonedelor și statisticile asociate pot varia. Datele prezentate pot reflecta active tranzacționate pe bursa Osmosis Labs și pe alte burse de criptomonede selectate.",
+    "storeDisclaimer": "Anumite conținuturi au fost pregătite de terțe părți neafiliate cu NNX Labs sau cu oricare dintre afilierile sale, iar NNX Labs nu este responsabilă pentru astfel de conținuturi. NNX Labs nu este responsabilă pentru eventualele erori sau întârzieri în conținut sau pentru orice acțiuni întreprinse bazându-se pe orice conținut. Informațiile sunt furnizate numai în scop informativ și nu constituie sfaturi de investiții. Aceasta nu este o recomandare de a cumpăra sau vinde un anumit activ digital sau de a utiliza o anumită strategie de investiții. NNX Labs nu face nicio declarație cu privire la acuratețea, adecvarea sau validitatea oricăror informații furnizate sau pentru un anumit activ. Prețurile prezentate sunt doar în scop ilustrativ. Prețurile reale ale criptomonedelor și statisticile asociate pot varia. Datele prezentate pot reflecta active tranzacționate pe bursa NNX Labs și pe alte burse de criptomonede selectate.",
     "allAppsHeader": "Toate aplicațiile"
   },
   "createFirstPositionCta": {
@@ -207,7 +207,7 @@
     "searchBalances": "Căutați solduri",
     "yourSuperchargedPositions": "Pozițiile tale Supercharged",
     "yourLiquidityPools": "Fondurile dvs. de lichiditate",
-    "connectWallet": "Conectați-vă portofelul pentru a începe să vă urmăriți soldurile și pozițiile pe Osmosis.",
+    "connectWallet": "Conectați-vă portofelul pentru a începe să vă urmăriți soldurile și pozițiile pe NNX.",
     "noAssets": "Nu aveți solduri pe {osmosis}",
     "getStarted": "Depuneți active pentru a începe",
     "noPositions": "Nu ai posturi",
@@ -433,7 +433,7 @@
     },
     "welcomeBack": {
       "title": "Bine ai revenit",
-      "subtitle": "Conectați-vă portofelul pentru a continua explorarea Osmosis.",
+      "subtitle": "Conectați-vă portofelul pentru a continua explorarea NNX.",
       "description": "După ce vă conectați portofelul, vi se va solicita să aprobați o tranzacție pentru a începe sesiunea de tranzacționare cu 1 clic.",
       "toggleLabel": "1-Click Trading",
       "editParamsAriaLabel": "Modificați parametrii 1CT"
@@ -516,7 +516,7 @@
       "buttonAddToken": "Adauga token nou",
       "buttonCreate": "Creeaza Pool",
       "buttonNext": "Urmatorul",
-      "infoCaption": "Transferat catre pool-ul comunitatii Osmosis",
+      "infoCaption": "Transferat catre pool-ul comunitatii NNX",
       "infoMessage": "Taxa creeare pool",
       "scalingFactorController": "Seteaza factorul de scalare(optional)",
       "stablePool": "pool fix",
@@ -761,7 +761,7 @@
     "step2Title": "Fără conturi. Fără parole.",
     "step2Content": "Utilizați-vă portofelul pentru a vă autentifica pe multe platforme diferite. Fără conturi sau parole unice.",
     "step3Title": "Cheile dvs., fondurile dvs.",
-    "step3Content": "Pe Osmosis, numai dvs. puteți muta activele. Cu mare putere vine și mare responsabilitate.",
+    "step3Content": "Pe NNX, numai dvs. puteți muta activele. Cu mare putere vine și mare responsabilitate.",
     "step4Title": "Creați un portofel pentru a începe",
     "step4Content": "Configurați-vă primul portofel și autentificați-vă! Trimiteți, primiți sau cumpărați active.",
     "yourConnectedWallets": "Portofelele dvs. conectate",
@@ -795,7 +795,7 @@
     "selectWithdrawWallet": "Selectați portofelul {network}",
     "depositTakingLonger": "Depunerea durează mai mult decât se aștepta",
     "withdrawalTakingLonger": "Retragerea durează mai mult decât se aștepta",
-    "depositAssetDescription": "Când depui anumite active, poți alege ce versiune a activului vrei să primești pe Osmosis.",
+    "depositAssetDescription": "Când depui anumite active, poți alege ce versiune a activului vrei să primești pe NNX.",
     "withdrawAssetDescription": "Când retrageți anumite active, puteți alege ce versiune a activului doriți să primiți în rețeaua de destinație.",
     "estimatingTime": "Estimarea timpului",
     "calculatingFees": "Calcularea taxelor",
@@ -890,10 +890,10 @@
     "youNeedFundsToPay": "Aveți nevoie de fonduri pentru a plăti taxele de rețea și de conectare pe {chain} .",
     "assetsDepositsUnavailable": "Depunerile {asset} nu sunt disponibile",
     "assetWithdrawalsUnavailable": "Retragerile {asset} nu sunt disponibile",
-    "noAvailableDeposits": "În prezent, nu pot fi găsite rute sau furnizori disponibili. Vă rugăm să încercați din nou mai târziu sau să utilizați o aplicație alternativă pentru a vă transfera fondurile către Osmosis.",
-    "noAvailableWithdrawals": "În prezent, nu pot fi găsite rute sau furnizori disponibili. Vă rugăm să încercați din nou mai târziu sau să setați o aplicație alternativă pentru a vă transfera fondurile de la Osmosis.",
+    "noAvailableDeposits": "În prezent, nu pot fi găsite rute sau furnizori disponibili. Vă rugăm să încercați din nou mai târziu sau să utilizați o aplicație alternativă pentru a vă transfera fondurile către NNX.",
+    "noAvailableWithdrawals": "În prezent, nu pot fi găsite rute sau furnizori disponibili. Vă rugăm să încercați din nou mai târziu sau să setați o aplicație alternativă pentru a vă transfera fondurile de la NNX.",
     "somethingIsntWorking": "Ceva nu merge…",
-    "sorryForTheInconvenience": "Îmi pare rău pentru neplăcerile create. Vă rugăm să reîmprospătați pagina și să încercați din nou sau să utilizați o aplicație alternativă pentru a vă transfera fondurile către Osmosis.",
+    "sorryForTheInconvenience": "Îmi pare rău pentru neplăcerile create. Vă rugăm să reîmprospătați pagina și să încercați din nou sau să utilizați o aplicație alternativă pentru a vă transfera fondurile către NNX.",
     "assetIsCurrentlyUnstable": "Transferurile {asset} sunt momentan instabile",
     "transferWillLikelyTakeLonger": "Transferurile vor dura probabil mai mult decât de obicei sau pot eșua complet. Procedați pe propriul risc.",
     "sendFromWalletOrExchange": "Trimiteți din portofel sau schimb",
@@ -949,19 +949,19 @@
       "description": "Schimbați, câștigați și construiți pe cel mai important schimb Cosmos descentralizat - Cel mai mare interchain DEX"
     },
     "apps": {
-      "title": "Magazin de aplicații Osmosis",
+      "title": "Magazin de aplicații NNX",
       "description": "Tranzacționarea este doar primul pas. Puneți-vă bunurile la lucru și realizați mult mai mult cu pârghie, seifuri și nu numai"
     },
     "disclaimer": {
       "title": "Declinarea răspunderii pentru osmoză",
-      "description": "Citiți declinarea răspunderii și politica de confidențialitate pentru Osmosis - principalul schimb descentralizat Cosmos"
+      "description": "Citiți declinarea răspunderii și politica de confidențialitate pentru NNX - principalul schimb descentralizat Cosmos"
     },
     "pool": {
       "title": "Bazin #"
     },
     "pools": {
       "title": "Bazine cu osmoză",
-      "description": "Descoperiți bazine de lichiditate pe Osmosis - principalul schimb descentralizat Cosmos"
+      "description": "Descoperiți bazine de lichiditate pe NNX - principalul schimb descentralizat Cosmos"
     }
   },
   "tokenInfos": {
@@ -1071,7 +1071,7 @@
         "description": "Perioada de timp în care o poziție este legată înainte de a putea fi părăsită. Notă: nu toate perioadele de dezlegare a strategiilor* au distribuții de recompense."
       },
       "strategy": {
-        "description": "Oportunități de câștig de diferite tipuri, găzduite de diverse platforme, sunt disponibile pe Osmosis. Accesarea unei strategii necesită depunerea unor active specifice."
+        "description": "Oportunități de câștig de diferite tipuri, găzduite de diverse platforme, sunt disponibile pe NNX. Accesarea unei strategii necesită depunerea unor active specifice."
       },
       "risk": {
         "description": "Evaluarea riscului implică luarea în considerare a unei combinații de criterii legate de o strategie și activele de bază ale acesteia."
@@ -1109,7 +1109,7 @@
     "noRecent": "Fără transferuri recente",
     "recentShownHere": "Depunerile și retragerile din ultimele 3 zile pe acest dispozitiv (între anumite rețele) vor apărea aici.",
     "noTransactions": "Fără tranzacții",
-    "pastShownHere": "Tranzacțiile tale anterioare pe Osmosis vor apărea aici.",
+    "pastShownHere": "Tranzacțiile tale anterioare pe NNX vor apărea aici.",
     "connectToSee": "Conectați-vă pentru a vedea istoricul tranzacțiilor dvs",
     "connectWallet": "Conectați portofelul",
     "title": "Tranzacții",
@@ -1170,7 +1170,7 @@
         "title": "Fără comenzi recente",
         "subtitle": "Istoricul comenzilor dvs. comerciale va apărea aici.",
         "connectTitle": "Conectați-vă portofelul pentru a vedea istoricul comenzilor",
-        "connectSubtitle": "Comenzile dumneavoastră limită anterioare pentru Osmosis vor apărea aici."
+        "connectSubtitle": "Comenzile dumneavoastră limită anterioare pentru NNX vor apărea aici."
       }
     },
     "aboveMarket": {
@@ -1215,13 +1215,13 @@
     "youNeed": "Ai nevoie",
     "stablecoin": "stablecoin",
     "quoteUpdated": "Citat actualizat",
-    "fundsOsmosisToBuyAssets": "fonduri pe Osmosis pentru a cumpăra active.",
+    "fundsOsmosisToBuyAssets": "fonduri pe NNX pentru a cumpăra active.",
     "chooseAnOption": "Alegeți o opțiune pentru a continua.",
     "lowerSlippageToleranceRecommended": "Se recomandă o toleranță mai mică la alunecare.",
     "tryHigherSlippage": "Încercați o toleranță maximă la alunecare mai mare.",
     "reviewTrade": "Examinați comerțul",
     "errors": {
-      "noAssetAvailable": "Nu aveți fonduri {coinName} pe Osmosis cu care să tranzacționați. Alegeți o opțiune pentru a continua.",
+      "noAssetAvailable": "Nu aveți fonduri {coinName} pe NNX cu care să tranzacționați. Alegeți o opțiune pentru a continua.",
       "tradeMayResultInLossOfValue": "Tranzacția dvs. poate duce la pierderi semnificative de valoare",
       "tradeMayNotExecuted": "Este posibil ca tranzacția dvs. să nu fie executată"
     },
@@ -1232,7 +1232,7 @@
     },
     "whatIsAStablecoin": {
       "title": "Ce este o monedă stabilă?",
-      "description": "Monedele stabile sunt un tip de criptomonedă a cărui valoare este legată de un alt activ, cum ar fi o monedă fiat sau aurul, pentru a menține un preț stabil. Pe Osmosis, principalele monede stabile pentru cumpărarea și vânzarea de active sunt USDC și USDT."
+      "description": "Monedele stabile sunt un tip de criptomonedă a cărui valoare este legată de un alt activ, cum ar fi o monedă fiat sau aurul, pentru a menține un preț stabil. Pe NNX, principalele monede stabile pentru cumpărarea și vânzarea de active sunt USDC și USDT."
     },
     "claimAll": "Revendica totul",
     "addFunds": "Adăuga fonduri",
@@ -1279,11 +1279,11 @@
     },
     "swapFees": {
       "header": "Ce sunt comisioanele de swap?",
-      "content": "Acesta este comisionul perceput de protocolul Osmosis pentru a recompensa furnizorii de lichidități și a menține rețeaua."
+      "content": "Acesta este comisionul perceput de protocolul NNX pentru a recompensa furnizorii de lichidități și a menține rețeaua."
     },
     "tradeRoute": {
       "header": "Ce este o rută comercială?",
-      "contentTop": " Dacă nu există o piață directă între activele pe care le tranzacționați, Osmosis va încerca să facă tranzacția efectuând o serie de tranzacții cu alte active pentru a obține cel mai bun preț la un moment dat.",
+      "contentTop": " Dacă nu există o piață directă între activele pe care le tranzacționați, NNX va încerca să facă tranzacția efectuând o serie de tranzacții cu alte active pentru a obține cel mai bun preț la un moment dat.",
       "contentBottom": "Pentru o eficiență optimă pe baza lichidității disponibile, uneori tranzacțiile vor fi împărțite în mai multe rute cu active diferite."
     },
     "outputDifference": {
@@ -1306,7 +1306,7 @@
   },
   "assetVariantsConversion": {
     "title": "Standardizați activele",
-    "description": "Convertiți următoarele elemente în versiunea lor standardizată pe Osmosis pentru mai multă flexibilitate și compatibilitate sporită.",
+    "description": "Convertiți următoarele elemente în versiunea lor standardizată pe NNX pentru mai multă flexibilitate și compatibilitate sporită.",
     "learnMore": "Află mai multe",
     "errorLoading": "Eroare la încărcarea variantelor de material, încercați din nou mai târziu.",
     "tooltipTitle": "{coinName} pe osmoză",

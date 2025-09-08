@@ -116,7 +116,7 @@
     "getFeatured": "获得特色",
     "featuredDescription": "在应用商店上架并接触成千上万的用户。如果您想上榜或被推荐，请联系我们，我们将保持沟通。",
     "applyButton": "申请",
-    "storeDisclaimer": "部分内容由与 Osmosis Labs 或其任何附属公司无关的第三方准备，Osmosis Labs 对此类内容不承担责任。Osmosis Labs 不对内容中的任何错误或延迟，或因依赖任何内容而采取的任何行动承担责任。信息仅供参考，不构成投资建议。这不是购买或出售特定数字资产或采用特定投资策略的建议。 Osmosis Labs 不对所提供的任何信息的准确性、适当性或有效性，或针对特定资产作出任何陈述。显示的价格仅用于说明目的。实际加密货币价格及相关统计数据可能有所不同。所呈现的数据可能反映在 Osmosis Labs 交易所及选定的其他加密货币交易所上交易的资产。",
+    "storeDisclaimer": "部分内容由与 NNX Labs 或其任何附属公司无关的第三方准备，Osmosis Labs 对此类内容不承担责任。Osmosis Labs 不对内容中的任何错误或延迟，或因依赖任何内容而采取的任何行动承担责任。信息仅供参考，不构成投资建议。这不是购买或出售特定数字资产或采用特定投资策略的建议。 NNX Labs 不对所提供的任何信息的准确性、适当性或有效性，或针对特定资产作出任何陈述。显示的价格仅用于说明目的。实际加密货币价格及相关统计数据可能有所不同。所呈现的数据可能反映在 NNX Labs 交易所及选定的其他加密货币交易所上交易的资产。",
     "allAppsHeader": "所有应用"
   },
   "createFirstPositionCta": {
@@ -171,7 +171,7 @@
       "stablecoin": "稳定币",
       "meme": "模因",
       "liquid_staking": "流动质押",
-      "built_on_osmosis": "建立在 Osmosis 之上",
+      "built_on_osmosis": "建立在 NNX 之上",
       "sail_initiative": "扬帆计划",
       "bridges": "桥梁",
       "nft_protocol": "NFT 协议",
@@ -207,7 +207,7 @@
     "searchBalances": "搜索余额",
     "yourSuperchargedPositions": "您的超级职位",
     "yourLiquidityPools": "您的流动资金池",
-    "connectWallet": "连接您的钱包，开始跟踪 Osmosis 上的余额和头寸。",
+    "connectWallet": "连接您的钱包，开始跟踪 NNX 上的余额和头寸。",
     "noAssets": "您在{osmosis}上没有余额",
     "getStarted": "存入资产即可开始",
     "noPositions": "您没有职位",
@@ -418,7 +418,7 @@
         "spendLimitSubDescription": "对于所有其他资产，在要求手动钱包批准之前，请设置最大可交易价值限制。交易费也计入此限制。",
         "fixedAmount": "固定值",
         "shareOfBalance": "余额份额",
-        "shareOfBalanceDescription": "您在 Osmosis 上的总余额的{shareOfBalance}目前价值"
+        "shareOfBalanceDescription": "您在 NNX 上的总余额的{shareOfBalance}目前价值"
       },
       "sessionPeriodScreen": {
         "title": "会议期间",
@@ -433,7 +433,7 @@
     },
     "welcomeBack": {
       "title": "欢迎回来",
-      "subtitle": "连接你的钱包以继续探索 Osmosis。",
+      "subtitle": "连接你的钱包以继续探索 NNX。",
       "description": "连接钱包后，系统将提示您批准交易以开始一键交易会话。",
       "toggleLabel": "一键交易",
       "editParamsAriaLabel": "更改1CT参数"
@@ -516,7 +516,7 @@
       "buttonAddToken": "添加新的代币",
       "buttonCreate": "创建资金池",
       "buttonNext": "下一步",
-      "infoCaption": "已发送到 Osmosis 社区池",
+      "infoCaption": "已发送到 NNX 社区池",
       "infoMessage": "资金池创建费",
       "scalingFactorController": "设置比例因子控制器（可选）",
       "stablePool": "稳定池",
@@ -591,7 +591,7 @@
     "noResultsFor": "没有找到“ {query} ”的结果",
     "adjust": "尝试调整您的搜索查询",
     "noPools": "没有泳池",
-    "poolsEmpty": "目前 Osmosis 上没有适用于{denom}池"
+    "poolsEmpty": "目前 NNX 上没有适用于{denom}池"
   },
   "stake": {
     "available": "可用的",
@@ -671,7 +671,7 @@
       },
       "existingUser": {
         "title": "看起来您之前已经投注过",
-        "description": "我们检测到与您的钱包地址相关的现有权益小组。您想在 Osmosis 上保留相同的验证器吗？",
+        "description": "我们检测到与您的钱包地址相关的现有权益小组。您想在 NNX 上保留相同的验证器吗？",
         "buttonKeep": "保留现有验证器",
         "buttonSelect": "选择新的验证器"
       }
@@ -795,7 +795,7 @@
     "selectWithdrawWallet": "选择{network}钱包",
     "depositTakingLonger": "存款时间比预期的要长",
     "withdrawalTakingLonger": "提款时间比预期的要长",
-    "depositAssetDescription": "当你存入某些资产时，你可以选择要在 Osmosis 上接收哪个版本的资产。",
+    "depositAssetDescription": "当你存入某些资产时，你可以选择要在 NNX 上接收哪个版本的资产。",
     "withdrawAssetDescription": "当你提取某些资产时，你可以选择要在目标网络上接收哪个版本的资产。",
     "estimatingTime": "估计时间",
     "calculatingFees": "计算费用",
@@ -890,10 +890,10 @@
     "youNeedFundsToPay": "您需要资金来支付{chain}网络费和桥接费。",
     "assetsDepositsUnavailable": "{asset}存款不可用",
     "assetWithdrawalsUnavailable": "{asset}提现不可用",
-    "noAvailableDeposits": "目前找不到可用的路线或提供商。请稍后重试或使用其他应用程序将您的资金转入 Osmosis。",
-    "noAvailableWithdrawals": "目前找不到可用的路线或提供商。请稍后重试或设置其他应用程序以从 Osmosis 转移资金。",
+    "noAvailableDeposits": "目前找不到可用的路线或提供商。请稍后重试或使用其他应用程序将您的资金转入 NNX。",
+    "noAvailableWithdrawals": "目前找不到可用的路线或提供商。请稍后重试或设置其他应用程序以从 NNX 转移资金。",
     "somethingIsntWorking": "有些事情不起作用……",
-    "sorryForTheInconvenience": "抱歉造成不便。请刷新页面并重试，或使用其他应用程序将您的资金转入 Osmosis。",
+    "sorryForTheInconvenience": "抱歉造成不便。请刷新页面并重试，或使用其他应用程序将您的资金转入 NNX。",
     "assetIsCurrentlyUnstable": "{asset}转移目前不稳定",
     "transferWillLikelyTakeLonger": "转账可能比平时耗时更长，甚至可能完全失败。请自行承担风险。",
     "sendFromWalletOrExchange": "从您的钱包或交易所发送",
@@ -954,14 +954,14 @@
     },
     "disclaimer": {
       "title": "渗透免责声明",
-      "description": "阅读 Osmosis 的免责声明和隐私政策 - 领先的去中心化 Cosmos 交易所"
+      "description": "阅读 NNX 的免责声明和隐私政策 - 领先的去中心化 Cosmos 交易所"
     },
     "pool": {
       "title": "水池 ＃"
     },
     "pools": {
       "title": "渗透池",
-      "description": "在 Osmosis 上发现流动性池——领先的去中心化 Cosmos 交易所"
+      "description": "在 NNX 上发现流动性池——领先的去中心化 Cosmos 交易所"
     }
   },
   "tokenInfos": {
@@ -1109,7 +1109,7 @@
     "noRecent": "最近没有转会",
     "recentShownHere": "此设备（某些网络之间）过去 3 天的存款和取款将显示在这里。",
     "noTransactions": "没有交易",
-    "pastShownHere": "您过去在 Osmosis 上的交易将会显示在这里。",
+    "pastShownHere": "您过去在 NNX 上的交易将会显示在这里。",
     "connectToSee": "连接以查看您的交易历史记录",
     "connectWallet": "连接钱包",
     "title": "交易",
@@ -1170,7 +1170,7 @@
         "title": "暂无近期订单",
         "subtitle": "您的交易订单历史记录将显示在这里。",
         "connectTitle": "连接您的钱包以查看您的订单历史记录",
-        "connectSubtitle": "您过去在 Osmosis 上的限价订单将显示在这里。"
+        "connectSubtitle": "您过去在 NNX 上的限价订单将显示在这里。"
       }
     },
     "aboveMarket": {
@@ -1221,7 +1221,7 @@
     "tryHigherSlippage": "尝试更高的最大滑动容忍度。",
     "reviewTrade": "回顾贸易",
     "errors": {
-      "noAssetAvailable": "您在 Osmosis 上没有任何{coinName}资金可供交易。选择一个选项以继续。",
+      "noAssetAvailable": "您在 NNX 上没有任何{coinName}资金可供交易。选择一个选项以继续。",
       "tradeMayResultInLossOfValue": "您的交易可能会导致重大价值损失",
       "tradeMayNotExecuted": "您的交易可能无法执行"
     },
@@ -1232,7 +1232,7 @@
     },
     "whatIsAStablecoin": {
       "title": "什么是稳定币？",
-      "description": "稳定币是一种加密货币，其价值与另一种资产（例如法定货币或黄金）挂钩，以保持稳定的价格。在 Osmosis 上，用于购买和出售资产的主要稳定币是 USDC 和 USDT。"
+      "description": "稳定币是一种加密货币，其价值与另一种资产（例如法定货币或黄金）挂钩，以保持稳定的价格。在 NNX 上，用于购买和出售资产的主要稳定币是 USDC 和 USDT。"
     },
     "claimAll": "索取全部",
     "addFunds": "增加资金",
@@ -1279,7 +1279,7 @@
     },
     "swapFees": {
       "header": "什么是掉期费？",
-      "content": "这是 Osmosis 协议为了奖励流动性提供者和维护网络而收取的费用。"
+      "content": "这是 NNX 协议为了奖励流动性提供者和维护网络而收取的费用。"
     },
     "tradeRoute": {
       "header": "什么是贸易路线？",
@@ -1299,14 +1299,14 @@
   "previewAssetsEnabledForSession": "已为本次会话启用预览资产。要禁用，请打开新选项卡，或附加“show_preview_assets=false”。",
   "alloyedAssets": {
     "title": "检测到的变体",
-    "caption": "告别所有那些令人困惑的资产变体。迎接 Osmosis 上更加无缝的体验。",
+    "caption": "告别所有那些令人困惑的资产变体。迎接 NNX 上更加无缝的体验。",
     "remindMeLater": "稍后提醒我",
     "dismiss": "解雇",
     "convert": "转变"
   },
   "assetVariantsConversion": {
     "title": "标准化资产",
-    "description": "将以下资产转换为 Osmosis 上的标准化版本，以获得更大的灵活性和更高的兼容性。",
+    "description": "将以下资产转换为 NNX 上的标准化版本，以获得更大的灵活性和更高的兼容性。",
     "learnMore": "了解更多",
     "errorLoading": "加载资产变体时出错，请稍后重试。",
     "tooltipTitle": "Osmosis 上的{coinName}",
