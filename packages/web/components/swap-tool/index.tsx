@@ -98,7 +98,7 @@ export const SwapTool: FunctionComponent<SwapToolProps> = observer(
     const featureFlags = useFeatureFlags();
     const { isOneClickTradingEnabled } = useOneClickTradingSession();
     const [isSendingTx, setIsSendingTx] = useState(false);
-    const [quoteType, setQuoteType] = useState<QuoteDirection>("out-given-in");
+    const [quoteType, setQuoteType] = useState<QuoteDirection>("in-given-out");
     // auto focus from amount on token switch
     const fromAmountInputEl = useRef<HTMLInputElement | null>(null);
     const toAmountInputEl = useRef<HTMLInputElement | null>(null);
@@ -585,8 +585,10 @@ export const SwapTool: FunctionComponent<SwapToolProps> = observer(
                     onInputChange={(e) => {
                       e.preventDefault();
 
-                      if (quoteType !== "in-given-out")
+                      if (quoteType !== "in-given-out") {
+                        console.log("HERER 6");
                         setQuoteType("in-given-out");
+                      }
                       if (e.target.value.length <= (isMobile ? 19 : 26)) {
                         swapState.outAmountInput.setAmount(e.target.value);
                       }

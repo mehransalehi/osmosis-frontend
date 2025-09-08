@@ -45,6 +45,7 @@ export function toScientificNotation(
 
 /** Trims 0s from end iff trailing integers from '.' are not all 0s. */
 export function trimPlaceholderZeros(str: string) {
+  // console.log("NUMBBBBBBBBBBBBBBBBBBBBBBRE 5 : " + str);
   const decimalPointIndex = str.indexOf(".");
 
   if (decimalPointIndex === -1) {
@@ -62,7 +63,6 @@ export function trimPlaceholderZeros(str: string) {
   if (str.charAt(i) === ".") {
     i--;
   }
-
   return str.substring(0, i + 1);
 }
 

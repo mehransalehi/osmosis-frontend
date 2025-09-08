@@ -117,6 +117,7 @@ export function useSwap(
     quoteType = "out-given-in",
   }: SwapOptions = { maxSlippage: undefined }
 ) {
+  console.log("default quoteType : " + quoteType);
   const { logEvent } = useAmplitudeAnalytics();
   const apiUtils = api.useUtils();
   const { chainStore, accountStore } = useStore();
@@ -332,20 +333,33 @@ export function useSwap(
     | typeof inAmountInput.error = useMemo(() => {
     let error =
       quoteType === "out-given-in" ? inGivenOutQuoteError : quoteErrorMsg;
-
+    console.log("inGivenOutQuoteError : " + inGivenOutQuoteError);
+    console.log("quoteType : " + quoteType);
+    console.log("quote : " + quote);
+    console.log("error : " + error);
+    console.log("spotPriceQuoteErrorMsg : " + spotPriceQuoteErrorMsg);
     // only show spot price error if there's no quote
     if (
       (quote && !quote.amount.toDec().isPositive() && !error) ||
       (!quote && spotPriceQuoteErrorMsg)
-    )
+    ) {
       error = spotPriceQuoteErrorMsg;
+      console.log("quote : " + quote);
+      console.log("spotPriceQuoteErrorMsg : " + spotPriceQuoteErrorMsg);
+    }
 
     const errorFromTrpc = makeRouterErrorFromTrpcError(error)?.error;
-    if (errorFromTrpc) return errorFromTrpc;
+    if (errorFromTrpc) {
+      console.log("errorFromTrpc : " + errorFromTrpc);
+      return errorFromTrpc;
+    }
 
     // prioritize router errors over user input errors
-    if (!inAmountInput.isEmpty && inAmountInput.error)
+    if (!inAmountInput.isEmpty && inAmountInput.error) {
+      console.log("inAmountInput.isEmpty : " + inAmountInput.isEmpty);
+      console.log("inAmountInput.error : " + inAmountInput.error);
       return inAmountInput.error;
+    }
   }, [
     quoteErrorMsg,
     quote,

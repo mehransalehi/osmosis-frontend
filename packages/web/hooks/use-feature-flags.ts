@@ -24,7 +24,7 @@ const defaultFlags: Record<AvailableFlags, boolean> = {
   limitOrders: true,
   advancedChart: false,
   cypherCard: false,
-  inGivenOut: false,
+  inGivenOut: true,
   sqsActiveOrders: false,
   alloyedAssets: false,
   bridgeDepositAddress: false,
@@ -58,7 +58,7 @@ export function useFeatureFlags() {
 
   return {
     ...launchdarklyFlags,
-    ...(isDevModeWithoutClientID ? defaultFlags : {}),
+    ...(isDevModeWithoutClientID ? defaultFlags : defaultFlags),
     oneClickTrading: isDevModeWithoutClientID
       ? defaultFlags.oneClickTrading
       : !isMobile &&

@@ -91,11 +91,13 @@ export const bridgeTransferRouter = createTRPCRouter({
       if (!bridgeProvider) {
         throw new Error("Invalid bridge provider id: " + input.bridge);
       }
-
+      // console.log("Bridge input:", JSON.stringify(input, null, 2));
+      // console.log("Bridge provider:", bridgeProvider?.providerName);
       const quoteFn = () => bridgeProvider.getQuote(input);
 
       /** If the bridge takes longer than 10 seconds to respond, we should timeout that quote. */
-      const quote = await timeout(quoteFn, 10 * 1000)();
+
+      const quote = await timeout(quoteFn, 20 * 1000)();
 
       // Basic circuit breaker to validate some invariants
       // from input + given quote
@@ -104,7 +106,6 @@ export const bridgeTransferRouter = createTRPCRouter({
           `Invalid quote: Expected fromAsset address ${input.fromAsset.address} but got ${quote.input.address} in quote`
         );
       }
-
       /**
        * Since transfer fee is deducted from input amount,
        * we overwrite the transfer fee asset to be the input
@@ -112,6 +113,7 @@ export const bridgeTransferRouter = createTRPCRouter({
        * This allows us to easily deduct fees from input amount
        * and find prices on Osmosis.
        */
+      console.log("We are here!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
       const feeCoin = isSameVariant(
         ctx.assetLists,
         input.fromAsset.address,
@@ -240,8 +242,6 @@ export const bridgeTransferRouter = createTRPCRouter({
           : Promise.resolve(undefined),
       ]);
 
-      console.log(assetPrice, feeAssetPrice, gasFeeAssetPrice);
-
       const transferFee = {
         amount: new CoinPretty(
           {
@@ -279,7 +279,51 @@ export const bridgeTransferRouter = createTRPCRouter({
           totalFeeFiatValue?.add(transferFee.fiatValue) ??
           transferFee.fiatValue;
       }
-
+      console.log(
+        "!!!!!!!!!!!!############################!!!!!!!!!!!!!!!!!!!!!!!!!!!########################"
+      );
+      console.log({
+        quote: {
+          provider: {
+            id: bridgeProvider.providerName as Bridge,
+            logoUrl: BridgeLogoUrls[bridgeProvider.providerName as Bridge],
+          },
+          input: {
+            ...quote.input,
+            amount: new CoinPretty(
+              {
+                coinDenom: quote.input.denom,
+                coinMinimalDenom: quote.input.address,
+                coinDecimals: quote.input.decimals,
+              },
+              quote.input.amount
+            ),
+            fiatValue: assetPrice
+              ? priceFromBridgeCoin(quote.input, assetPrice)
+              : undefined,
+          },
+          expectedOutput: {
+            amount: new CoinPretty(
+              {
+                coinDecimals: quote.expectedOutput.decimals,
+                coinDenom: quote.expectedOutput.denom,
+                coinMinimalDenom: quote.expectedOutput.address,
+              },
+              quote.expectedOutput.amount
+            ),
+            fiatValue: assetPrice
+              ? priceFromBridgeCoin(
+                  quote.expectedOutput,
+                  // output is same token as input
+                  assetPrice
+                )
+              : undefined,
+          },
+          transferFee,
+          estimatedGasFee,
+          totalFeeFiatValue,
+        },
+      });
       return {
         quote: {
           provider: {

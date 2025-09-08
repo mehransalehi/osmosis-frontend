@@ -206,6 +206,7 @@ export class IbcBridgeProvider implements BridgeProvider {
     });
 
     const gasFee = txSimulation.amount[0];
+
     const gasAsset = await getGasAsset({
       fromChainId: params.fromChain.chainId as string,
       denom: gasFee.denom,
@@ -213,7 +214,6 @@ export class IbcBridgeProvider implements BridgeProvider {
       chainList: this.ctx.chainList,
       cache: this.ctx.cache,
     });
-
     return {
       type: "cosmos",
       msgs: txMessages,

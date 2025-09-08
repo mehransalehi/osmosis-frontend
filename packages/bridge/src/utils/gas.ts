@@ -40,13 +40,24 @@ export async function getGasAsset({
   const chains = await getChains({ cache: cache, chainList });
   const chain = chains.find((c) => c.chain_id === fromChainId);
   const feeCurrency = chain?.feeCurrencies.find(
-    ({ chainSuggestionDenom }) =>
-      chainSuggestionDenom.toLowerCase() === denom.toLowerCase()
+    ({ chainSuggestionDenom, coinMinimalDenom }) => {
+      if (chainSuggestionDenom) {
+        return chainSuggestionDenom.toLowerCase() === denom.toLowerCase();
+      } else if (coinMinimalDenom) {
+        return coinMinimalDenom.toLowerCase() === denom.toLowerCase();
+      } else {
+        return false;
+      }
+    }
   );
 
   if (feeCurrency) {
     return {
-      address: feeCurrency.chainSuggestionDenom,
+      address: feeCurrency.chainSuggestionDenom
+        ? feeCurrency.chainSuggestionDenom
+        : feeCurrency.coinMinimalDenom
+        ? feeCurrency.coinMinimalDenom
+        : "",
       denom: feeCurrency.coinDenom,
       decimals: feeCurrency.coinDecimals,
       coinGeckoId: feeCurrency.coinGeckoId,
