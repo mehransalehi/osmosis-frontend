@@ -161,7 +161,7 @@ const MainLayoutWrapper: FunctionComponent<{
       return [];
     }
 
-    if (levanaGeoblock?.allowed) {
+    if (levanaGeoblock?.allowed && false) {
       conditionalMenuItems.push(
         {
           label: t("menu.margin"),

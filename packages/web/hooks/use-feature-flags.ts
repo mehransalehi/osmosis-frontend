@@ -16,7 +16,7 @@ const defaultFlags: Record<AvailableFlags, boolean> = {
   aprBreakdown: true,
   topAnnouncementBanner: true,
   tfmProTradingNavbarButton: false,
-  positionRoi: true,
+  positionRoi: false,
   swapToolSimulateFee: true,
   displayDailyEarn: false,
   newDepositWithdrawFlow: true,
