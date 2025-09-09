@@ -7,7 +7,7 @@ import {
   EvmBridgeTransactionRequest,
 } from "@osmosis-labs/bridge";
 import { DeliverTxResponse } from "@osmosis-labs/stores";
-import { CoinPretty, Dec, DecUtils, Int, RatePretty } from "@osmosis-labs/unit";
+import { CoinPretty, Dec, DecUtils, RatePretty } from "@osmosis-labs/unit";
 import { getNomicRelayerUrl, isNil } from "@osmosis-labs/utils";
 import dayjs from "dayjs";
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -117,7 +117,6 @@ export const useBridgeQuotes = ({
     useState<Bridge | null>(null);
   const [isBridgeProviderControlledMode, setBridgeProviderControlledMode] =
     useState(false);
-
   const onChangeBridgeProvider = useCallback((bridge: Bridge) => {
     setSelectedBridgeProvider(bridge);
     setBridgeProviderControlledMode(true);
@@ -144,8 +143,8 @@ export const useBridgeQuotes = ({
           // CoinPretty only accepts whole amounts
           DecUtils.getTenExponentNInPrecisionRange(fromAsset?.decimals ?? 0)
         )
-        .truncate()
-        .div(new Int(95)),
+        .mul(new Dec("0.95"))
+        .truncate(),
     [debouncedInputValue, fromAsset?.decimals]
   );
   const availableBalance = fromAsset?.amount;
@@ -156,7 +155,6 @@ export const useBridgeQuotes = ({
         : undefined,
     [availableBalance, inputAmount]
   );
-
   const isInsufficientBal =
     availableBalance &&
     inputCoin &&
@@ -216,12 +214,12 @@ export const useBridgeQuotes = ({
               input,
               totalFeeFiatValue,
             } = quote;
-
             const priceImpact = new RatePretty(
               new Dec(expectedOutput.priceImpact)
             );
 
             // Handle cases where fiat values might be undefined
+
             const expectedOutputFiatDec = expectedOutput.fiatValue?.toDec();
             const inputFiatDec = input.fiatValue?.toDec();
 
@@ -253,7 +251,6 @@ export const useBridgeQuotes = ({
                 expectedOutputFiatDec.quo(inputFiatDec)
               );
             }
-
             return {
               gasCost: estimatedGasFee?.amount.maxDecimals(8),
               transferFee: transferFee.amount.maxDecimals(8),
@@ -789,7 +786,7 @@ export const useBridgeQuotes = ({
     };
   } else if (bridgeTransaction.error || Boolean(someError)) {
     errorBoxMessage = {
-      heading: t("transfer.somethingIsntWorking"),
+      heading: t("transfer.somethingIsntWorking"), //#################################################
       description: t("transfer.sorryForTheInconvenience"),
     };
   } else if (warnUserOfSlippage) {

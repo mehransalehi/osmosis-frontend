@@ -117,7 +117,6 @@ export function useSwap(
     quoteType = "out-given-in",
   }: SwapOptions = { maxSlippage: undefined }
 ) {
-  console.log("default quoteType : " + quoteType);
   const { logEvent } = useAmplitudeAnalytics();
   const apiUtils = api.useUtils();
   const { chainStore, accountStore } = useStore();

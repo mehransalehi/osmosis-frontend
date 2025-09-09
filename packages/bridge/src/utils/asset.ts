@@ -13,8 +13,6 @@ export class BridgeAssetMap<Asset> extends Map<string, Asset> {
   }
 
   setAsset(chainId: string, denom: string, value: Asset): void {
-    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-    console.log(value);
     this.set(BridgeAssetMap.makeKey(chainId, denom), value);
   }
 }
