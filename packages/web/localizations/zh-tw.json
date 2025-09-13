@@ -116,7 +116,7 @@
     "getFeatured": "獲得特色",
     "featuredDescription": "在應用商店上架並接觸成千上萬的用戶。如果您想上榜或被推薦，請聯繫我們，我們將保持溝通。",
     "applyButton": "申請",
-    "storeDisclaimer": "部分內容由與 Osmosis Labs 或其任何附屬公司無關的第三方準備，Osmosis Labs 對此類內容不承擔責任。Osmosis Labs 不對內容中的任何錯誤或延遲，或因依賴任何內容而採取的任何行動承擔責任。信息僅供參考，不構成投資建議。這不是購買或出售特定數字資產或采用特定投資策略的建議。 Osmosis Labs 不對所提供的任何信息的准確性、適當性或有效性，或針對特定資產作出任何陳述。顯示的價格僅用於說明目的。實際加密貨幣價格及相關統計數據可能有所不同。所呈現的數據可能反映在 Osmosis Labs 交易所及選定的其他加密貨幣交易所上交易的資產。",
+    "storeDisclaimer": "部分內容由與 NNX Labs 或其任何附屬公司無關的第三方準備，Osmosis Labs 對此類內容不承擔責任。Osmosis Labs 不對內容中的任何錯誤或延遲，或因依賴任何內容而採取的任何行動承擔責任。信息僅供參考，不構成投資建議。這不是購買或出售特定數字資產或采用特定投資策略的建議。 NNX Labs 不對所提供的任何信息的准確性、適當性或有效性，或針對特定資產作出任何陳述。顯示的價格僅用於說明目的。實際加密貨幣價格及相關統計數據可能有所不同。所呈現的數據可能反映在 NNX Labs 交易所及選定的其他加密貨幣交易所上交易的資產。",
     "allAppsHeader": "所有應用"
   },
   "createFirstPositionCta": {
@@ -207,7 +207,7 @@
     "searchBalances": "搜尋餘額",
     "yourSuperchargedPositions": "您的超級職位",
     "yourLiquidityPools": "您的流動資金池",
-    "connectWallet": "連接您的錢包，開始追蹤您在 Osmosis 上的餘額和部位。",
+    "connectWallet": "連接您的錢包，開始追蹤您在 NNX 上的餘額和部位。",
     "noAssets": "您{osmosis}沒有餘額",
     "getStarted": "存入資產即可開始",
     "noPositions": "您沒有職位",
@@ -418,7 +418,7 @@
         "spendLimitSubDescription": "對於所有其他資產，在需要手動錢包批准之前設定最大可交易價值的限制。交易費用也計入此限額。",
         "fixedAmount": "固定值",
         "shareOfBalance": "餘額份額",
-        "shareOfBalanceDescription": "您在 Osmosis 上的總餘額的{shareOfBalance}目前值"
+        "shareOfBalanceDescription": "您在 NNX 上的總餘額的{shareOfBalance}目前值"
       },
       "sessionPeriodScreen": {
         "title": "會議期間",
@@ -433,7 +433,7 @@
     },
     "welcomeBack": {
       "title": "歡迎回來",
-      "subtitle": "連接您的錢包以繼續探索 Osmosis。",
+      "subtitle": "連接您的錢包以繼續探索 NNX。",
       "description": "連接錢包後，系統將提示您批准交易以開始一鍵交易會話。",
       "toggleLabel": "一鍵交易",
       "editParamsAriaLabel": "更改1CT參數"
@@ -516,7 +516,7 @@
       "buttonAddToken": "加入新代幣",
       "buttonCreate": "建立新池",
       "buttonNext": "下一步",
-      "infoCaption": "已被傳送到 Osmosis 社群資金池",
+      "infoCaption": "已被傳送到 NNX 社群資金池",
       "infoMessage": "流動性池建立費",
       "scalingFactorController": "比例因子控制器（可選)",
       "stablePool": "穩定池",
@@ -591,7 +591,7 @@
     "noResultsFor": "“ {query} ”沒有結果",
     "adjust": "嘗試調整您的搜尋查詢",
     "noPools": "沒有泳池",
-    "poolsEmpty": "目前 Osmosis 上沒有{denom}"
+    "poolsEmpty": "目前 NNX 上沒有{denom}"
   },
   "stake": {
     "available": "可用的",
@@ -671,7 +671,7 @@
       },
       "existingUser": {
         "title": "看起來您之前已經投注過",
-        "description": "我們檢測到與您的錢包地址相關的現有權益小組。您想在 Osmosis 上保留相同的驗證器嗎？",
+        "description": "我們檢測到與您的錢包地址相關的現有權益小組。您想在 NNX 上保留相同的驗證器嗎？",
         "buttonKeep": "保留現有驗證器",
         "buttonSelect": "選擇新的驗證器"
       }
@@ -795,7 +795,7 @@
     "selectWithdrawWallet": "選擇{network}錢包",
     "depositTakingLonger": "存款時間比預期的要長",
     "withdrawalTakingLonger": "提款時間比預期的要長",
-    "depositAssetDescription": "當您存入某些資產時，您可以選擇想要在 Osmosis 上接收的資產版本。",
+    "depositAssetDescription": "當您存入某些資產時，您可以選擇想要在 NNX 上接收的資產版本。",
     "withdrawAssetDescription": "當您提取某些資產時，您可以選擇您想要在目標網路上接收哪個版本的資產。",
     "estimatingTime": "預計時間",
     "calculatingFees": "計算費用",
@@ -890,10 +890,10 @@
     "youNeedFundsToPay": "您需要資金來支付{chain}上的網路和橋接費。",
     "assetsDepositsUnavailable": "{asset}存款不可用",
     "assetWithdrawalsUnavailable": "{asset}提現不可用",
-    "noAvailableDeposits": "目前找不到可用的路線或提供者。請稍後再試或使用其他應用程式將您的資金轉移到 Osmosis。",
-    "noAvailableWithdrawals": "目前找不到可用的路線或提供者。請稍後重試或設定替代應用程式以從 Osmosis 轉移您的資金。",
+    "noAvailableDeposits": "目前找不到可用的路線或提供者。請稍後再試或使用其他應用程式將您的資金轉移到 NNX。",
+    "noAvailableWithdrawals": "目前找不到可用的路線或提供者。請稍後重試或設定替代應用程式以從 NNX 轉移您的資金。",
     "somethingIsntWorking": "有些東西不起作用…",
-    "sorryForTheInconvenience": "帶來不便敬請諒解。請刷新頁面並重試或使用其他應用程式將您的資金轉移到 Osmosis。",
+    "sorryForTheInconvenience": "帶來不便敬請諒解。請刷新頁面並重試或使用其他應用程式將您的資金轉移到 NNX。",
     "assetIsCurrentlyUnstable": "{asset}傳輸目前不穩定",
     "transferWillLikelyTakeLonger": "轉移可能需要比平常更長的時間，或者可能完全失敗。繼續需要您自擔風險。",
     "sendFromWalletOrExchange": "從您的錢包或交易所發送",
@@ -954,14 +954,14 @@
     },
     "disclaimer": {
       "title": "滲透免責聲明",
-      "description": "閱讀 Osmosis 的免責聲明和隱私政策 - 領先的去中心化 Cosmos 交易所"
+      "description": "閱讀 NNX 的免責聲明和隱私政策 - 領先的去中心化 Cosmos 交易所"
     },
     "pool": {
       "title": "水池 ＃"
     },
     "pools": {
       "title": "滲透池",
-      "description": "在 Osmosis 上發現流動性池——領先的去中心化 Cosmos 交易所"
+      "description": "在 NNX 上發現流動性池——領先的去中心化 Cosmos 交易所"
     }
   },
   "tokenInfos": {
@@ -1109,7 +1109,7 @@
     "noRecent": "最近沒有轉帳",
     "recentShownHere": "此處將顯示過去 3 天在此裝置上（某些網路之間）的存款和提款。",
     "noTransactions": "沒有交易",
-    "pastShownHere": "您過去在 Osmosis 上的交易將顯示在這裡。",
+    "pastShownHere": "您過去在 NNX 上的交易將顯示在這裡。",
     "connectToSee": "連接以查看您的交易記錄",
     "connectWallet": "連接錢包",
     "title": "交易",
@@ -1170,7 +1170,7 @@
         "title": "最近沒有訂單",
         "subtitle": "您的交易訂單歷史記錄將顯示在這裡。",
         "connectTitle": "連接您的錢包以查看您的訂單歷史記錄",
-        "connectSubtitle": "您過去在 Osmosis 上的限價訂單將顯示在此。"
+        "connectSubtitle": "您過去在 NNX 上的限價訂單將顯示在此。"
       }
     },
     "aboveMarket": {
@@ -1221,7 +1221,7 @@
     "tryHigherSlippage": "嘗試更高的最大滑動容差。",
     "reviewTrade": "審查交易",
     "errors": {
-      "noAssetAvailable": "您在 Osmosis 上沒有任何可用於交易的{coinName}資金。選擇一個選項繼續。",
+      "noAssetAvailable": "您在 NNX 上沒有任何可用於交易的{coinName}資金。選擇一個選項繼續。",
       "tradeMayResultInLossOfValue": "您的交易可能會導致重大價值損失",
       "tradeMayNotExecuted": "您的交易可能無法執行"
     },
@@ -1232,7 +1232,7 @@
     },
     "whatIsAStablecoin": {
       "title": "什麼是穩定幣？",
-      "description": "穩定幣是一種加密貨幣，其價值與另一種資產（例如法定貨幣或黃金）掛鉤，以維持穩定的價格。在 Osmosis 上，買賣資產的主要穩定幣是 USDC 和 USDT。"
+      "description": "穩定幣是一種加密貨幣，其價值與另一種資產（例如法定貨幣或黃金）掛鉤，以維持穩定的價格。在 NNX 上，買賣資產的主要穩定幣是 USDC 和 USDT。"
     },
     "claimAll": "索取全部",
     "addFunds": "增加資金",
@@ -1279,7 +1279,7 @@
     },
     "swapFees": {
       "header": "什麼是掉期費用？",
-      "content": "這是 Osmosis 協議為了獎勵流動性提供者和維護網路而收取的費用。"
+      "content": "這是 NNX 協議為了獎勵流動性提供者和維護網路而收取的費用。"
     },
     "tradeRoute": {
       "header": "什麼是貿易路線？",
@@ -1299,14 +1299,14 @@
   "previewAssetsEnabledForSession": "預覽為此會話啟用的資產。若要停用開啟新選項卡，或附加「show_preview_assets=false」。",
   "alloyedAssets": {
     "title": "偵測到變體",
-    "caption": "告別所有那些令人困惑的資產變體。迎接更無縫的 Osmosis 體驗。",
+    "caption": "告別所有那些令人困惑的資產變體。迎接更無縫的 NNX 體驗。",
     "remindMeLater": "稍後提醒我",
     "dismiss": "解僱",
     "convert": "轉變"
   },
   "assetVariantsConversion": {
     "title": "標準化資產",
-    "description": "將以下資產轉換為 Osmosis 上的標準化版本，以獲得更大的靈活性和更高的兼容性。",
+    "description": "將以下資產轉換為 NNX 上的標準化版本，以獲得更大的靈活性和更高的兼容性。",
     "learnMore": "了解更多",
     "errorLoading": "載入資源變體時出錯，請稍後重試。",
     "tooltipTitle": "滲透上的{coinName}",

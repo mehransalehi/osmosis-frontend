@@ -99,10 +99,10 @@
   "copied": "¡Copiado!",
   "app": {
     "banner": {
-      "backToOsmosis": "Regresar a Osmosis",
-      "externalLink": "Estás abandonando la aplicación de Osmosis para ir a",
-      "externalLinkDisclaimer": "Al hacer clic en el enlace, reconoce que ha leído y comprende que Osmosis no garantiza la calidad del servicio para páginas externas que pueden tener un TdS diferente.",
-      "externalLinkModalTitle": "Saliendo de Osmosis",
+      "backToOsmosis": "Regresar a NNX",
+      "externalLink": "Estás abandonando la aplicación de NNX para ir a",
+      "externalLinkDisclaimer": "Al hacer clic en el enlace, reconoce que ha leído y comprende que NNX no garantiza la calidad del servicio para páginas externas que pueden tener un TdS diferente.",
+      "externalLinkModalTitle": "Saliendo de NNX",
       "goToSite": "Ir al sitio",
       "doNotShowAgain": "No muestres esto de nuevo",
       "chainHalted": "Se detiene la cadena de ósmosis, las transacciones se inhabilitan temporalmente."
@@ -116,7 +116,7 @@
     "getFeatured": "Ser destacado",
     "featuredDescription": "Lanza en la tienda de aplicaciones y obtén acceso a miles de usuarios. Si quieres aparecer en la lista o ser destacado, ponte en contacto y nos pondremos en contacto contigo.",
     "applyButton": "Aplicar",
-    "storeDisclaimer": "Ciertos contenidos han sido preparados por terceros no afiliados a Osmosis Labs ni a ninguna de sus filiales, y Osmosis Labs no se hace responsable de dicho contenido. Osmosis Labs no es responsable de ningún error o retraso en el contenido, ni de ninguna acción tomada en función de dicho contenido. La información se proporciona únicamente con fines informativos y no constituye asesoramiento de inversión. Esto no es una recomendación para comprar o vender un activo digital en particular o emplear una estrategia de inversión en particular. Osmosis Labs no se hace responsable de la exactitud, idoneidad o validez de ninguna información proporcionada o de un activo en particular. Los precios mostrados son solo con fines ilustrativos. Los precios reales de las criptomonedas y las estadísticas asociadas pueden variar. Los datos presentados pueden reflejar los activos negociados en el intercambio de Osmosis Labs y en otros intercambios de criptomonedas seleccionados.",
+    "storeDisclaimer": "Ciertos contenidos han sido preparados por terceros no afiliados a NNX Labs ni a ninguna de sus filiales, y NNX Labs no se hace responsable de dicho contenido. NNX Labs no es responsable de ningún error o retraso en el contenido, ni de ninguna acción tomada en función de dicho contenido. La información se proporciona únicamente con fines informativos y no constituye asesoramiento de inversión. Esto no es una recomendación para comprar o vender un activo digital en particular o emplear una estrategia de inversión en particular. NNX Labs no se hace responsable de la exactitud, idoneidad o validez de ninguna información proporcionada o de un activo en particular. Los precios mostrados son solo con fines ilustrativos. Los precios reales de las criptomonedas y las estadísticas asociadas pueden variar. Los datos presentados pueden reflejar los activos negociados en el intercambio de NNX Labs y en otros intercambios de criptomonedas seleccionados.",
     "allAppsHeader": "Todas las aplicaciones"
   },
   "createFirstPositionCta": {
@@ -207,7 +207,7 @@
     "searchBalances": "Buscar saldos",
     "yourSuperchargedPositions": "Tus posiciones sobrealimentadas",
     "yourLiquidityPools": "Tus fondos de liquidez",
-    "connectWallet": "Conecte su billetera para comenzar a rastrear sus saldos y posiciones en Osmosis.",
+    "connectWallet": "Conecte su billetera para comenzar a rastrear sus saldos y posiciones en NNX.",
     "noAssets": "No tienes saldos en {osmosis}",
     "getStarted": "Deposite activos para comenzar",
     "noPositions": "no tienes posiciones",
@@ -418,7 +418,7 @@
         "spendLimitSubDescription": "Para todos los demás activos, establezca un límite en el valor máximo negociable antes de requerir la aprobación manual de la billetera. Las tarifas comerciales también cuentan para este límite.",
         "fixedAmount": "Cantidad fija",
         "shareOfBalance": "Participación del saldo",
-        "shareOfBalanceDescription": "{shareOfBalance} de su saldo total en Osmosis vale actualmente"
+        "shareOfBalanceDescription": "{shareOfBalance} de su saldo total en NNX vale actualmente"
       },
       "sessionPeriodScreen": {
         "title": "Período de sesión",
@@ -433,7 +433,7 @@
     },
     "welcomeBack": {
       "title": "Bienvenido de nuevo",
-      "subtitle": "Conecta tu billetera para continuar explorando Osmosis.",
+      "subtitle": "Conecta tu billetera para continuar explorando NNX.",
       "description": "Una vez que conecte su billetera, se le pedirá que apruebe una transacción para iniciar su sesión de negociación con 1 clic.",
       "toggleLabel": "Comercio con 1 clic",
       "editParamsAriaLabel": "Cambiar parámetros 1CT"
@@ -516,7 +516,7 @@
       "buttonAddToken": "Agregar token nuevo",
       "buttonCreate": "Crear Piscina",
       "buttonNext": "Siguiente",
-      "infoCaption": "Transferido a la piscina comunitaria de Osmosis",
+      "infoCaption": "Transferido a la piscina comunitaria de NNX",
       "infoMessage": "Tarifa de creación de piscina",
       "scalingFactorController": "Establecer controlador de factor de escala (opcional)",
       "stablePool": "Piscina estable",
@@ -591,7 +591,7 @@
     "noResultsFor": "No hay resultados para \" {query} \"",
     "adjust": "Intente ajustar su consulta de búsqueda",
     "noPools": "Sin piscinas",
-    "poolsEmpty": "Actualmente no hay grupos para {denom} en Osmosis"
+    "poolsEmpty": "Actualmente no hay grupos para {denom} en NNX"
   },
   "stake": {
     "available": "Disponible",
@@ -671,7 +671,7 @@
       },
       "existingUser": {
         "title": "Parece que has apostado antes",
-        "description": "Detectamos un escuadrón de participación existente asociado con la dirección de su billetera. ¿Te gustaría mantener los mismos validadores en Osmosis?",
+        "description": "Detectamos un escuadrón de participación existente asociado con la dirección de su billetera. ¿Te gustaría mantener los mismos validadores en NNX?",
         "buttonKeep": "Conservar los validadores existentes",
         "buttonSelect": "Seleccionar nuevos validadores"
       }
@@ -761,7 +761,7 @@
     "step2Title": "Sin cuentas. Sin contraseñas.",
     "step2Content": "Usa tu cartera para iniciar sesión en muchas plataformas diferentes. No hay cuentas o contraseñas únicas.",
     "step3Title": "Tus llaves, tus fondos.",
-    "step3Content": "En Osmosis, solo tú puedes mover tus activos. Con gran poder viene una gran responsabilidad.",
+    "step3Content": "En NNX, solo tú puedes mover tus activos. Con gran poder viene una gran responsabilidad.",
     "step4Title": "Crea una cartera para comenzar",
     "step4Content": "¡Configura tu primera cartera y comienza sesión! Enviar, recibir o comprar activos.",
     "yourConnectedWallets": "Tus billeteras conectadas",
@@ -795,7 +795,7 @@
     "selectWithdrawWallet": "Seleccione la billetera {network}",
     "depositTakingLonger": "El depósito tarda más de lo esperado",
     "withdrawalTakingLonger": "El retiro tarda más de lo esperado",
-    "depositAssetDescription": "Cuando deposita ciertos activos, puede elegir qué versión del activo desea recibir en Osmosis.",
+    "depositAssetDescription": "Cuando deposita ciertos activos, puede elegir qué versión del activo desea recibir en NNX.",
     "withdrawAssetDescription": "Cuando retira ciertos activos, puede elegir qué versión del activo desea recibir en la red de destino.",
     "estimatingTime": "tiempo estimado",
     "calculatingFees": "Calcular tarifas",
@@ -890,10 +890,10 @@
     "youNeedFundsToPay": "Necesita fondos para pagar las tarifas de red y puente en {chain} .",
     "assetsDepositsUnavailable": "Los depósitos {asset} no están disponibles",
     "assetWithdrawalsUnavailable": "Los retiros de {asset} no están disponibles",
-    "noAvailableDeposits": "Actualmente no se pueden encontrar rutas ni proveedores disponibles. Inténtelo de nuevo más tarde o utilice una aplicación alternativa para transferir sus fondos a Osmosis.",
-    "noAvailableWithdrawals": "Actualmente no se pueden encontrar rutas ni proveedores disponibles. Inténtelo de nuevo más tarde o configure una aplicación alternativa para transferir sus fondos desde Osmosis.",
+    "noAvailableDeposits": "Actualmente no se pueden encontrar rutas ni proveedores disponibles. Inténtelo de nuevo más tarde o utilice una aplicación alternativa para transferir sus fondos a NNX.",
+    "noAvailableWithdrawals": "Actualmente no se pueden encontrar rutas ni proveedores disponibles. Inténtelo de nuevo más tarde o configure una aplicación alternativa para transferir sus fondos desde NNX.",
     "somethingIsntWorking": "Algo no funciona…",
-    "sorryForTheInconvenience": "Lo siento por los inconvenientes ocasionados. Actualice la página e inténtelo nuevamente o use una aplicación alternativa para transferir sus fondos a Osmosis.",
+    "sorryForTheInconvenience": "Lo siento por los inconvenientes ocasionados. Actualice la página e inténtelo nuevamente o use una aplicación alternativa para transferir sus fondos a NNX.",
     "assetIsCurrentlyUnstable": "Las transferencias {asset} actualmente son inestables",
     "transferWillLikelyTakeLonger": "Es probable que las transferencias demoren más de lo habitual o que fallen por completo. Proceda bajo su propio riesgo.",
     "sendFromWalletOrExchange": "Envía desde tu billetera o exchange",
@@ -945,7 +945,7 @@
       "description": "Ocurrió un error interno del servidor."
     },
     "default": {
-      "title": "Opere en Osmosis Zone",
+      "title": "Opere en NNX Zone",
       "description": "Intercambie, gane y construya en el principal intercambio descentralizado de Cosmos: el DEX entre cadenas más grande"
     },
     "apps": {
@@ -954,14 +954,14 @@
     },
     "disclaimer": {
       "title": "Descargo de responsabilidad de ósmosis",
-      "description": "Lea el descargo de responsabilidad y la política de privacidad de Osmosis, el principal intercambio descentralizado de Cosmos"
+      "description": "Lea el descargo de responsabilidad y la política de privacidad de NNX, el principal intercambio descentralizado de Cosmos"
     },
     "pool": {
       "title": "Piscina #"
     },
     "pools": {
-      "title": "Piscinas de Osmosis",
-      "description": "Descubra fondos de liquidez en Osmosis, el principal intercambio descentralizado de Cosmos"
+      "title": "Piscinas de NNX",
+      "description": "Descubra fondos de liquidez en NNX, el principal intercambio descentralizado de Cosmos"
     }
   },
   "tokenInfos": {
@@ -994,13 +994,13 @@
     "marketCap": "Tapa del mercado",
     "fullyDilutedValuation": "Valoración totalmente diluida",
     "volume24h": "Volumen total 24h",
-    "volumeOnOsmosis": "Volumen 24h en Osmosis",
+    "volumeOnOsmosis": "Volumen 24h en NNX",
     "liquidityOnOsmosis": "Liquidez por ósmosis",
     "circulatingSupply": "Suministro circulante",
     "supplyOnOsmosis": "Suministro por Ósmosis",
     "underlyingAssets": {
       "title": "Activos subyacentes",
-      "description": "{name} ( {denom} ) en Osmosis se compone de {count} diferentes tipos de {name} .",
+      "description": "{name} ( {denom} ) en NNX se compone de {count} diferentes tipos de {name} .",
       "of": "de {denom}"
     }
   },
@@ -1071,7 +1071,7 @@
         "description": "El período de tiempo que una posición está vinculada antes de que se pueda salir de ella. Nota: No todos los períodos de desvinculación de estrategias* tienen distribuciones de recompensas."
       },
       "strategy": {
-        "description": "En Osmosis hay disponibles oportunidades de ingresos de varios tipos, alojadas en varias plataformas. Acceder a una estrategia requiere el depósito de activos específicos."
+        "description": "En NNX hay disponibles oportunidades de ingresos de varios tipos, alojadas en varias plataformas. Acceder a una estrategia requiere el depósito de activos específicos."
       },
       "risk": {
         "description": "La evaluación de riesgos implica considerar una combinación de criterios relacionados con una estrategia y sus activos subyacentes."
@@ -1109,7 +1109,7 @@
     "noRecent": "Sin transferencias recientes",
     "recentShownHere": "Los depósitos y retiros de los últimos 3 días en este dispositivo (entre ciertas redes) aparecerán aquí.",
     "noTransactions": "Sin transacciones",
-    "pastShownHere": "Tus operaciones anteriores en Osmosis aparecerán aquí.",
+    "pastShownHere": "Tus operaciones anteriores en NNX aparecerán aquí.",
     "connectToSee": "Conéctese para ver su historial de transacciones",
     "connectWallet": "Conectar billetera",
     "title": "Actas",
@@ -1170,7 +1170,7 @@
         "title": "No hay pedidos recientes",
         "subtitle": "Su historial de órdenes comerciales aparecerá aquí.",
         "connectTitle": "Conecte su billetera para ver su historial de pedidos",
-        "connectSubtitle": "Tus órdenes límite anteriores en Osmosis aparecerán aquí."
+        "connectSubtitle": "Tus órdenes límite anteriores en NNX aparecerán aquí."
       }
     },
     "aboveMarket": {
@@ -1215,13 +1215,13 @@
     "youNeed": "Necesitas",
     "stablecoin": "moneda estable",
     "quoteUpdated": "Cotización actualizada",
-    "fundsOsmosisToBuyAssets": "fondos en Osmosis para comprar activos.",
+    "fundsOsmosisToBuyAssets": "fondos en NNX para comprar activos.",
     "chooseAnOption": "Elija una opción para continuar.",
     "lowerSlippageToleranceRecommended": "Se recomienda una menor tolerancia al deslizamiento.",
     "tryHigherSlippage": "Pruebe con una tolerancia máxima de deslizamiento más alta.",
     "reviewTrade": "Revisar el comercio",
     "errors": {
-      "noAssetAvailable": "No tienes fondos {coinName} en Osmosis para operar. Elija una opción para continuar.",
+      "noAssetAvailable": "No tienes fondos {coinName} en NNX para operar. Elija una opción para continuar.",
       "tradeMayResultInLossOfValue": "Su operación puede resultar en una pérdida significativa de valor",
       "tradeMayNotExecuted": "Es posible que su operación no se ejecute"
     },
@@ -1232,7 +1232,7 @@
     },
     "whatIsAStablecoin": {
       "title": "¿Qué es una moneda estable?",
-      "description": "Las monedas estables son un tipo de criptomoneda cuyo valor está vinculado a otro activo, como una moneda fiduciaria o el oro, para mantener un precio estable. En Osmosis, las principales monedas estables para comprar y vender activos son USDC y USDT."
+      "description": "Las monedas estables son un tipo de criptomoneda cuyo valor está vinculado a otro activo, como una moneda fiduciaria o el oro, para mantener un precio estable. En NNX, las principales monedas estables para comprar y vender activos son USDC y USDT."
     },
     "claimAll": "Reclamar todo",
     "addFunds": "Añadir fondos",
@@ -1279,11 +1279,11 @@
     },
     "swapFees": {
       "header": "¿Qué son las tarifas de swap?",
-      "content": "Esta es la tarifa que cobra el protocolo Osmosis para recompensar a los proveedores de liquidez y mantener la red."
+      "content": "Esta es la tarifa que cobra el protocolo NNX para recompensar a los proveedores de liquidez y mantener la red."
     },
     "tradeRoute": {
       "header": "¿Qué es una ruta comercial?",
-      "contentTop": " Si no existe un mercado directo entre los activos que estás negociando, Osmosis intentará que la transacción se realice realizando una serie de transacciones con otros activos para obtener el mejor precio en cualquier momento.",
+      "contentTop": " Si no existe un mercado directo entre los activos que estás negociando, NNX intentará que la transacción se realice realizando una serie de transacciones con otros activos para obtener el mejor precio en cualquier momento.",
       "contentBottom": "Para lograr una eficiencia óptima en función de la liquidez disponible, a veces las operaciones se dividirán en múltiples rutas con diferentes activos."
     },
     "outputDifference": {
@@ -1299,17 +1299,17 @@
   "previewAssetsEnabledForSession": "Obtenga una vista previa de los activos habilitados para esta sesión. Para deshabilitarlos, abra una nueva pestaña o agregue `show_preview_assets=false`.",
   "alloyedAssets": {
     "title": "Variantes detectadas",
-    "caption": "Dile adiós a todas esas variantes de activos confusas. Saluda a una experiencia más fluida en Osmosis.",
+    "caption": "Dile adiós a todas esas variantes de activos confusas. Saluda a una experiencia más fluida en NNX.",
     "remindMeLater": "Recuérdamelo más tarde",
     "dismiss": "Despedir",
     "convert": "Convertir"
   },
   "assetVariantsConversion": {
     "title": "Estandarizar activos",
-    "description": "Convierta los siguientes activos a su versión estandarizada en Osmosis para obtener mayor flexibilidad y compatibilidad.",
+    "description": "Convierta los siguientes activos a su versión estandarizada en NNX para obtener mayor flexibilidad y compatibilidad.",
     "learnMore": "Más información",
     "errorLoading": "Error al cargar variantes de activos, inténtelo de nuevo más tarde.",
-    "tooltipTitle": "{coinName} en Osmosis",
+    "tooltipTitle": "{coinName} en NNX",
     "tooltipDescription": "Osmosis consolida numerosas variantes de {coinDenom} en un activo simple para mayor flexibilidad y facilidad de uso.",
     "convert": "Convertir",
     "conversionFees": "Tarifas de conversión",

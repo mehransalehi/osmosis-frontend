@@ -161,7 +161,7 @@ const MainLayoutWrapper: FunctionComponent<{
       return [];
     }
 
-    if (levanaGeoblock?.allowed) {
+    if (levanaGeoblock?.allowed && false) {
       conditionalMenuItems.push(
         {
           label: t("menu.margin"),
@@ -290,27 +290,25 @@ const MainLayoutWrapper: FunctionComponent<{
     () => [
       {
         label: t("menu.help"),
-        link: "https://support.osmosis.zone/",
+        link: "#",
         icon: <Icon id="help-circle" className="h-6 w-6" />,
         amplitudeEvent: [EventName.Sidebar.supportClicked] as AmplitudeEvent,
       },
       {
         label: t("menu.vote"),
-        link:
-          osmosisWallet?.walletInfo?.governanceUrl ??
-          "https://wallet.keplr.app/chains/osmosis?tab=governance",
+        link: osmosisWallet?.walletInfo?.governanceUrl ?? "#",
         icon: <Icon id="vote" className="h-6 w-6" />,
         amplitudeEvent: [EventName.Sidebar.voteClicked] as AmplitudeEvent,
       },
       {
         label: t("menu.info"),
-        link: "https://www.datalenses.zone/chain/osmosis/overview",
+        link: "#",
         icon: <Icon id="chart" className="h-6 w-6" />,
         amplitudeEvent: [EventName.Sidebar.infoClicked] as AmplitudeEvent,
       },
       {
         label: t("menu.featureRequests"),
-        link: "https://forum.osmosis.zone/c/site-feedback/2",
+        link: "#",
         icon: <Icon id="gift" className="h-6 w-6" />,
       },
     ],
