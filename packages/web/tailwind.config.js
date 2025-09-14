@@ -323,5 +323,14 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["dark", "light", "cupcake"], // load only these themes
+    darkTheme: "dark", // which one is used when dark mode is active
+    base: true, // include base styles like typography etc
+    styled: true, // include component classes (btn, card…)
+    utils: true, // include DaisyUI utility classes
+    prefix: "", // no prefix, but you can set "ds-" if needed
+    logs: true, // show DaisyUI config logs in console
+  },
 };

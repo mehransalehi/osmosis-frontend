@@ -33,6 +33,7 @@ import { Icon } from "~/components/assets";
 import { ErrorFallback } from "~/components/error/error-fallback";
 import { Pill } from "~/components/indicators/pill";
 import { MainLayout } from "~/components/layouts";
+import { AdminLayout } from "~/components/layouts";
 import { MainLayoutMenu } from "~/components/main-menu";
 import { AmplitudeEvent, EventName } from "~/config";
 import { wagmiConfig } from "~/config/wagmi";
@@ -77,9 +78,17 @@ const MoonPayProvider = dynamic(
   { ssr: false }
 );
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
   useAmplitudeAnalytics({ init: true });
+  const isDashboard = router.pathname.startsWith("/dashboard");
 
+  if (isDashboard) {
+    return (
+      <AdminLayout>
+        <Component {...pageProps} />
+      </AdminLayout>
+    );
+  }
   return (
     <WagmiProvider config={wagmiConfig}>
       <MultiLanguageProvider
