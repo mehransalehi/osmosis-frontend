@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import "react-toastify/dist/ReactToastify.css"; // some styles overridden in globals.css
 import "../styles/globals.css"; // eslint-disable-line no-restricted-imports
 
@@ -17,6 +18,7 @@ import { enableStaticRendering, observer } from "mobx-react-lite";
 import type { AppProps } from "next/app";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { SessionProvider } from "next-auth/react";
 import {
   ComponentType,
   FunctionComponent,
@@ -84,43 +86,47 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
   if (isDashboard) {
     return (
-      <AdminLayout>
-        <Component {...pageProps} />
-      </AdminLayout>
+      <SessionProvider session={pageProps.session}>
+        <AdminLayout>
+          <Component {...pageProps} />
+        </AdminLayout>
+      </SessionProvider>
     );
   }
   return (
-    <WagmiProvider config={wagmiConfig}>
-      <MultiLanguageProvider
-        defaultLanguage={DEFAULT_LANGUAGE}
-        defaultTranslations={{ en }}
-      >
-        <StoreProvider>
-          <WalletSelectProvider>
-            <MoonPayProvider
-              apiKey={process.env.NEXT_PUBLIC_MOONPAY_PUBLIC_KEY ?? ""}
-              debug={process.env.NODE_ENV === "development"}
-            >
-              <ErrorBoundary fallback={<ErrorFallback />}>
-                <SEO />
-                <SpeedInsights />
-                <ToastContainer
-                  toastStyle={{
-                    backgroundColor: "#2d2755",
-                  }}
-                  transition={Bounce}
-                  newestOnTop
-                />
-                <MainLayoutWrapper>
-                  {Component && <Component {...pageProps} />}
-                </MainLayoutWrapper>
-                <ImmersiveBridge />
-              </ErrorBoundary>
-            </MoonPayProvider>
-          </WalletSelectProvider>
-        </StoreProvider>
-      </MultiLanguageProvider>
-    </WagmiProvider>
+    <SessionProvider session={pageProps.session}>
+      <WagmiProvider config={wagmiConfig}>
+        <MultiLanguageProvider
+          defaultLanguage={DEFAULT_LANGUAGE}
+          defaultTranslations={{ en }}
+        >
+          <StoreProvider>
+            <WalletSelectProvider>
+              <MoonPayProvider
+                apiKey={process.env.NEXT_PUBLIC_MOONPAY_PUBLIC_KEY ?? ""}
+                debug={process.env.NODE_ENV === "development"}
+              >
+                <ErrorBoundary fallback={<ErrorFallback />}>
+                  <SEO />
+                  <SpeedInsights />
+                  <ToastContainer
+                    toastStyle={{
+                      backgroundColor: "#2d2755",
+                    }}
+                    transition={Bounce}
+                    newestOnTop
+                  />
+                  <MainLayoutWrapper>
+                    {Component && <Component {...pageProps} />}
+                  </MainLayoutWrapper>
+                  <ImmersiveBridge />
+                </ErrorBoundary>
+              </MoonPayProvider>
+            </WalletSelectProvider>
+          </StoreProvider>
+        </MultiLanguageProvider>
+      </WagmiProvider>
+    </SessionProvider>
   );
 }
 

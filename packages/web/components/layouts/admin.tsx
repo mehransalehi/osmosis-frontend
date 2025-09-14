@@ -1,12 +1,15 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { signOut, useSession } from "next-auth/react";
 import React from "react";
 
+import logo from "~/public/images/logo.png";
 interface Props {
   children: React.ReactNode;
 }
 const links = [
-  { text: "Home", href: "/dashboard", icon: "fa-regular fa-house" },
+  { text: "Home", href: "/dashboard", icon: "fa-solid fa-house" },
   { text: "Ads", href: "/dashboard/ads", icon: "fa-solid fa-headset" },
   { text: "Notification", href: "/dashboard/notif", icon: "fa-solid fa-bell" },
   { text: "Contact", href: "/dashboard/contact", icon: "fa-solid fa-comments" },
@@ -15,18 +18,21 @@ const links = [
 ];
 export function AdminLayout({ children }: Props) {
   const pathname = usePathname();
+  const { data: session, status } = useSession();
   return (
     <>
       <div className="min-h-screen flex flex-col bg-gray-50">
         <div className="navbar bg-base-100">
           <div className="flex-1">
-            <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+            <Link className="btn btn-ghost normal-case text-xl" href="/">
+              <img src={logo.src} alt="logo" className="h-full" />
+            </Link>
           </div>
           <div className="flex-none">
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                <div className="w-10 rounded-full">
-                  <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <div className="w-10 rounded-full border border-primary !flex justify-center items-center">
+                  <i className="fa-solid fa-user"></i>
                 </div>
               </label>
               <ul
@@ -34,16 +40,17 @@ export function AdminLayout({ children }: Props) {
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <a className="justify-between">
-                    Profile
-                    <span className="badge">New</span>
-                  </a>
+                  <span className="justify-between">
+                    {session?.user?.email}
+                  </span>
                 </li>
                 <li>
-                  <a>Settings</a>
+                  <span>Settings</span>
                 </li>
                 <li>
-                  <a>Logout</a>
+                  <button onClick={() => signOut({ callbackUrl: "/login" })}>
+                    Logout
+                  </button>
                 </li>
               </ul>
             </div>
@@ -68,10 +75,10 @@ export function AdminLayout({ children }: Props) {
                   );
                 })}
                 <li>
-                  <a>
+                  <button onClick={() => signOut({ callbackUrl: "/login" })}>
                     <i className="fa-solid fa-right-from-bracket"></i>
                     Logout
-                  </a>
+                  </button>
                 </li>
               </ul>
               <div className="col-span-10 h-full p-6">{children}</div>
@@ -90,10 +97,10 @@ export function AdminLayout({ children }: Props) {
               ></label>
               <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
                 <li>
-                  <a>Sidebar Item 1</a>
+                  <span>Sidebar Item 1</span>
                 </li>
                 <li>
-                  <a>Sidebar Item 2</a>
+                  <span>Sidebar Item 2</span>
                 </li>
               </ul>
             </div>

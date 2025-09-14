@@ -83,12 +83,12 @@ export const MainLayout = observer(
           </div>
         </div>
         <NavBar
-          className="ml-sidebar md:ml-0"
+          className="ml-sidebar md:ml-0 h-full"
           title={navBarTitle}
           menus={menus}
           secondaryMenuItems={secondaryMenuItems}
         />
-        <div className="ml-sidebar md:ml-0">{children}</div>
+        <div className="ml-sidebar md:ml-0 h-full">{children}</div>
         <AssetVariantsConversionModal />
       </React.Fragment>
     );
