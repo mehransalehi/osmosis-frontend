@@ -13,7 +13,7 @@ export default function Login() {
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
 
-  const { data: session, status } = useSession();
+  const { status } = useSession();
   // ✅ Redirect if already logged in
   useEffect(() => {
     if (status === "authenticated") {

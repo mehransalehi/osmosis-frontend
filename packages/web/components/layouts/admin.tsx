@@ -19,7 +19,7 @@ const links = [
 ];
 export function AdminLayout({ children }: Props) {
   const pathname = usePathname();
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
   const [theme, setTheme] = useState<string>("winter");
 
   useEffect(() => {

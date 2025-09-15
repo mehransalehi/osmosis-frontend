@@ -15,6 +15,7 @@ import { MyPositionsSection } from "~/components/complex/my-positions-section";
 import { SuperchargePool } from "~/components/funnels/concentrated-liquidity";
 import { Spinner } from "~/components/loaders/spinner";
 import { Button, ChartButton } from "~/components/ui/button";
+import { EntityImage } from "~/components/ui/entity-image";
 import { EventName } from "~/config";
 import {
   useAmplitudeAnalytics,

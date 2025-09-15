@@ -52,7 +52,10 @@ export const authOptions: AuthOptions = {
     },
     async session({ session, token }) {
       if (token) {
-        session.user = { id: token.id, email: token.email };
+        session.user = {
+          id: token.id,
+          email: token.email ?? null, // ← converts undefined to null
+        };
       }
       return session;
     },
