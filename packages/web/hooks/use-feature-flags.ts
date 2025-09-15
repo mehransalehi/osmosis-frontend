@@ -16,7 +16,7 @@ const defaultFlags: Record<AvailableFlags, boolean> = {
   aprBreakdown: true,
   topAnnouncementBanner: true,
   tfmProTradingNavbarButton: false,
-  positionRoi: true,
+  positionRoi: false,
   swapToolSimulateFee: true,
   displayDailyEarn: false,
   newDepositWithdrawFlow: true,
@@ -38,7 +38,9 @@ const defaultFlags: Record<AvailableFlags, boolean> = {
   transak: true,
   polarisBanner: false,
 };
-
+/* const defaultFlags: Record<AvailableFlags, boolean> = {
+  inGivenOut: true,
+}; */
 export function useFeatureFlags() {
   const launchdarklyFlags: Record<AvailableFlags, boolean> = useFlags();
   const { isMobile } = useWindowSize();
