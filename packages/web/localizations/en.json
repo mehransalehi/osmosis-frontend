@@ -105,7 +105,7 @@
       "externalLinkModalTitle": "Leaving NNX",
       "goToSite": "Continue to Site",
       "doNotShowAgain": "Do not show this again",
-      "chainHalted": "Osmosis chain is halted, transactions are temporarily disabled."
+      "chainHalted": "NNX chain is halted, transactions are temporarily disabled."
     }
   },
   "store": {
@@ -193,7 +193,7 @@
     }
   },
   "cypherCard": {
-    "cypherSpend": "Osmosis Pay",
+    "cypherSpend": "NNX Pay",
     "cypherOrder": "Order your card now",
     "cypherBeta": "Beta",
     "acceptedEverywhere": "Your OSMO, now accepted everywhere",
@@ -208,7 +208,7 @@
     "yourSuperchargedPositions": "Your Supercharged positions",
     "yourLiquidityPools": "Your liquidity pools",
     "connectWallet": "Connect your wallet to get started with tracking your balances and positions on NNX.",
-    "noAssets": "You have no balances on {osmosis}",
+    "noAssets": "You have no balances on {NNX }",
     "getStarted": "Deposit assets to get started",
     "noPositions": "You have no positions",
     "unlockPotential": "Unlock your full earning potential and put your assets to work with liquidity pools",
@@ -629,7 +629,7 @@
     "learnMore": {
       "step1": {
         "title": "What is staking?",
-        "bodyText": "Osmosis uses a mechanism called “Proof of Stake” to verify and secure all transactions. When you stake your OSMO, the blockchain puts it to work allowing you to earn passively on your assets."
+        "bodyText": "NNX uses a mechanism called “Proof of Stake” to verify and secure all transactions. When you stake your OSMO, the blockchain puts it to work allowing you to earn passively on your assets."
       },
       "step2": {
         "title": "Validators",
@@ -949,18 +949,18 @@
       "description": "Swap, earn, and build on the leading decentralized Cosmos exchange - The largest interchain DEX"
     },
     "apps": {
-      "title": "Osmosis App Store",
+      "title": "NNX App Store",
       "description": "Trading is just the first step. Put your assets to work and accomplish so much more with leverage, vaults, and beyond"
     },
     "disclaimer": {
-      "title": "Osmosis Disclaimer",
+      "title": "NNX Disclaimer",
       "description": "Read the disclaimer and privacy policy for the NNX - the leading decentralized Cosmos exchange"
     },
     "pool": {
       "title": "Pool #{id}"
     },
     "pools": {
-      "title": "Osmosis Pools",
+      "title": "NNX Pools",
       "description": "Discover liquidity pools on NNX - the leading decentralized Cosmos exchange"
     }
   },
@@ -994,7 +994,7 @@
     "marketCap": "Market cap",
     "fullyDilutedValuation": "Fully diluted valuation",
     "volume24h": "Total volume (24h)",
-    "volumeOnOsmosis": "Osmosis volume (24h)",
+    "volumeOnOsmosis": "NNX volume (24h)",
     "liquidityOnOsmosis": "Liquidity on NNX",
     "circulatingSupply": "Circulating supply",
     "supplyOnOsmosis": "Supply on NNX",
@@ -1005,7 +1005,7 @@
     }
   },
   "osmosisUpdates": {
-    "osmosisUpdates": "Osmosis updates!",
+    "osmosisUpdates": "NNX updates!",
     "seeWhatsNew": "See what's new"
   },
   "earnPage": {
@@ -1310,7 +1310,7 @@
     "learnMore": "Learn more",
     "errorLoading": "Error loading asset variants, please try again later.",
     "tooltipTitle": "{coinName} on NNX",
-    "tooltipDescription": "Osmosis consolidates numerous variants of {coinDenom} into one simple asset for more flexibility and ease of use.",
+    "tooltipDescription": "NNX consolidates numerous variants of {coinDenom} into one simple asset for more flexibility and ease of use.",
     "convert": "Convert",
     "conversionFees": "Conversion fees",
     "free": "Free",

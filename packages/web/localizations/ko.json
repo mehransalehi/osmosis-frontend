@@ -100,12 +100,12 @@
   "app": {
     "banner": {
       "backToOsmosis": "Osmosis로 돌아가기",
-      "externalLink": "Osmosis 앱을 떠나 외부 링크로 이동합니다.",
+      "externalLink": "NNX 앱을 떠나 외부 링크로 이동합니다.",
       "externalLinkDisclaimer": "링크를 클릭함으로써, 당신은 NNX가 다른 ToS를 가질 수 있는 외부 페이지에 대한 서비스 품질을 보장하지 않음을 읽었고 이해한 것을 인정하는 것입니다.",
-      "externalLinkModalTitle": "Osmosis 떠나기",
+      "externalLinkModalTitle": "NNX 떠나기",
       "goToSite": "사이트로 가기",
       "doNotShowAgain": "다시 표시하지 않음",
-      "chainHalted": "Osmosis 체인이 중단되고 거래가 일시적으로 비활성화됩니다."
+      "chainHalted": "NNX 체인이 중단되고 거래가 일시적으로 비활성화됩니다."
     }
   },
   "store": {
@@ -516,7 +516,7 @@
       "buttonAddToken": "새로운 토큰 추가히기",
       "buttonCreate": "풀 생성하기",
       "buttonNext": "다음",
-      "infoCaption": "Osmosis 커뮤니티풀로 전송됩니다",
+      "infoCaption": "NNX 커뮤니티풀로 전송됩니다",
       "infoMessage": "풀 생성 수수료",
       "scalingFactorController": "단위조정인수 제어자 설정(선택 사항)",
       "stablePool": "스테이블 풀",
@@ -945,7 +945,7 @@
       "description": "내부 서버 오류가 발생했습니다."
     },
     "default": {
-      "title": "Osmosis Zone에서 거래",
+      "title": "NNX Zone에서 거래",
       "description": "가장 큰 인터체인 DEX인 선도적인 탈중앙화 Cosmos 거래소에서 스왑, 수익 및 구축"
     },
     "apps": {

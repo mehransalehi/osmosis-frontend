@@ -101,7 +101,7 @@
     "banner": {
       "backToOsmosis": "Retour à NNX",
       "externalLink": "Vous quittez maintenant l'application NNX pour aller à",
-      "externalLinkDisclaimer": "En cliquant sur le lien, vous reconnaissez avoir lu et compris qu'Osmosis ne donne aucune garantie de qualité de service pour les pages externes qui peuvent avoir des CGU différentes.",
+      "externalLinkDisclaimer": "En cliquant sur le lien, vous reconnaissez avoir lu et compris qu'NNX ne donne aucune garantie de qualité de service pour les pages externes qui peuvent avoir des CGU différentes.",
       "externalLinkModalTitle": "Quitter NNX",
       "goToSite": "Aller au site",
       "doNotShowAgain": "Ne montre plus cela",
@@ -116,7 +116,7 @@
     "getFeatured": "Être en vedette",
     "featuredDescription": "Lancez-vous sur l'App Store et accédez à des milliers d'utilisateurs. Si vous souhaitez être répertorié ou mis en vedette, contactez-nous et nous vous répondrons.",
     "applyButton": "Appliquer",
-    "storeDisclaimer": "Certains contenus ont été préparés par des tiers non affiliés à NNX Labs ou à l'une de ses filiales et NNX Labs n'est pas responsable de ces contenus. NNX Labs n'est pas responsable des erreurs ou des retards dans le contenu, ni des actions entreprises en se basant sur un quelconque contenu. Les informations sont fournies à des fins informatives uniquement et ne constituent pas un conseil en investissement. Ceci n'est pas une recommandation d'achat ou de vente d'un actif numérique particulier ou d'adoption d'une stratégie d'investissement particulière. NNX Labs ne fait aucune déclaration quant à l'exactitude, à la pertinence ou à la validité des informations fournies ou pour un actif particulier. Les prix indiqués sont à titre illustratif seulement. Les prix réels des cryptomonnaies et les statistiques associées peuvent varier. Les données présentées peuvent refléter les actifs échangés sur la plateforme d'échange d'Osmosis Labs et d'autres plateformes d'échange de cryptomonnaies sélectionnées.",
+    "storeDisclaimer": "Certains contenus ont été préparés par des tiers non affiliés à NNX Labs ou à l'une de ses filiales et NNX Labs n'est pas responsable de ces contenus. NNX Labs n'est pas responsable des erreurs ou des retards dans le contenu, ni des actions entreprises en se basant sur un quelconque contenu. Les informations sont fournies à des fins informatives uniquement et ne constituent pas un conseil en investissement. Ceci n'est pas une recommandation d'achat ou de vente d'un actif numérique particulier ou d'adoption d'une stratégie d'investissement particulière. NNX Labs ne fait aucune déclaration quant à l'exactitude, à la pertinence ou à la validité des informations fournies ou pour un actif particulier. Les prix indiqués sont à titre illustratif seulement. Les prix réels des cryptomonnaies et les statistiques associées peuvent varier. Les données présentées peuvent refléter les actifs échangés sur la plateforme d'échange d'NNX Labs et d'autres plateformes d'échange de cryptomonnaies sélectionnées.",
     "allAppsHeader": "Toutes les applications"
   },
   "createFirstPositionCta": {
@@ -629,7 +629,7 @@
     "learnMore": {
       "step1": {
         "title": "Qu’est-ce que le jalonnement ?",
-        "bodyText": "Osmosis utilise un mécanisme appelé « Proof of Stake » pour vérifier et sécuriser toutes les transactions. Lorsque vous misez votre OSMO, la blockchain le met en œuvre vous permettant de gagner passivement sur vos actifs."
+        "bodyText": "NNX utilise un mécanisme appelé « Proof of Stake » pour vérifier et sécuriser toutes les transactions. Lorsque vous misez votre OSMO, la blockchain le met en œuvre vous permettant de gagner passivement sur vos actifs."
       },
       "step2": {
         "title": "Validateurs",
@@ -954,7 +954,7 @@
     },
     "disclaimer": {
       "title": "Avis de non-responsabilité sur l'osmose",
-      "description": "Lisez la clause de non-responsabilité et la politique de confidentialité d'Osmosis - le principal échange Cosmos décentralisé"
+      "description": "Lisez la clause de non-responsabilité et la politique de confidentialité d'NNX - le principal échange Cosmos décentralisé"
     },
     "pool": {
       "title": "Piscine #"
@@ -1310,7 +1310,7 @@
     "learnMore": "Apprendre encore plus",
     "errorLoading": "Erreur lors du chargement des variantes d'actifs, veuillez réessayer ultérieurement.",
     "tooltipTitle": "{coinName} sur NNX",
-    "tooltipDescription": "Osmosis consolide de nombreuses variantes de {coinDenom} en un seul actif simple pour plus de flexibilité et de facilité d'utilisation.",
+    "tooltipDescription": "NNX consolide de nombreuses variantes de {coinDenom} en un seul actif simple pour plus de flexibilité et de facilité d'utilisation.",
     "convert": "Convertir",
     "conversionFees": "Frais de conversion",
     "free": "Gratuit",

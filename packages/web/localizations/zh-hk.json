@@ -105,7 +105,7 @@
       "externalLinkModalTitle": "離開Osmosis",
       "goToSite": "前往網站",
       "doNotShowAgain": "不要再顯示此內容",
-      "chainHalted": "Osmosis 鏈停止，交易暫時停用。"
+      "chainHalted": "NNX 鏈停止，交易暫時停用。"
     }
   },
   "store": {
@@ -116,7 +116,7 @@
     "getFeatured": "獲得精選",
     "featuredDescription": "在應用商店上架，並接觸到成千上萬的用戶。如果您想上榜或獲得精選，請聯繫我們，我們將保持聯繫。",
     "applyButton": "申請",
-    "storeDisclaimer": "部分內容由與 NNX Labs 或其任何附屬公司無關的第三方準備，Osmosis Labs 對此類內容不承擔責任。Osmosis Labs 不對內容中的任何錯誤或延遲，或因依賴任何內容而採取的任何行動承擔責任。信息僅供參考，不構成投資建議。這不是購買或出售特定數字資產或采用特定投資策略的建議。 NNX Labs 不對所提供的任何信息的准確性、適當性或有效性，或針對特定資產作出任何陳述。顯示的價格僅用於說明目的。實際加密貨幣價格及相關統計數據可能有所不同。所呈現的數據可能反映在 NNX Labs 交易所及選定的其他加密貨幣交易所上交易的資產。",
+    "storeDisclaimer": "部分內容由與 NNX Labs 或其任何附屬公司無關的第三方準備，NNX Labs 對此類內容不承擔責任。NNX Labs 不對內容中的任何錯誤或延遲，或因依賴任何內容而採取的任何行動承擔責任。信息僅供參考，不構成投資建議。這不是購買或出售特定數字資產或采用特定投資策略的建議。 NNX Labs 不對所提供的任何信息的准確性、適當性或有效性，或針對特定資產作出任何陳述。顯示的價格僅用於說明目的。實際加密貨幣價格及相關統計數據可能有所不同。所呈現的數據可能反映在 NNX Labs 交易所及選定的其他加密貨幣交易所上交易的資產。",
     "allAppsHeader": "所有應用"
   },
   "createFirstPositionCta": {
@@ -629,7 +629,7 @@
     "learnMore": {
       "step1": {
         "title": "什麼是質押？",
-        "bodyText": "Osmosis 使用一種稱為「權益證明」的機制來驗證和保護所有交易。當您質押 OSMO 時，區塊鏈會使其發揮作用，讓您可以被動地從資產中獲利。"
+        "bodyText": "NNX 使用一種稱為「權益證明」的機制來驗證和保護所有交易。當您質押 OSMO 時，區塊鏈會使其發揮作用，讓您可以被動地從資產中獲利。"
       },
       "step2": {
         "title": "驗證者",
@@ -1000,7 +1000,7 @@
     "supplyOnOsmosis": "滲透供應",
     "underlyingAssets": {
       "title": "基礎資產",
-      "description": "Osmosis 上的 { {name} ( {denom} ) 由{count}不同類型的{name} 。",
+      "description": "NNX 上的 { {name} ( {denom} ) 由{count}不同類型的{name} 。",
       "of": "{denom}"
     }
   },
@@ -1071,7 +1071,7 @@
         "description": "頭寸在可以退出之前被綁定的時間段。注意：並非所有策略解除綁定*期間都有獎勵分配。"
       },
       "strategy": {
-        "description": "Osmosis 上提供由各種平台託管的各種類型的賺錢機會。存取策略需要存入特定資產。"
+        "description": "NNX 上提供由各種平台託管的各種類型的賺錢機會。存取策略需要存入特定資產。"
       },
       "risk": {
         "description": "風險評估涉及考慮與策略及其基礎資產相關的標準組合。"
@@ -1215,7 +1215,7 @@
     "youNeed": "你需要",
     "stablecoin": "穩定幣",
     "quoteUpdated": "報價已更新",
-    "fundsOsmosisToBuyAssets": "Osmosis 上的資金用於購買資產。",
+    "fundsOsmosisToBuyAssets": "NNX 上的資金用於購買資產。",
     "chooseAnOption": "選擇一個選項繼續。",
     "lowerSlippageToleranceRecommended": "建議採用較低的滑移容差。",
     "tryHigherSlippage": "嘗試更高的最大滑動容差。",
@@ -1283,7 +1283,7 @@
     },
     "tradeRoute": {
       "header": "什麼是貿易路線？",
-      "contentTop": " 如果您正在交易的資產之間沒有直接市場，Osmosis 將嘗試透過與其他資產進行一系列交易來實現交易，以便在任何給定時間獲得最佳價格。",
+      "contentTop": " 如果您正在交易的資產之間沒有直接市場，NNX 將嘗試透過與其他資產進行一系列交易來實現交易，以便在任何給定時間獲得最佳價格。",
       "contentBottom": "為了根據可用流動性實現最佳效率，有時交易會被分成具有不同資產的多條路線。"
     },
     "outputDifference": {
@@ -1310,7 +1310,7 @@
     "learnMore": "了解更多",
     "errorLoading": "載入資源變體時出錯，請稍後重試。",
     "tooltipTitle": "滲透上的{coinName}",
-    "tooltipDescription": "Osmosis 將{coinDenom}的眾多變體合併為一種簡單的資產，以提高靈活性和易用性。",
+    "tooltipDescription": "NNX 將{coinDenom}的眾多變體合併為一種簡單的資產，以提高靈活性和易用性。",
     "convert": "轉變",
     "conversionFees": "轉換費",
     "free": "自由的",

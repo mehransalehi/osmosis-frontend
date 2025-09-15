@@ -208,7 +208,7 @@
     "yourSuperchargedPositions": "Ihre Supercharged-Positionen",
     "yourLiquidityPools": "Ihre Liquiditätspools",
     "connectWallet": "Verbinden Sie Ihr Portemonnaie, um mit der Verfolgung Ihrer Guthaben und Positionen auf NNX zu beginnen.",
-    "noAssets": "Sie haben keine Guthaben auf {osmosis}",
+    "noAssets": "Sie haben keine Guthaben auf {osmosis }",
     "getStarted": "Zahlen Sie Guthaben ein, um loszulegen",
     "noPositions": "Sie haben keine Positionen",
     "unlockPotential": "Schöpfen Sie Ihr volles Ertragspotenzial aus und nutzen Sie Ihr Vermögen mit Liquiditätspools",
@@ -629,7 +629,7 @@
     "learnMore": {
       "step1": {
         "title": "Was ist Abstecken?",
-        "bodyText": "Osmosis verwendet einen Mechanismus namens „Proof of Stake“, um alle Transaktionen zu überprüfen und zu sichern. Wenn Sie Ihr OSMO einsetzen, setzt die Blockchain es in Gang, sodass Sie passiv mit Ihrem Vermögen verdienen können."
+        "bodyText": "NNX verwendet einen Mechanismus namens „Proof of Stake“, um alle Transaktionen zu überprüfen und zu sichern. Wenn Sie Ihr OSMO einsetzen, setzt die Blockchain es in Gang, sodass Sie passiv mit Ihrem Vermögen verdienen können."
       },
       "step2": {
         "title": "Validatoren",
@@ -1310,7 +1310,7 @@
     "learnMore": "Mehr erfahren",
     "errorLoading": "Beim Laden der Asset-Varianten ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.",
     "tooltipTitle": "{coinName} auf NNX",
-    "tooltipDescription": "Osmosis konsolidiert zahlreiche Varianten von {coinDenom} in einem einfachen Asset für mehr Flexibilität und Benutzerfreundlichkeit.",
+    "tooltipDescription": "NNX konsolidiert zahlreiche Varianten von {coinDenom} in einem einfachen Asset für mehr Flexibilität und Benutzerfreundlichkeit.",
     "convert": "Konvertieren",
     "conversionFees": "Umtauschgebühren",
     "free": "Frei",

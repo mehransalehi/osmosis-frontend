@@ -208,7 +208,7 @@
     "yourSuperchargedPositions": "Tus posiciones sobrealimentadas",
     "yourLiquidityPools": "Tus fondos de liquidez",
     "connectWallet": "Conecte su billetera para comenzar a rastrear sus saldos y posiciones en NNX.",
-    "noAssets": "No tienes saldos en {osmosis}",
+    "noAssets": "No tienes saldos en {NNX }",
     "getStarted": "Deposite activos para comenzar",
     "noPositions": "no tienes posiciones",
     "unlockPotential": "Libere todo su potencial de ganancias y ponga sus activos a trabajar con fondos de liquidez",
@@ -629,7 +629,7 @@
     "learnMore": {
       "step1": {
         "title": "¿Qué es apostar?",
-        "bodyText": "Osmosis utiliza un mecanismo llamado \"Prueba de participación\" para verificar y proteger todas las transacciones. Cuando apuesta su OSMO, la cadena de bloques lo pone a trabajar permitiéndole ganar pasivamente con sus activos."
+        "bodyText": "NNX utiliza un mecanismo llamado \"Prueba de participación\" para verificar y proteger todas las transacciones. Cuando apuesta su OSMO, la cadena de bloques lo pone a trabajar permitiéndole ganar pasivamente con sus activos."
       },
       "step2": {
         "title": "Validadores",
@@ -1310,7 +1310,7 @@
     "learnMore": "Más información",
     "errorLoading": "Error al cargar variantes de activos, inténtelo de nuevo más tarde.",
     "tooltipTitle": "{coinName} en NNX",
-    "tooltipDescription": "Osmosis consolida numerosas variantes de {coinDenom} en un activo simple para mayor flexibilidad y facilidad de uso.",
+    "tooltipDescription": "NNX consolida numerosas variantes de {coinDenom} en un activo simple para mayor flexibilidad y facilidad de uso.",
     "convert": "Convertir",
     "conversionFees": "Tarifas de conversión",
     "free": "Gratis",

@@ -1310,7 +1310,7 @@
     "learnMore": "Dowiedz się więcej",
     "errorLoading": "Błąd podczas ładowania wariantów zasobów. Spróbuj ponownie później.",
     "tooltipTitle": "{coinName} na temat NNX",
-    "tooltipDescription": "Osmosis konsoliduje liczne warianty {coinDenom} w jeden prosty zasób, co zapewnia większą elastyczność i łatwość użytkowania.",
+    "tooltipDescription": "NNX konsoliduje liczne warianty {coinDenom} w jeden prosty zasób, co zapewnia większą elastyczność i łatwość użytkowania.",
     "convert": "Konwertować",
     "conversionFees": "Opłaty za konwersję",
     "free": "Bezpłatny",
