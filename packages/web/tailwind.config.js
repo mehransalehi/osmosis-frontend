@@ -325,8 +325,8 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["dark", "light", "cupcake"], // load only these themes
-    darkTheme: "dark", // which one is used when dark mode is active
+    themes: ["dark", "winter", "synthwave"], // load only these themes
+    darkTheme: "synthwave", // which one is used when dark mode is active
     base: true, // include base styles like typography etc
     styled: true, // include component classes (btn, card…)
     utils: true, // include DaisyUI utility classes

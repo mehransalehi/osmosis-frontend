@@ -56,7 +56,7 @@ export function useFeatureFlags() {
 
   return {
     ...launchdarklyFlags,
-    ...(isDevModeWithoutClientID ? defaultFlags : {}),
+    ...(isDevModeWithoutClientID ? defaultFlags : defaultFlags),
     oneClickTrading: isDevModeWithoutClientID
       ? defaultFlags.oneClickTrading
       : !isMobile &&

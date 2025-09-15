@@ -4,12 +4,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@plugin "daisyui";
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
+
 @layer base {
   ::-webkit-scrollbar {
     width: 8px;
@@ -38,7 +38,7 @@ body {
     @apply text-white-full;
     height: 100%;
   }
-  body {
+  body:not(.dashboard-body) {
     @apply bg-osmoverse-1000;
   }
 
@@ -108,35 +108,35 @@ body {
 
   /* Global table style */
 
-  table {
-    @apply w-full table-fixed border-collapse text-left md:w-full;
+  body:not(.dashboard-body) table {
+    @apply w-full table border-collapse text-right md:w-full;
   }
 
-  thead > tr {
+  body:not(.dashboard-body) thead > tr {
     @apply sticky top-navbar z-40 border-b border-osmoverse-700 bg-osmoverse-1000 text-body2 font-semibold text-osmoverse-300 md:top-navbar-mobile;
   }
 
-  thead > tr > th:first-child {
-    @apply pl-0;
+  body:not(.dashboard-body) thead > tr > th:first-child {
+    @apply pl-0 text-left;
   }
 
-  thead > tr > th {
+  body:not(.dashboard-body) thead > tr > th {
     @apply px-4 py-3;
   }
 
-  tbody > tr {
+  body:not(.dashboard-body) tbody > tr {
     @apply body1 rounded-3xl;
   }
 
-  tbody > tr > td {
-    @apply p-4 text-right md:px-1;
+  body:not(.dashboard-body) tbody > tr > td {
+    @apply p-4 md:px-1;
   }
 
-  tbody > tr > td:first-child {
+  body:not(.dashboard-body) tbody > tr > td:first-child {
     @apply rounded-l-3xl text-left;
   }
 
-  tbody > tr > td:last-child {
+  body:not(.dashboard-body) tbody > tr > td:last-child {
     @apply rounded-r-3xl;
   }
 

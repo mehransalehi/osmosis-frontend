@@ -20,3 +20,42 @@ model Admin {
   password  String
   createdAt DateTime @default(now())
 }
+
+
+model Ads {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  link        String?
+  imageUrl    String?
+  createdAt   DateTime @default(now())
+}
+
+model Notification {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  type        NotificationType
+  createdAt   DateTime @default(now())
+}
+
+enum NotificationType {
+  ERROR
+  WARN
+  SUCCESS
+}
+
+model Contact {
+  id        Int      @id @default(autoincrement())
+  userEmail String
+  name      String
+  text      String
+  createdAt DateTime @default(now())
+}
+
+model Settings {
+  id        Int      @id @default(autoincrement())
+  key       String   @unique
+  value     String
+  updatedAt DateTime @updatedAt
+}

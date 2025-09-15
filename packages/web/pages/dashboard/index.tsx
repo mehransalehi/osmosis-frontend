@@ -3,7 +3,7 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>Admin Dashboard</title>
+        <title>Admin Dashboard | NNX</title>
       </Head>
       <button className="btn btn-neutral">Neutral</button>
       <button className="btn btn-primary">Primary</button>

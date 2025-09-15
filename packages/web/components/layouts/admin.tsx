@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
 import React from "react";
+import { useEffect, useState } from "react";
 
 import logo from "~/public/images/logo.png";
 interface Props {
@@ -19,17 +20,46 @@ const links = [
 export function AdminLayout({ children }: Props) {
   const pathname = usePathname();
   const { data: session, status } = useSession();
+  const [theme, setTheme] = useState<string>("winter");
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") || "winter";
+    setTheme(savedTheme);
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    // Add class when dashboard layout mounts
+    document.body.classList.add("dashboard-body");
+
+    // Clean up: remove class when leaving dashboard
+    return () => {
+      document.body.classList.remove("dashboard-body");
+    };
+  }, []);
+
+  // Toggle theme
+  const toggleTheme = () => {
+    const newTheme = theme === "winter" ? "synthwave" : "winter"; // or custom DaisyUI themes
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+  };
+
   return (
     <>
       <div className="min-h-screen flex flex-col bg-gray-50">
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-200">
           <div className="flex-1">
             <Link className="btn btn-ghost normal-case text-xl" href="/">
               <img src={logo.src} alt="logo" className="h-full" />
             </Link>
           </div>
           <div className="flex-none">
-            <div className="dropdown dropdown-end">
+            <button
+              className="btn btn-sm btn-ghost btn-circle"
+              onClick={toggleTheme}
+            >
+              {theme === "winter" ? "🌙" : "☀️"}
+            </button>
+            <div className="dropdown dropdown-end ml-4">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full border border-primary !flex justify-center items-center">
                   <i className="fa-solid fa-user"></i>
