@@ -304,6 +304,12 @@ const MainLayoutWrapper: FunctionComponent<{
   const secondaryMenuItems = useMemo<MainLayoutMenu[]>(
     () => [
       {
+        label: "Contact Us",
+        link: "/contact",
+        icon: <Icon id="telegram" className="h-6 w-6" />,
+        amplitudeEvent: [EventName.Sidebar.supportClicked] as AmplitudeEvent,
+      },
+      {
         label: t("menu.help"),
         link: "#",
         icon: <Icon id="help-circle" className="h-6 w-6" />,

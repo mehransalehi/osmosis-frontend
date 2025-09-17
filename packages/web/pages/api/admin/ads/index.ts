@@ -26,9 +26,9 @@ export default async function handler(
     }
 
     if (req.method === "POST") {
-      const { title, description, link, imageUrl } = req.body;
+      const { title, description, link, twitter, github, imageUrl } = req.body;
       const ad = await prisma.ads.create({
-        data: { title, description, link, imageUrl },
+        data: { title, description, link, twitter, github, imageUrl },
       });
       return res.status(201).json(ad);
     }

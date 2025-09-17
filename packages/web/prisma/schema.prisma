@@ -27,6 +27,8 @@ model Ads {
   title       String
   description String
   link        String?
+  twitter        String?
+  github        String?
   imageUrl    String?
   createdAt   DateTime @default(now())
 }

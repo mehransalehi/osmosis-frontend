@@ -6,6 +6,8 @@ type Ad = {
   title: string;
   description: string;
   link?: string;
+  twitter?: string;
+  github?: string;
   imageUrl?: string;
   createdAt: string;
 };
@@ -87,6 +89,8 @@ export default function AdsPage() {
                     <th>Title</th>
                     <th>Description</th>
                     <th>Link</th>
+                    <th>Twitter</th>
+                    <th>Github</th>
                     <th>Image</th>
                     <th>Date</th>
                     <th></th>
@@ -98,6 +102,8 @@ export default function AdsPage() {
                       <td>{ad.title}</td>
                       <td title={ad.description}>...</td>
                       <td>{ad.link}</td>
+                      <td>{ad.twitter}</td>
+                      <td>{ad.github}</td>
                       <td>
                         {ad.imageUrl && (
                           <img src={ad.imageUrl} alt="" className="h-10 w-10" />
@@ -105,21 +111,23 @@ export default function AdsPage() {
                       </td>
                       <td>{new Date(ad.createdAt).toLocaleDateString()}</td>
                       <td className="flex gap-2">
-                        <button
-                          className="btn btn-sm btn-outline"
-                          onClick={() => {
-                            setEditingAd(ad);
-                            setShowModal(true);
-                          }}
-                        >
-                          <i className="fa-solid fa-pen-to-square"></i>
-                        </button>
-                        <button
-                          className="btn btn-sm btn-error"
-                          onClick={() => handleDelete(ad.id)}
-                        >
-                          <i className="fa-solid fa-trash"></i>
-                        </button>
+                        <td className="flex gap-2">
+                          <button
+                            className="btn btn-sm btn-outline"
+                            onClick={() => {
+                              setEditingAd(ad);
+                              setShowModal(true);
+                            }}
+                          >
+                            <i className="fa-solid fa-pen-to-square"></i>
+                          </button>
+                          <button
+                            className="btn btn-sm btn-error"
+                            onClick={() => handleDelete(ad.id)}
+                          >
+                            <i className="fa-solid fa-trash"></i>
+                          </button>
+                        </td>{" "}
                       </td>
                     </tr>
                   ))}
@@ -165,6 +173,8 @@ export default function AdsPage() {
                     title: formData.get("title") as string,
                     description: formData.get("description") as string,
                     link: formData.get("link") as string,
+                    twitter: formData.get("twitter") as string,
+                    github: formData.get("github") as string,
                     imageUrl: formData.get("imageUrl") as string,
                   });
                 }}
@@ -194,6 +204,18 @@ export default function AdsPage() {
                   name="imageUrl"
                   defaultValue={editingAd?.imageUrl || ""}
                   placeholder="Image URL"
+                  className="input input-bordered"
+                />
+                <input
+                  name="twitter"
+                  defaultValue={editingAd?.twitter || ""}
+                  placeholder="Twitter"
+                  className="input input-bordered"
+                />
+                <input
+                  name="github"
+                  defaultValue={editingAd?.github || ""}
+                  placeholder="Github"
                   className="input input-bordered"
                 />
 

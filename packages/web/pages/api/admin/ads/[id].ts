@@ -13,10 +13,10 @@ export default async function handler(
 
   try {
     if (req.method === "PUT") {
-      const { title, description, link, imageUrl } = req.body;
+      const { title, description, link, twitter, github, imageUrl } = req.body;
       const ad = await prisma.ads.update({
         where: { id: adId },
-        data: { title, description, link, imageUrl },
+        data: { title, description, link, twitter, github, imageUrl },
       });
       return res.status(200).json(ad);
     }

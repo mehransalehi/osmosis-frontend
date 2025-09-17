@@ -60,8 +60,43 @@ export const AppStore: React.FC<AppStoreProps> = ({ apps }) => {
     setFuse(new Fuse(applications, options));
   }, [applications]);
 
+  const [ads, setAds] = useState<any[]>([]);
+
+  useEffect(() => {
+    async function loadAds() {
+      try {
+        const res = await fetch("/api/ads/public");
+        const data = await res.json();
+        setAds(data);
+      } catch (err) {
+        console.error("Failed to load ads", err);
+      }
+    }
+    loadAds();
+  }, []);
+
   let featuredApp = applications?.find((app) => app.featured === true);
-  const nonFeaturedApps = applications?.filter((app) => !app.featured);
+  const nonFeaturedApps = applications?.filter((app) => !app.featured) || [];
+
+  // Transform ads to match App type
+  const adsAsApps: App[] = ads.map((ad) => ({
+    title: ad.title,
+    subtitle: ad.description,
+    external_URL: ad.link || "",
+    thumbnail_image_URL: ad.imageUrl || "/placeholder.png",
+    hero_image_URL: ad.imageUrl || "/placeholder.png",
+    twitter_URL: ad.twitter || undefined,
+    github_URL: ad.github || undefined,
+    featured: false,
+    internal_data: {
+      thumbnail_size: 1,
+      hero_size: 1,
+      project_listing_date: ad.createdAt,
+    },
+  }));
+
+  // Combine
+  const combinedApps = [...adsAsApps, ...nonFeaturedApps];
 
   featuredApp = featuredApp ? featuredApp : nonFeaturedApps[0];
 
@@ -79,7 +114,7 @@ export const AppStore: React.FC<AppStoreProps> = ({ apps }) => {
     }
   };
 
-  const appsToDisplay = searchValue ? fuzzySearchResults : nonFeaturedApps;
+  const appsToDisplay = searchValue ? fuzzySearchResults : combinedApps;
 
   const searchBoxSize = useMemo(() => {
     if (width <= Breakpoint.sm) {
