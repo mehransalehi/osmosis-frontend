@@ -2,7 +2,7 @@ import dayjs from "dayjs";
 import { observer } from "mobx-react-lite";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocalStorage } from "react-use";
 
 import { AdBanners } from "~/components/ad-banner";
@@ -30,8 +30,28 @@ export type PreviousTrade = {
   baseDenom: string;
   quoteDenom: string;
 };
-
+type Notification = {
+  id: number;
+  title: string;
+  description: string;
+  type: string;
+  createdAt: string;
+};
 const Home = () => {
+  const [notifications, setNotifications] = useState<Notification[]>([]);
+
+  useEffect(() => {
+    async function loadNotifications() {
+      try {
+        const res = await fetch("/api/notifications");
+        const data = await res.json();
+        setNotifications(data);
+      } catch (err) {
+        console.error("Failed to load notifications", err);
+      }
+    }
+    loadNotifications();
+  }, []);
   const featureFlags = useFeatureFlags();
 
   const [previousTrade, setPreviousTrade] =
@@ -65,6 +85,19 @@ const Home = () => {
                 previousTrade={previousTrade}
                 setPreviousTrade={setPreviousTrade}
               />
+              <div className="flex flex-col gap-2">
+                {notifications.map((n) => (
+                  <div key={n.id} className={`${getAlertClass(n.type)} flex `}>
+                    <i className={getAlertIcon(n.type)}></i>
+                    <div>
+                      <h4 className="font-semibold text-lg">{n.title}</h4>
+                      <p className="text-sm text-base-200 text-shadow-lg">
+                        {n.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </ClientOnly>
             {featureFlags.babyTokenBanner && showBanner && (
               <BabyBanner onClose={() => setShowBanner(false)} />
@@ -135,5 +168,26 @@ const SwapAdsBanner = observer(() => {
     </ErrorBoundary>
   );
 });
-
+function getAlertClass(type: string) {
+  switch (type) {
+    case "SUCCESS":
+      return "alert alert-success mt-5";
+    case "WARN":
+      return "alert alert-warning mt-5";
+    case "ERROR":
+      return "alert alert-error mt-5";
+    default:
+      return "alert mt-5";
+  }
+}
+function getAlertIcon(type: string) {
+  switch (type) {
+    case "SUCCESS":
+      return "fa-solid fa-check";
+    case "WARN":
+      return "fa-solid fa-circle-exclamation text-base-100 text-lg";
+    case "ERROR":
+      return "fa-solid fa-triangle-exclamation";
+  }
+}
 export default observer(Home);

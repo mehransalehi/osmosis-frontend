@@ -70,7 +70,9 @@ import { useDebouncedState } from "./use-debounced-state";
 import { useFeatureFlags } from "./use-feature-flags";
 import { usePreviousWhen } from "./use-previous-when";
 import { useWalletSelect } from "./use-wallet-select";
+import { PrismaClient } from "~/generated/prisma";
 
+const prisma = new PrismaClient();
 export type SwapState = ReturnType<typeof useSwap>;
 export type SwapAsset = ReturnType<typeof useSwapAsset>["asset"];
 
@@ -1390,31 +1392,59 @@ export function useSwapAsset<TAsset extends MinimalAsset>({
   minDenomOrSymbol?: string;
   existingAssets: TAsset[] | undefined;
 }) {
-  /** If `coinDenom` or `coinMinimalDenom` don't yield a result, we
-   *  can fall back to the getAssets query which will perform
-   *  a more comprehensive search. */
-  const existingAsset = existingAssets.find(
+  const [blacklist, setBlacklist] = useState<string[] | null>(null);
+
+  // Fetch blacklisted coinMinimalDenoms from API
+  useEffect(() => {
+    fetch("/api/assets/blacklist")
+      .then((res) => res.json())
+      .then((data: string[]) => setBlacklist(data));
+  }, []);
+
+  // Filter AssetLists by removing blacklisted assets
+  const filteredAssetLists = useMemo(() => {
+    if (!blacklist) return AssetLists; // fallback while loading
+    return AssetLists.map((chain) => ({
+      ...chain,
+      assets: chain.assets.filter(
+        (asset) => !blacklist.includes(asset.coinMinimalDenom)
+      ),
+    }));
+  }, [blacklist]);
+
+  // Filter existingAssets if any
+  const filteredExistingAssets = useMemo(() => {
+    if (!blacklist) return existingAssets;
+    return existingAssets?.filter(
+      (asset) => !blacklist.includes(asset.coinMinimalDenom)
+    );
+  }, [existingAssets, blacklist]);
+
+  // Find existing asset first
+  const existingAsset = filteredExistingAssets?.find(
     (asset) =>
       asset.coinDenom === minDenomOrSymbol ||
       asset.coinMinimalDenom === minDenomOrSymbol
   );
 
+  // Resolve asset from AssetLists
   const asset = useMemo(() => {
     if (existingAsset) return existingAsset;
 
-    const asset = getAssetFromAssetList({
-      assetLists: AssetLists,
+    const assetFromList = getAssetFromAssetList({
+      assetLists: filteredAssetLists,
       coinMinimalDenom: minDenomOrSymbol,
       symbol: minDenomOrSymbol,
     });
 
-    if (!asset) return;
+    if (!assetFromList) return;
 
-    return makeMinimalAsset(asset.rawAsset);
-  }, [minDenomOrSymbol, existingAsset]);
+    return makeMinimalAsset(assetFromList.rawAsset);
+  }, [minDenomOrSymbol, existingAsset, filteredAssetLists]);
 
   return {
     asset: existingAsset ?? (asset as TAsset | undefined),
+    loading: blacklist === null,
   };
 }
 
@@ -1627,25 +1657,40 @@ export function useRecommendedAssets(
   fromCoinMinimalDenom?: string,
   toCoinMinimalDenom?: string
 ) {
-  return useMemo(
-    () =>
-      RecommendedSwapDenoms.map((denom) => {
-        const asset = AssetLists.flatMap(({ assets }) => assets).find(
-          (asset) => asset.symbol === denom
-        );
-        if (!asset) return;
+  const [blacklist, setBlacklist] = useState<string[] | null>(null);
 
-        return makeMinimalAsset(asset);
-      })
-        .filter((c): c is NonNullable<typeof c> => !!c)
-        .filter(
-          (currency) =>
-            currency &&
-            currency.coinMinimalDenom !== fromCoinMinimalDenom &&
-            currency.coinMinimalDenom !== toCoinMinimalDenom
-        ),
-    [fromCoinMinimalDenom, toCoinMinimalDenom]
-  );
+  // Fetch blacklisted coinMinimalDenoms from API
+  useEffect(() => {
+    fetch("/api/assets/blacklist")
+      .then((res) => res.json())
+      .then((data: string[]) => setBlacklist(data));
+  }, []);
+
+  // Filter recommended assets
+  const recommendedAssets = useMemo(() => {
+    if (!blacklist) return []; // or return all while loading, up to you
+
+    return RecommendedSwapDenoms.map((denom) => {
+      const asset = AssetLists.flatMap(({ assets }) => assets).find(
+        (asset) => asset.symbol === denom
+      );
+      if (!asset) return;
+
+      // Skip blacklisted assets
+      if (blacklist.includes(asset.coinMinimalDenom)) return;
+
+      return makeMinimalAsset(asset);
+    })
+      .filter((c): c is NonNullable<typeof c> => !!c)
+      .filter(
+        (currency) =>
+          currency &&
+          currency.coinMinimalDenom !== fromCoinMinimalDenom &&
+          currency.coinMinimalDenom !== toCoinMinimalDenom
+      );
+  }, [fromCoinMinimalDenom, toCoinMinimalDenom, blacklist]);
+
+  return recommendedAssets;
 }
 
 /**

@@ -141,7 +141,6 @@ export const PlaceLimitTool: FunctionComponent<PlaceLimitToolProps> = observer(
     } = useDisclosure();
     const inputRef = useRef<HTMLInputElement>(null);
     const featureFlags = useFeatureFlags();
-
     const [{ from, quote, tab, type }, set] = useQueryStates({
       from: parseAsString.withDefault(initialBaseDenom),
       quote: parseAsString.withDefault(initialQuoteDenom),

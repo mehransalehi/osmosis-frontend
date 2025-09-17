@@ -91,7 +91,6 @@ export const usePlaceLimit = ({
     // Disabled auto market placing but can be readded with the above conditional
     [type]
   );
-
   const swapAssets = useSwapAssets({
     initialFromDenom: baseDenom,
     initialToDenom: quoteDenom,

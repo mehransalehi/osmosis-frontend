@@ -122,7 +122,6 @@ export const BridgeReceiveAssetDropdown: FunctionComponent<BridgeReceiveAssetDro
                         };
 
                         const isConvert =
-                          false ??
                           asset.coinMinimalDenom === asset.variantGroupKey;
                         const isSelected =
                           toAsset?.address === asset.coinMinimalDenom;
