@@ -5,7 +5,6 @@ import { signOut, useSession } from "next-auth/react";
 import React from "react";
 import { useEffect, useState } from "react";
 
-import logo from "~/public/images/logo.png";
 interface Props {
   children: React.ReactNode;
 }
