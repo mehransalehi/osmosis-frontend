@@ -14,7 +14,6 @@ import { NavbarOsmoPrice } from "~/components/navbar-osmo-price";
 import { NavbarOsmosisUpdate } from "~/components/navbar-osmosis-update";
 import { useCurrentLanguage, useWindowSize } from "~/hooks";
 import { AssetVariantsConversionModal } from "~/modals/variants-conversion";
-import Logo from "~/public/images/logo.png";
 
 export const MainLayout = observer(
   ({
@@ -113,6 +112,6 @@ const OsmosisFullLogo: FunctionComponent<{
       onClick?.();
     }}
     /** We cannot add this to the sprite.svg since nested <defs></defs> are not supported  */
-    icon={<img src={Logo.src} alt="" className="" />}
+    icon={<img src="/images/logo.png" alt="" className="" />}
   />
 );

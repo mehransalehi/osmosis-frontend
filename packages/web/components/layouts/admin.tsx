@@ -56,7 +56,7 @@ export function AdminLayout({ children }: Props) {
               <i className="fa-solid fa-bars text-lg"></i>
             </label>
             <a className="btn btn-ghost normal-case text-xl" href="/">
-              <img src={logo.src} alt="logo" className="h-full" />
+              <img src="/images/logo.png" alt="logo" className="h-full" />
             </a>
           </div>
           <div className="flex-none">
@@ -126,7 +126,7 @@ export function AdminLayout({ children }: Props) {
               <div className=" w-80 min-h-full bg-base-200">
                 <div className="w-full flex justify-between items-center py-4 pr-4">
                   <a className="btn btn-ghost normal-case text-xl" href="/">
-                    <img src={logo.src} alt="logo" className="h-full" />
+                    <img src="/images/logo.png" alt="logo" className="h-full" />
                   </a>
                   <label
                     htmlFor="my-drawer"
