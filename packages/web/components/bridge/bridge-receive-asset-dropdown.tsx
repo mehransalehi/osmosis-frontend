@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { MinimalAsset } from "@osmosis-labs/types";
 import classNames from "classnames";

@@ -33304,7 +33304,7 @@ const AssetLists = [
     ],
   },
 ];
-async function main() {
+/* async function main() {
   for (const chain of AssetLists) {
     for (const a of chain.assets) {
       await prisma.asset.upsert({
@@ -33344,3 +33344,25 @@ main()
   .finally(async () => {
     await prisma.$disconnect();
   });
+ */
+
+let blacklist = [
+  "factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn",
+];
+let filter = AssetLists.map((chain) => ({
+  ...chain,
+  assets: chain.assets.filter((asset, index) => {
+    if (
+      asset.coinMinimalDenom ==
+      "factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn"
+    ) {
+      console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!" + index);
+      console.log(asset);
+      return false;
+    }
+    return true;
+  }),
+}));
+
+console.log(AssetLists[0].assets.length);
+console.log(filter[0].assets.length);

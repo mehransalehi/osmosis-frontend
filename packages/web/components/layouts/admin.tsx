@@ -31,6 +31,7 @@ export function AdminLayout({ children }: Props) {
 
     // Clean up: remove class when leaving dashboard
     return () => {
+      document.documentElement.setAttribute("data-theme", "synthwave");
       document.body.classList.remove("dashboard-body");
     };
   }, []);
@@ -48,9 +49,15 @@ export function AdminLayout({ children }: Props) {
       <div className="min-h-screen flex flex-col bg-gray-50">
         <div className="navbar bg-base-200">
           <div className="flex-1">
-            <Link className="btn btn-ghost normal-case text-xl" href="/">
+            <label
+              htmlFor="my-drawer"
+              className="btn btn-ghost drawer-button hidden lg:flex"
+            >
+              <i className="fa-solid fa-bars text-lg"></i>
+            </label>
+            <a className="btn btn-ghost normal-case text-xl" href="/">
               <img src={logo.src} alt="logo" className="h-full" />
-            </Link>
+            </a>
           </div>
           <div className="flex-none">
             <button
@@ -75,7 +82,7 @@ export function AdminLayout({ children }: Props) {
                   </span>
                 </li>
                 <li>
-                  <span>Settings</span>
+                  <Link href="/dashboard/settings">Settings</Link>
                 </li>
                 <li>
                   <button onClick={() => signOut({ callbackUrl: "/login" })}>
@@ -90,7 +97,7 @@ export function AdminLayout({ children }: Props) {
           <div className="drawer h-full flex-1">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content grid grid-cols-12 h-full">
-              <ul className="menu bg-base-200 col-span-2 h-full">
+              <ul className="menu bg-base-200 col-span-2 lg:hidden h-full">
                 {links.map((link) => {
                   return (
                     <li key={link.text}>
@@ -111,28 +118,46 @@ export function AdminLayout({ children }: Props) {
                   </button>
                 </li>
               </ul>
-              <div className="col-span-10 h-full p-6">{children}</div>
-              {/* <label
-                htmlFor="my-drawer"
-                className="btn btn-primary drawer-button"
-              >
-                Open drawer
-              </label> */}
+              <div className="col-span-10 lg:col-span-12 h-full p-6">
+                {children}
+              </div>
             </div>
-            <div className="drawer-side">
-              <label
-                htmlFor="my-drawer"
-                aria-label="close sidebar"
-                className="drawer-overlay"
-              ></label>
-              <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-                <li>
-                  <span>Sidebar Item 1</span>
-                </li>
-                <li>
-                  <span>Sidebar Item 2</span>
-                </li>
-              </ul>
+            <div className="drawer-side w-full">
+              <div className=" w-80 min-h-full bg-base-200">
+                <div className="w-full flex justify-between items-center py-4 pr-4">
+                  <a className="btn btn-ghost normal-case text-xl" href="/">
+                    <img src={logo.src} alt="logo" className="h-full" />
+                  </a>
+                  <label
+                    htmlFor="my-drawer"
+                    aria-label="close sidebar"
+                    className="drawer-overlay"
+                  >
+                    <i className="fa-solid fa-xmark text-xl"></i>
+                  </label>
+                </div>
+                <ul className="menu p-4 w-full text-base-content">
+                  {links.map((link) => {
+                    return (
+                      <li key={link.text}>
+                        <Link
+                          href={link.href}
+                          className={pathname === link.href ? "active" : ""}
+                        >
+                          <i className={link.icon}></i>
+                          {link.text}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                  <li>
+                    <button onClick={() => signOut({ callbackUrl: "/login" })}>
+                      <i className="fa-solid fa-right-from-bracket"></i>
+                      Logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </main>

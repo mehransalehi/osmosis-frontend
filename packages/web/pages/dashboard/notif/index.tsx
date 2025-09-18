@@ -64,11 +64,11 @@ export default function NotificationsPage() {
       <Head>
         <title>Admin Notifications | NNX</title>
       </Head>
-      <div className="p-6">
-        <div className="flex justify-between mb-4">
+      <div className="p-6 lg:p-0">
+        <div className="flex md:flex-col justify-between mb-4 items-center md:items-start">
           <h1 className="text-xl font-bold">Notifications</h1>
           <button
-            className="btn btn-primary"
+            className="btn btn-primary md:w-full"
             onClick={() => setShowModal(true)}
           >
             New Notification
@@ -81,7 +81,7 @@ export default function NotificationsPage() {
           <div className="overflow-x-auto">
             <table className="table table-zebra w-full">
               <thead>
-                <tr>
+                <tr className="md:hidden">
                   <th>Title</th>
                   <th>Description</th>
                   <th>Type</th>
@@ -91,9 +91,26 @@ export default function NotificationsPage() {
               </thead>
               <tbody>
                 {items.map((n) => (
-                  <tr key={n.id}>
-                    <td>{n.title}</td>
-                    <td title={n.description}>...</td>
+                  <tr
+                    key={n.id}
+                    className="md:flex md:flex-col md:w-full md:mb-5 md:text-lg sm:text-sm"
+                  >
+                    <td className="md:flex justify-between md:border-b border-base-200">
+                      <span className="hidden md:block font-bold">Title :</span>
+                      {n.title}
+                    </td>
+                    <td
+                      title={n.description}
+                      className="md:border-b border-base-200"
+                    >
+                      <span className="hidden md:block font-bold">
+                        Description :
+                      </span>
+                      <span className="md:hidden block">...</span>
+                      <span className="hidden md:block mt-4">
+                        {n.description}
+                      </span>
+                    </td>
                     <td>
                       <span
                         className={`badge ${
@@ -107,7 +124,10 @@ export default function NotificationsPage() {
                         {n.type}
                       </span>
                     </td>
-                    <td>{new Date(n.createdAt).toLocaleDateString()}</td>
+                    <td className="md:flex justify-between md:border-b border-base-200">
+                      <span className="hidden md:block font-bold">Date :</span>
+                      {new Date(n.createdAt).toLocaleDateString()}
+                    </td>
                     <td className="flex gap-2">
                       <button
                         className="btn btn-sm btn-outline"

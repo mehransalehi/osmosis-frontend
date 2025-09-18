@@ -101,6 +101,7 @@
     "fancy-canvas": "^2.1.0",
     "fast-deep-equal": "^3.1.3",
     "focus-trap-react": "^10.0.2",
+    "formidable": "^3.5.4",
     "fuse.js": "^6.5.3",
     "highcharts": "^9.1.0",
     "highcharts-react-official": "^3.0.0",
@@ -130,8 +131,6 @@
     "sha.js": "^2.4.11",
     "sharp": "^0.30.4",
     "sqlite3": "^5.1.7",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.2",
     "utility-types": "^3.10.0",
     "viem": "^2.23.5",
     "wagmi": "^2.12.17",
@@ -173,7 +172,6 @@
     "prisma": "^6.16.1",
     "tailwindcss": "^3.2.4",
     "ts-jest": "^29.1.2",
-    "typescript": "5.4.5",
     "use-debugger-hooks": "^1.3.0"
   }
 }

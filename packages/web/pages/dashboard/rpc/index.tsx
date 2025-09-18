@@ -68,10 +68,10 @@ export default function AssetsAdmin() {
       <Head>
         <title>Admin RPC | NNX</title>
       </Head>
-      <div className="p-4">
-        <div className="flex justify-between items-center mb-4">
+      <div className="p-4 lg:p-0">
+        <div className="flex justify-between items-center mb-4 lg:flex-col lg:items-start">
           <h1 className="text-xl font-bold mb-4 flex-1">Assets List</h1>
-          <div>
+          <div className="lg:flex lg:justify-between lg:w-full md:flex-col">
             <button
               className={`btn btn-primary ${showBlacklisted ? "active" : ""}`}
               onClick={() => {
@@ -82,9 +82,9 @@ export default function AssetsAdmin() {
               {showBlacklisted ? "Show All" : "Show Blacklisted"}
             </button>
 
-            <div className="join ml-6">
+            <div className="join ml-6 md:ml-0 md:mt-4 overflow-hidden">
               <input
-                className="input input-bordered join-item"
+                className="input input-bordered join-item md:flex-1"
                 placeholder="Asset or Blockchain name"
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
@@ -102,7 +102,7 @@ export default function AssetsAdmin() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-x-4">
+        <div className="grid grid-cols-2 lg:grid-cols-1 gap-x-4">
           {Object.keys(groupedAssets).map((chain) => (
             <div key={chain} className="mb-6 border border-base-300">
               <div className="flex justify-between items-center p-2 bg-gray-100 font-semibold">

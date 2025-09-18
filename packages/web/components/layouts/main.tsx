@@ -14,7 +14,7 @@ import { NavbarOsmoPrice } from "~/components/navbar-osmo-price";
 import { NavbarOsmosisUpdate } from "~/components/navbar-osmosis-update";
 import { useCurrentLanguage, useWindowSize } from "~/hooks";
 import { AssetVariantsConversionModal } from "~/modals/variants-conversion";
-import Logo from "~/public/images/logo.svg";
+import Logo from "~/public/images/logo.png";
 
 export const MainLayout = observer(
   ({

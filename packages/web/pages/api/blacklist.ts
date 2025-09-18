@@ -5,7 +5,7 @@ import { PrismaClient } from "~/generated/prisma";
 const prisma = new PrismaClient();
 
 export default async function handler(
-  req: NextApiRequest,
+  _req: NextApiRequest,
   res: NextApiResponse
 ) {
   const blacklistedAssets = await prisma.asset.findMany({

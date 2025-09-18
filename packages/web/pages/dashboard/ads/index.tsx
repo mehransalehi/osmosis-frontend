@@ -67,11 +67,11 @@ export default function AdsPage() {
       <Head>
         <title>Admin Ads | NNX</title>
       </Head>
-      <div className="p-6">
-        <div className="flex justify-between mb-4">
+      <div className="p-6 lg:p-0">
+        <div className="flex md:flex-col justify-between mb-4 items-center md:items-start">
           <h1 className="text-xl font-bold">Ads</h1>
           <button
-            className="btn btn-primary"
+            className="btn btn-primary md:w-full"
             onClick={() => setShowModal(true)}
           >
             New Ad
@@ -85,7 +85,7 @@ export default function AdsPage() {
             <div className="overflow-x-auto">
               <table className="table table-zebra">
                 <thead>
-                  <tr>
+                  <tr className="md:hidden">
                     <th>Title</th>
                     <th>Description</th>
                     <th>Link</th>
@@ -98,36 +98,73 @@ export default function AdsPage() {
                 </thead>
                 <tbody>
                   {ads.map((ad) => (
-                    <tr key={ad.id}>
-                      <td>{ad.title}</td>
-                      <td title={ad.description}>...</td>
-                      <td>{ad.link}</td>
-                      <td>{ad.twitter}</td>
-                      <td>{ad.github}</td>
+                    <tr
+                      key={ad.id}
+                      className="md:flex md:flex-col md:w-full md:mb-5 md:text-lg sm:text-sm"
+                    >
+                      <td className="md:flex justify-between md:border-b border-base-200">
+                        <span className="hidden md:block font-bold">
+                          Title :
+                        </span>
+                        {ad.title}
+                      </td>
+                      <td
+                        title={ad.description}
+                        className="md:border-b border-base-200"
+                      >
+                        <span className="hidden md:block font-bold">
+                          Description :
+                        </span>
+                        <span className="md:hidden block">...</span>
+                        <span className="hidden md:block mt-4">
+                          {ad.description}
+                        </span>
+                      </td>
+                      <td className="md:flex justify-between md:border-b border-base-200">
+                        <span className="hidden md:block font-bold">
+                          Link :
+                        </span>
+                        {ad.link}
+                      </td>
+                      <td className="md:flex justify-between md:border-b border-base-200">
+                        <span className="hidden md:block font-bold">
+                          Twitter :
+                        </span>
+                        {ad.twitter}
+                      </td>
+                      <td className="md:flex justify-between md:border-b border-base-200">
+                        <span className="hidden md:block font-bold">
+                          Github :
+                        </span>
+                        {ad.github}
+                      </td>
                       <td>
                         {ad.imageUrl && (
                           <img src={ad.imageUrl} alt="" className="h-10 w-10" />
                         )}
                       </td>
-                      <td>{new Date(ad.createdAt).toLocaleDateString()}</td>
+                      <td className="md:flex justify-between md:border-b border-base-200">
+                        <span className="hidden md:block font-bold">
+                          Date :
+                        </span>
+                        {new Date(ad.createdAt).toLocaleDateString()}
+                      </td>
                       <td className="flex gap-2">
-                        <td className="flex gap-2">
-                          <button
-                            className="btn btn-sm btn-outline"
-                            onClick={() => {
-                              setEditingAd(ad);
-                              setShowModal(true);
-                            }}
-                          >
-                            <i className="fa-solid fa-pen-to-square"></i>
-                          </button>
-                          <button
-                            className="btn btn-sm btn-error"
-                            onClick={() => handleDelete(ad.id)}
-                          >
-                            <i className="fa-solid fa-trash"></i>
-                          </button>
-                        </td>{" "}
+                        <button
+                          className="btn btn-sm btn-outline"
+                          onClick={() => {
+                            setEditingAd(ad);
+                            setShowModal(true);
+                          }}
+                        >
+                          <i className="fa-solid fa-pen-to-square"></i>
+                        </button>
+                        <button
+                          className="btn btn-sm btn-error"
+                          onClick={() => handleDelete(ad.id)}
+                        >
+                          <i className="fa-solid fa-trash"></i>
+                        </button>
                       </td>
                     </tr>
                   ))}
