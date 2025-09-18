@@ -346,7 +346,7 @@ export const SwapTool: FunctionComponent<SwapToolProps> = observer(
           )));
 
     const showTokenSelectRecommendedTokens = isNil(forceSwapInPoolId);
-
+    console.log(showTokenSelectRecommendedTokens);
     const {
       isOpen: isAddFundsModalOpen,
       onClose: closeAddFundsModal,

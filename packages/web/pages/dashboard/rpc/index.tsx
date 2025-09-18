@@ -84,10 +84,16 @@ export default function AssetsAdmin() {
 
             <div className="join ml-6 md:ml-0 md:mt-4 overflow-hidden">
               <input
-                className="input input-bordered join-item md:flex-1"
+                className="input input-bordered join-item md:flex-1 caret-base-content"
                 placeholder="Asset or Blockchain name"
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    setSearch(searchInput);
+                    setPage(1);
+                  }
+                }}
               />
               <button
                 className="btn btn-secondary join-item"

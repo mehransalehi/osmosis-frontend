@@ -78,7 +78,7 @@ function AccountSettings() {
         placeholder="New Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="input input-bordered"
+        className="input input-bordered caret-base-content"
         required
       />
 
@@ -87,7 +87,7 @@ function AccountSettings() {
         placeholder="New Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        className="input input-bordered"
+        className="input input-bordered caret-base-content"
         required
       />
 

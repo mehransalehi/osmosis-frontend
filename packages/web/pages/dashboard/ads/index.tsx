@@ -221,7 +221,7 @@ export default function AdsPage() {
                   name="title"
                   defaultValue={editingAd?.title || ""}
                   placeholder="Title"
-                  className="input input-bordered"
+                  className="input input-bordered caret-base-content"
                   required
                 />
                 <textarea
@@ -235,25 +235,25 @@ export default function AdsPage() {
                   name="link"
                   defaultValue={editingAd?.link || ""}
                   placeholder="Link"
-                  className="input input-bordered"
+                  className="input input-bordered caret-base-content"
                 />
                 <input
                   name="imageUrl"
                   defaultValue={editingAd?.imageUrl || ""}
                   placeholder="Image URL"
-                  className="input input-bordered"
+                  className="input input-bordered caret-base-content"
                 />
                 <input
                   name="twitter"
                   defaultValue={editingAd?.twitter || ""}
                   placeholder="Twitter"
-                  className="input input-bordered"
+                  className="input input-bordered caret-base-content"
                 />
                 <input
                   name="github"
                   defaultValue={editingAd?.github || ""}
                   placeholder="Github"
-                  className="input input-bordered"
+                  className="input input-bordered caret-base-content"
                 />
 
                 <div className="modal-action">

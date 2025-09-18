@@ -197,14 +197,14 @@ export default function NotificationsPage() {
                   name="title"
                   defaultValue={editingItem?.title || ""}
                   placeholder="Title"
-                  className="input input-bordered"
+                  className="input input-bordered caret-base-content"
                   required
                 />
                 <textarea
                   name="description"
                   defaultValue={editingItem?.description || ""}
                   placeholder="Description"
-                  className="textarea textarea-bordered"
+                  className="textarea textarea-bordered caret-base-content"
                   required
                 />
                 <select

@@ -9,7 +9,9 @@ export const BlacklistedPoolIds: string[] = ["895"];
  */
 export const TransmuterPoolCodeIds = IS_TESTNET ? ["3084"] : ["148"];
 
-export const RecommendedSwapDenoms = [
+export const RecommendedSwapDenoms = [];
+
+/* export const RecommendedSwapDenoms = [
   "OSMO",
   "USDC",
   "USDT",
@@ -17,4 +19,4 @@ export const RecommendedSwapDenoms = [
   "ETH",
   "ATOM",
   "TIA",
-];
+]; */
