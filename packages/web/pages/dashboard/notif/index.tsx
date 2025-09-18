@@ -121,7 +121,7 @@ export default function NotificationsPage() {
                             : "badge-success"
                         }`}
                       >
-                        {n.type}
+                        {n.type == "ERROR" ? "CRITICAL" : n.type}
                       </span>
                     </td>
                     <td className="md:flex justify-between md:border-b border-base-200">
@@ -215,7 +215,7 @@ export default function NotificationsPage() {
                 >
                   <option value="SUCCESS">Success</option>
                   <option value="WARN">Warning</option>
-                  <option value="ERROR">Error</option>
+                  <option value="ERROR">Critical</option>
                 </select>
 
                 <div className="modal-action">

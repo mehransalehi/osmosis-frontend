@@ -337,7 +337,7 @@ const MainLayoutWrapper: FunctionComponent<{
       },
       {
         label: t("menu.vote"),
-        link: osmosisWallet?.walletInfo?.governanceUrl ?? "#",
+        link: "#",
         icon: <Icon id="vote" className="h-6 w-6" />,
         amplitudeEvent: [EventName.Sidebar.voteClicked] as AmplitudeEvent,
       },

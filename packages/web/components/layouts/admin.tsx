@@ -1,6 +1,6 @@
 /* eslint-disable */
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
 import React from "react";
 import { useEffect, useState } from "react";
@@ -18,7 +18,8 @@ const links = [
 ];
 export function AdminLayout({ children }: Props) {
   const pathname = usePathname();
-  const { data: session } = useSession();
+  const router = useRouter();
+  const { data: session, status } = useSession();
   const [theme, setTheme] = useState<string>("winter");
 
   useEffect(() => {
@@ -34,6 +35,13 @@ export function AdminLayout({ children }: Props) {
       document.body.classList.remove("dashboard-body");
     };
   }, []);
+
+  useEffect(() => {
+    // if user not logged in, redirect to login
+    if (status === "unauthenticated") {
+      router.push("/login");
+    }
+  }, [status, router]);
 
   // Toggle theme
   const toggleTheme = () => {
@@ -84,7 +92,13 @@ export function AdminLayout({ children }: Props) {
                   <Link href="/dashboard/settings">Settings</Link>
                 </li>
                 <li>
-                  <button onClick={() => signOut({ callbackUrl: "/login" })}>
+                  <button
+                    onClick={() =>
+                      signOut({
+                        callbackUrl: `${window.location.origin}/login`,
+                      })
+                    }
+                  >
                     Logout
                   </button>
                 </li>
@@ -111,7 +125,13 @@ export function AdminLayout({ children }: Props) {
                   );
                 })}
                 <li>
-                  <button onClick={() => signOut({ callbackUrl: "/login" })}>
+                  <button
+                    onClick={() =>
+                      signOut({
+                        callbackUrl: `${window.location.origin}/login`,
+                      })
+                    }
+                  >
                     <i className="fa-solid fa-right-from-bracket"></i>
                     Logout
                   </button>
@@ -150,7 +170,13 @@ export function AdminLayout({ children }: Props) {
                     );
                   })}
                   <li>
-                    <button onClick={() => signOut({ callbackUrl: "/login" })}>
+                    <button
+                      onClick={() =>
+                        signOut({
+                          callbackUrl: `${window.location.origin}/login`,
+                        })
+                      }
+                    >
                       <i className="fa-solid fa-right-from-bracket"></i>
                       Logout
                     </button>
