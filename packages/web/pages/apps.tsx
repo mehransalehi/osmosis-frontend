@@ -78,7 +78,7 @@ export const AppStore: React.FC<AppStoreProps> = ({ apps }) => {
   }, []);
 
   let featuredApp = applications?.find((app) => app.featured === true);
-  const nonFeaturedApps = applications?.filter((app) => !app.featured) || [];
+  //const nonFeaturedApps = applications?.filter((app) => !app.featured) || [];
 
   // Transform ads to match App type
   const adsAsApps: App[] = ads.map((ad) => ({
