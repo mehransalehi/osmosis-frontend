@@ -16687,6 +16687,11 @@ lodash.debounce@^4.0.8:
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==
 
+lodash.flatmap@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.flatmap/-/lodash.flatmap-4.5.0.tgz#ef8cbf408f6e48268663345305c6acc0b778702e"
+  integrity sha512-/OcpcAGWlrZyoHGeHh3cAoa6nGdX6QYtmzNP84Jqol6UEQQ2gIaU3H+0eICcjcKGl0/XF8LWOujNn9lffsnaOg==
+
 lodash.includes@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/lodash.includes/-/lodash.includes-4.3.0.tgz#60bb98a87cb923c68ca1e51325483314849f553f"
@@ -21813,6 +21818,13 @@ tabbable@^6.0.1:
   version "6.0.1"
   resolved "https://registry.npmjs.org/tabbable/-/tabbable-6.0.1.tgz"
   integrity sha512-SYJSIgeyXW7EuX1ytdneO5e8jip42oHWg9xl/o3oTYhmXusZVgiA+VlPvjIN+kHii9v90AmzTZEBcsEvuAY+TA==
+
+tailwindcss-flip@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-flip/-/tailwindcss-flip-1.0.0.tgz#60050c725e03113b4afab1593531c7c16209441d"
+  integrity sha512-7zGjiIgw11cKcVKp8zz1YJQZ6H/bbdaENRo1Y9oXffwilZh0HhJFOM1daXrKIhOXJbpPgIVJa5yQ2vrZA+D8TQ==
+  dependencies:
+    lodash.flatmap "^4.5.0"
 
 tailwindcss@^3.1:
   version "3.4.17"

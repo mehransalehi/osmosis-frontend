@@ -4,28 +4,48 @@ import { usePathname, useRouter } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
 import React from "react";
 import { useEffect, useState } from "react";
+import { getLocale } from "~/utils/i18n";
+import { AdminLanguageProvider } from "~/utils/admin-language-context";
 
 interface Props {
   children: React.ReactNode;
 }
-const links = [
-  { text: "Home", href: "/dashboard", icon: "fa-solid fa-house" },
-  { text: "Ads", href: "/dashboard/ads", icon: "fa-solid fa-headset" },
-  { text: "Notification", href: "/dashboard/notif", icon: "fa-solid fa-bell" },
-  { text: "Contact", href: "/dashboard/contact", icon: "fa-solid fa-comments" },
-  { text: "RPC Managment", href: "/dashboard/rpc", icon: "fa-solid fa-link" },
-  { text: "Settings", href: "/dashboard/settings", icon: "fa-solid fa-cog" },
-];
+
 export function AdminLayout({ children }: Props) {
   const pathname = usePathname();
   const router = useRouter();
   const { data: session, status } = useSession();
   const [theme, setTheme] = useState<string>("winter");
-
+  const [lang, setLang] = useState<string>("en");
+  const t = getLocale(lang);
+  const links = [
+    { text: t.menu.dashboard, href: "/dashboard", icon: "fa-solid fa-house" },
+    { text: t.menu.ads, href: "/dashboard/ads", icon: "fa-solid fa-headset" },
+    {
+      text: t.menu.notif,
+      href: "/dashboard/notif",
+      icon: "fa-solid fa-bell",
+    },
+    {
+      text: t.menu.contact,
+      href: "/dashboard/contact",
+      icon: "fa-solid fa-comments",
+    },
+    { text: t.menu.rpc, href: "/dashboard/rpc", icon: "fa-solid fa-link" },
+    {
+      text: t.menu.settings,
+      href: "/dashboard/settings",
+      icon: "fa-solid fa-cog",
+    },
+  ];
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "winter";
     setTheme(savedTheme);
+
+    const savedLang = localStorage.getItem("lang") || "en";
+    setLang(savedLang);
     document.documentElement.setAttribute("data-theme", savedTheme);
+    // document.documentElement.setAttribute("dir", "rtl");
     // Add class when dashboard layout mounts
     document.body.classList.add("dashboard-body");
 
@@ -50,10 +70,19 @@ export function AdminLayout({ children }: Props) {
     localStorage.setItem("theme", newTheme);
     document.documentElement.setAttribute("data-theme", newTheme);
   };
+  //Toggle Language
+  const toggleLang = () => {
+    const newLang = lang === "en" ? "ar" : "en"; // or custom DaisyUI themes
+    setLang(newLang);
+    localStorage.setItem("lang", newLang);
+  };
 
   return (
-    <>
-      <div className="min-h-screen flex flex-col bg-gray-50">
+    <AdminLanguageProvider lang={lang} setLang={setLang}>
+      <div
+        className="min-h-screen flex flex-col bg-gray-50 admin-dashboard-nnx"
+        dir={lang == "en" ? "" : "rtl"}
+      >
         <div className="navbar bg-base-200">
           <div className="flex-1">
             <label
@@ -67,6 +96,12 @@ export function AdminLayout({ children }: Props) {
             </a>
           </div>
           <div className="flex-none">
+            <button
+              className="btn btn-sm btn-ghost btn-circle"
+              onClick={toggleLang}
+            >
+              {lang === "en" ? "EN" : "AR"}
+            </button>
             <button
               className="btn btn-sm btn-ghost btn-circle"
               onClick={toggleTheme}
@@ -89,7 +124,7 @@ export function AdminLayout({ children }: Props) {
                   </span>
                 </li>
                 <li>
-                  <Link href="/dashboard/settings">Settings</Link>
+                  <Link href="/dashboard/settings">{t.menu.settings}</Link>
                 </li>
                 <li>
                   <button
@@ -99,7 +134,7 @@ export function AdminLayout({ children }: Props) {
                       })
                     }
                   >
-                    Logout
+                    {t.menu.logout}
                   </button>
                 </li>
               </ul>
@@ -133,7 +168,7 @@ export function AdminLayout({ children }: Props) {
                     }
                   >
                     <i className="fa-solid fa-right-from-bracket"></i>
-                    Logout
+                    {t.menu.logout}
                   </button>
                 </li>
               </ul>
@@ -142,8 +177,14 @@ export function AdminLayout({ children }: Props) {
               </div>
             </div>
             <div className="drawer-side w-full">
-              <div className=" w-80 min-h-full bg-base-200">
-                <div className="w-full flex justify-between items-center py-4 pr-4">
+              <div className=" w-80 min-h-full bg-base-200 right-0 translate-x-full">
+                <div
+                  className={
+                    lang == "en"
+                      ? `w-full flex justify-between items-center py-4 pr-4`
+                      : `w-full flex justify-between items-center py-4 pl-4`
+                  }
+                >
                   <a className="btn btn-ghost normal-case text-xl" href="/">
                     <img src="/images/logo.png" alt="logo" className="h-full" />
                   </a>
@@ -178,7 +219,7 @@ export function AdminLayout({ children }: Props) {
                       }
                     >
                       <i className="fa-solid fa-right-from-bracket"></i>
-                      Logout
+                      {t.menu.logout}
                     </button>
                   </li>
                 </ul>
@@ -188,10 +229,10 @@ export function AdminLayout({ children }: Props) {
         </main>
         <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
           <aside>
-            <p>Copyright © 2025 - All right reserved by NNX</p>
+            <p>{t.crp}</p>
           </aside>
         </footer>
       </div>
-    </>
+    </AdminLanguageProvider>
   );
 }

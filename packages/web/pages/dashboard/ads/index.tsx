@@ -1,6 +1,9 @@
 "use client";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+
+import { useAdminLanguage } from "~/utils/admin-language-context";
+import { getLocale } from "~/utils/i18n";
 type Ad = {
   id: number;
   title: string;
@@ -20,6 +23,8 @@ export default function AdsPage() {
 
   const [showModal, setShowModal] = useState(false);
   const [editingAd, setEditingAd] = useState<Ad | null>(null);
+  const { lang } = useAdminLanguage();
+  const t = getLocale(lang);
 
   const pageSize = 20;
   const totalPages = Math.ceil(total / pageSize);
@@ -65,34 +70,34 @@ export default function AdsPage() {
   return (
     <>
       <Head>
-        <title>Admin Ads | NNX</title>
+        <title>{t.titles.ads}</title>
       </Head>
       <div className="p-6 lg:p-0">
         <div className="flex md:flex-col justify-between mb-4 items-center md:items-start">
-          <h1 className="text-xl font-bold">Ads</h1>
+          <h1 className="text-xl font-bold">{t.menu.ads}</h1>
           <button
             className="btn btn-primary md:w-full"
             onClick={() => setShowModal(true)}
           >
-            New Ad
+            {t.ads.newads}
           </button>
         </div>
 
         {loading ? (
-          <p>Loading...</p>
+          <p>{t.loading}</p>
         ) : (
           <>
             <div className="overflow-x-auto">
               <table className="table table-zebra">
                 <thead>
-                  <tr className="md:hidden">
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Link</th>
-                    <th>Twitter</th>
-                    <th>Github</th>
-                    <th>Image</th>
-                    <th>Date</th>
+                  <tr className="md:hidden text-center">
+                    <th>{t.tables.ads.title}</th>
+                    <th>{t.tables.ads.desc}</th>
+                    <th>{t.tables.ads.link}</th>
+                    <th>{t.tables.ads.twitter}</th>
+                    <th>{t.tables.ads.github}</th>
+                    <th>{t.tables.ads.image}</th>
+                    <th>{t.tables.ads.date}</th>
                     <th></th>
                   </tr>
                 </thead>
@@ -100,11 +105,11 @@ export default function AdsPage() {
                   {ads.map((ad) => (
                     <tr
                       key={ad.id}
-                      className="md:flex md:flex-col md:w-full md:mb-5 md:text-lg sm:text-sm"
+                      className="md:flex md:flex-col md:w-full md:mb-5 md:text-lg sm:text-sm text-center md:text-unset"
                     >
                       <td className="md:flex justify-between md:border-b border-base-200">
                         <span className="hidden md:block font-bold">
-                          Title :
+                          {t.tables.ads.title} :
                         </span>
                         {ad.title}
                       </td>
@@ -113,7 +118,7 @@ export default function AdsPage() {
                         className="md:border-b border-base-200"
                       >
                         <span className="hidden md:block font-bold">
-                          Description :
+                          {t.tables.ads.desc} :
                         </span>
                         <span className="md:hidden block">...</span>
                         <span className="hidden md:block mt-4">
@@ -122,19 +127,19 @@ export default function AdsPage() {
                       </td>
                       <td className="md:flex justify-between md:border-b border-base-200">
                         <span className="hidden md:block font-bold">
-                          Link :
+                          {t.tables.ads.link} :
                         </span>
                         {ad.link}
                       </td>
                       <td className="md:flex justify-between md:border-b border-base-200">
                         <span className="hidden md:block font-bold">
-                          Twitter :
+                          {t.tables.ads.twitter} :
                         </span>
                         {ad.twitter}
                       </td>
                       <td className="md:flex justify-between md:border-b border-base-200">
                         <span className="hidden md:block font-bold">
-                          Github :
+                          {t.tables.ads.github} :
                         </span>
                         {ad.github}
                       </td>
@@ -145,7 +150,7 @@ export default function AdsPage() {
                       </td>
                       <td className="md:flex justify-between md:border-b border-base-200">
                         <span className="hidden md:block font-bold">
-                          Date :
+                          {t.tables.ads.date} :
                         </span>
                         {new Date(ad.createdAt).toLocaleDateString()}
                       </td>
@@ -178,17 +183,18 @@ export default function AdsPage() {
                 disabled={page === 1}
                 onClick={() => setPage((p) => p - 1)}
               >
-                Prev
+                {t.pagination.prev}
               </button>
               <span>
-                Page {page} / {totalPages || 1}
+                <span className="mx-2">{t.pagination.page}</span> {page} /{" "}
+                {totalPages || 1}
               </span>
               <button
                 className="btn btn-sm"
                 disabled={page === totalPages}
                 onClick={() => setPage((p) => p + 1)}
               >
-                Next
+                {t.pagination.next}
               </button>
             </div>
           </>
@@ -199,7 +205,7 @@ export default function AdsPage() {
           <div className="modal modal-open">
             <div className="modal-box">
               <h3 className="font-bold text-lg">
-                {editingAd ? "Edit Ad" : "New Ad"}
+                {editingAd ? t.ads.editads : t.ads.newads}
               </h3>
               <form
                 onSubmit={(e) => {
@@ -220,45 +226,45 @@ export default function AdsPage() {
                 <input
                   name="title"
                   defaultValue={editingAd?.title || ""}
-                  placeholder="Title"
+                  placeholder={t.tables.ads.title}
                   className="input input-bordered caret-base-content"
                   required
                 />
                 <textarea
                   name="description"
                   defaultValue={editingAd?.description || ""}
-                  placeholder="Description"
+                  placeholder={t.tables.ads.desc}
                   className="textarea textarea-bordered"
                   required
                 />
                 <input
                   name="link"
                   defaultValue={editingAd?.link || ""}
-                  placeholder="Link"
+                  placeholder={t.tables.ads.link}
                   className="input input-bordered caret-base-content"
                 />
                 <input
                   name="imageUrl"
                   defaultValue={editingAd?.imageUrl || ""}
-                  placeholder="Image URL"
+                  placeholder={t.tables.ads.image + " URL"}
                   className="input input-bordered caret-base-content"
                 />
                 <input
                   name="twitter"
                   defaultValue={editingAd?.twitter || ""}
-                  placeholder="Twitter"
+                  placeholder={t.tables.ads.twitter}
                   className="input input-bordered caret-base-content"
                 />
                 <input
                   name="github"
                   defaultValue={editingAd?.github || ""}
-                  placeholder="Github"
+                  placeholder={t.tables.ads.github}
                   className="input input-bordered caret-base-content"
                 />
 
                 <div className="modal-action">
-                  <button type="submit" className="btn btn-primary">
-                    Save
+                  <button type="submit" className="btn btn-primary mx-2">
+                    {t.save}
                   </button>
                   <button
                     type="button"
@@ -268,7 +274,7 @@ export default function AdsPage() {
                       setEditingAd(null);
                     }}
                   >
-                    Cancel
+                    {t.cancele}
                   </button>
                 </div>
               </form>

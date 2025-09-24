@@ -1,6 +1,9 @@
 "use client";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+
+import { useAdminLanguage } from "~/utils/admin-language-context";
+import { getLocale } from "~/utils/i18n";
 type Notification = {
   id: number;
   title: string;
@@ -20,6 +23,8 @@ export default function NotificationsPage() {
 
   const pageSize = 20;
   const totalPages = Math.ceil(total / pageSize);
+  const { lang } = useAdminLanguage();
+  const t = getLocale(lang);
 
   async function fetchItems(p: number) {
     setLoading(true);
@@ -62,30 +67,30 @@ export default function NotificationsPage() {
   return (
     <>
       <Head>
-        <title>Admin Notifications | NNX</title>
+        <title>{t.titles.notif}</title>
       </Head>
       <div className="p-6 lg:p-0">
         <div className="flex md:flex-col justify-between mb-4 items-center md:items-start">
-          <h1 className="text-xl font-bold">Notifications</h1>
+          <h1 className="text-xl font-bold">{t.menu.notif}</h1>
           <button
             className="btn btn-primary md:w-full"
             onClick={() => setShowModal(true)}
           >
-            New Notification
+            {t.notif.newnotif}
           </button>
         </div>
 
         {loading ? (
-          <p>Loading...</p>
+          <p>{t.loading}</p>
         ) : (
           <div className="overflow-x-auto">
             <table className="table table-zebra w-full">
               <thead>
-                <tr className="md:hidden">
-                  <th>Title</th>
-                  <th>Description</th>
-                  <th>Type</th>
-                  <th>Date</th>
+                <tr className="md:hidden text-center">
+                  <th>{t.tables.notif.title}</th>
+                  <th>{t.tables.notif.desc}</th>
+                  <th>{t.tables.notif.type}</th>
+                  <th>{t.tables.notif.date}</th>
                   <th></th>
                 </tr>
               </thead>
@@ -93,10 +98,12 @@ export default function NotificationsPage() {
                 {items.map((n) => (
                   <tr
                     key={n.id}
-                    className="md:flex md:flex-col md:w-full md:mb-5 md:text-lg sm:text-sm"
+                    className="md:flex md:flex-col md:w-full md:mb-5 md:text-lg sm:text-sm text-center"
                   >
                     <td className="md:flex justify-between md:border-b border-base-200">
-                      <span className="hidden md:block font-bold">Title :</span>
+                      <span className="hidden md:block font-bold">
+                        {t.tables.notif.title} :
+                      </span>
                       {n.title}
                     </td>
                     <td
@@ -104,7 +111,7 @@ export default function NotificationsPage() {
                       className="md:border-b border-base-200"
                     >
                       <span className="hidden md:block font-bold">
-                        Description :
+                        {t.tables.notif.desc} :
                       </span>
                       <span className="md:hidden block">...</span>
                       <span className="hidden md:block mt-4">
@@ -125,7 +132,9 @@ export default function NotificationsPage() {
                       </span>
                     </td>
                     <td className="md:flex justify-between md:border-b border-base-200">
-                      <span className="hidden md:block font-bold">Date :</span>
+                      <span className="hidden md:block font-bold">
+                        {t.tables.notif.date} :
+                      </span>
                       {new Date(n.createdAt).toLocaleDateString()}
                     </td>
                     <td className="flex gap-2">
@@ -159,17 +168,18 @@ export default function NotificationsPage() {
             disabled={page === 1}
             onClick={() => setPage((p) => p - 1)}
           >
-            Prev
+            {t.pagination.prev}
           </button>
           <span>
-            Page {page} / {totalPages || 1}
+            <span className="mx-2">{t.pagination.page}</span> {page} /{" "}
+            {totalPages || 1}
           </span>
           <button
             className="btn btn-sm"
             disabled={page === totalPages}
             onClick={() => setPage((p) => p + 1)}
           >
-            Next
+            {t.pagination.next}
           </button>
         </div>
 
@@ -178,7 +188,7 @@ export default function NotificationsPage() {
           <div className="modal modal-open">
             <div className="modal-box">
               <h3 className="font-bold text-lg">
-                {editingItem ? "Edit Notification" : "New Notification"}
+                {editingItem ? t.notif.editnotif : t.notif.newnotif}
               </h3>
               <form
                 onSubmit={(e) => {
@@ -196,14 +206,14 @@ export default function NotificationsPage() {
                 <input
                   name="title"
                   defaultValue={editingItem?.title || ""}
-                  placeholder="Title"
+                  placeholder={t.tables.notif.title}
                   className="input input-bordered caret-base-content"
                   required
                 />
                 <textarea
                   name="description"
                   defaultValue={editingItem?.description || ""}
-                  placeholder="Description"
+                  placeholder={t.tables.notif.desc}
                   className="textarea textarea-bordered caret-base-content"
                   required
                 />
@@ -219,8 +229,8 @@ export default function NotificationsPage() {
                 </select>
 
                 <div className="modal-action">
-                  <button type="submit" className="btn btn-primary">
-                    Save
+                  <button type="submit" className="btn btn-primary mx-2">
+                    {t.save}
                   </button>
                   <button
                     type="button"
@@ -230,7 +240,7 @@ export default function NotificationsPage() {
                       setEditingItem(null);
                     }}
                   >
-                    Cancel
+                    {t.cancele}
                   </button>
                 </div>
               </form>

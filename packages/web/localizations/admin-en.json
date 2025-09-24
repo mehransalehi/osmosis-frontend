@@ -1,0 +1,111 @@
+{
+  "crp": "Copyright © 2025 - All right reserved by NNX",
+  "loading": "Loading ...",
+  "error": "Error",
+  "nodata": "No data available",
+  "assets": "Assets",
+  "chains": "Blockchains",
+  "save": "Save",
+  "cancele": "Cancel",
+  "menu": {
+    "dashboard": "Dashboard",
+    "ads": "Ads",
+    "notif": "Notifications",
+    "contact": "Contacts",
+    "rpc": "RPC Management",
+    "logout": "Logout",
+    "settings": "Settings"
+  },
+  "titles": {
+    "dashboard": "Admin Dashboard | NNX",
+    "ads": "Admin Ads | NNX",
+    "notif": "Admin Notifications | NNX",
+    "contact": "Admin Contact | NNX",
+    "rpc": "Admin RPC | NNX",
+    "settings": "Admin Settings | NNX"
+  },
+  "tables": {
+    "ads": {
+      "title": "Title",
+      "desc": "Description",
+      "link": "Link",
+      "twitter": "Twitter",
+      "github": "Github",
+      "image": "Image",
+      "date": "Date"
+    },
+    "notif": {
+      "title": "Title",
+      "desc": "Description",
+      "type": "Type",
+      "date": "Date"
+    },
+    "contact": {
+      "name": "Name",
+      "email": "Email",
+      "msg": "Message",
+      "date": "Date"
+    },
+    "rpc": {
+      "blacklistgroup": "Blacklist Group",
+      "logo": "Logo",
+      "blacklist": "Blacklist",
+      "assetname": "Asset Name"
+    }
+  },
+  "pagination": {
+    "prev": "Prev",
+    "next": "Next",
+    "page": "Page"
+  },
+  "dashboard": {
+    "contactmsg": "Contact Message",
+    "blacklistedassets": "Blacklisted Assets"
+  },
+  "ads": {
+    "newads": "New Ads",
+    "editads": "Edit Ads"
+  },
+  "notif": {
+    "newnotif": "New Notification",
+    "editnotif": "Edit Notification"
+  },
+  "contact": {
+    "contactmsg": "Contact Messages"
+  },
+  "rpc": {
+    "assetslist": "Assets List",
+    "showall": "Show All",
+    "showblacklisted": "Show Blacklisted",
+    "searchtitle": "Asset or Blockchain name",
+    "search": "Search"
+  },
+  "settings": {
+    "title": "Admin Settings",
+    "changepassword": "Change Password",
+    "sitesettings": "Site Settings",
+    "newemail": "New Email",
+    "newpassword": "New Password",
+    "updating": "Updating ...",
+    "updateaccount": "Update Account",
+    "successupdate": "Account updated successfully.",
+    "faildupdate": "Update failed.",
+    "filesize": "❌ File size must be less than 4 MB",
+    "pngfile": "Please select a PNG file under 4 MB",
+    "successlogo": "✅ Logo updated successfully!",
+    "faildlogo": "❌ Upload failed",
+    "logotitle": "Upload New Logo",
+    "preview": "Preview",
+    "currentlogo": "Current Logo",
+    "upload": "Upload",
+    "editmainapp": "Edit Main App",
+    "mainapptitle": "Title",
+    "mainappsubtitle": "Sub Title",
+    "mainappimgurl": "Image URL",
+    "mainapptwitterurl": "Twitter URL",
+    "mainappexternalurl": "External URL",
+    "mainappmediumurl": "Medium URL",
+    "mainappgiturl": "Github URL",
+    "save": "Save"
+  }
+}

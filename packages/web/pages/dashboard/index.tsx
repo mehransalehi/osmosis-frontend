@@ -2,6 +2,9 @@ import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import { useAdminLanguage } from "~/utils/admin-language-context";
+import { getLocale } from "~/utils/i18n";
+
 interface DashboardStats {
   contactCount: number;
   adsCount: number;
@@ -14,6 +17,8 @@ export default function Page() {
   const [stats, setStats] = useState<DashboardStats | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { lang } = useAdminLanguage();
+  const t = getLocale(lang);
 
   useEffect(() => {
     async function fetchStats() {
@@ -31,26 +36,31 @@ export default function Page() {
     fetchStats();
   }, []);
 
-  if (loading) return <p className="text-gray-500">Loading...</p>;
-  if (error) return <p className="text-red-500">Error: {error}</p>;
-  if (!stats) return <p>No data available</p>;
+  if (loading) return <p className="text-gray-500">{t.loading}</p>;
+  if (error)
+    return (
+      <p className="text-red-500">
+        {t.error}: {error}
+      </p>
+    );
+  if (!stats) return <p>{t.nodata}</p>;
   return (
     <>
       <Head>
-        <title>Admin Dashboard | NNX</title>
+        <title>{t.titles.dashboard}</title>
       </Head>
       <div className="w-full grid grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-4">
         <div className="stat shadow rounded-lg">
           <div className="stat-figure text-secondary">
             <i className="fa-solid fa-comments text-3xl"></i>
           </div>
-          <div className="stat-title">Contact Messages</div>
+          <div className="stat-title">{t.dashboard.contactmsg}</div>
           <div className="stat-value">{stats.contactCount}</div>
           <Link
             className="stat-desc mt-3 text-primary underline"
             href="/dashboard/contact"
           >
-            Contacts
+            {t.menu.contact}
           </Link>
         </div>
 
@@ -58,13 +68,13 @@ export default function Page() {
           <div className="stat-figure text-secondary">
             <i className="fa-solid fa-headset text-3xl"></i>
           </div>
-          <div className="stat-title">Ads</div>
+          <div className="stat-title">{t.menu.ads}</div>
           <div className="stat-value">{stats.adsCount}</div>
           <Link
             className="stat-desc mt-3 text-primary underline"
             href="/dashboard/ads"
           >
-            Ads
+            {t.menu.ads}
           </Link>
         </div>
 
@@ -72,13 +82,13 @@ export default function Page() {
           <div className="stat-figure text-secondary">
             <i className="fa-solid fa-bell text-3xl"></i>
           </div>
-          <div className="stat-title">Notifications</div>
+          <div className="stat-title">{t.menu.notif}</div>
           <div className="stat-value">{stats.notificationsCount}</div>
           <Link
             className="stat-desc mt-3 text-primary underline"
             href="/dashboard/notif"
           >
-            Notifications
+            {t.menu.notif}
           </Link>
         </div>
 
@@ -86,13 +96,13 @@ export default function Page() {
           <div className="stat-figure text-secondary">
             <i className="fa-solid fa-coins text-3xl"></i>
           </div>
-          <div className="stat-title">Assets</div>
+          <div className="stat-title">{t.assets}</div>
           <div className="stat-value">{stats.assetsCount}</div>
           <Link
             className="stat-desc mt-3 text-primary underline"
             href="/dashboard/rpc"
           >
-            RPC Managment
+            {t.menu.rpc}
           </Link>
         </div>
 
@@ -100,7 +110,7 @@ export default function Page() {
           <div className="stat-figure text-secondary">
             <i className="fa-solid fa-link text-3xl"></i>
           </div>
-          <div className="stat-title">Chains</div>
+          <div className="stat-title">{t.chains}</div>
           <div className="stat-value">{stats.chainsCount}</div>
         </div>
 
@@ -108,7 +118,7 @@ export default function Page() {
           <div className="stat-figure text-secondary">
             <i className="fa-solid fa-list-check text-3xl"></i>
           </div>
-          <div className="stat-title">Blacklisted Assets</div>
+          <div className="stat-title">{t.dashboard.blacklistedassets}</div>
           <div className="stat-value">{stats.blacklistedAssetsCount}</div>
         </div>
       </div>

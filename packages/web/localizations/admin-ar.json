@@ -1,0 +1,111 @@
+{
+  "crp": "حقوق الطبع والنشر © 2025 - جميع الحقوق محفوظة لدى NNX",
+  "loading": "جارٍ التحميل ...",
+  "error": "خطأ",
+  "nodata": "لا توجد بيانات متاحة",
+  "assets": "الأصول",
+  "chains": "سلاسل الكتل",
+  "save": "حفظ",
+  "cancele": "إلغاء",
+  "menu": {
+    "dashboard": "لوحة التحكم",
+    "ads": "الإعلانات",
+    "notif": "الإشعارات",
+    "contact": "جهات الاتصال",
+    "rpc": "إدارة RPC",
+    "logout": "تسجيل الخروج",
+    "settings": "الإعدادات"
+  },
+  "titles": {
+    "dashboard": "لوحة تحكم المشرف | NNX",
+    "ads": "إعلانات المشرف | NNX",
+    "notif": "إشعارات المشرف | NNX",
+    "contact": "رسائل المشرف | NNX",
+    "rpc": "إدارة RPC | NNX",
+    "settings": "إعدادات المشرف | NNX"
+  },
+  "tables": {
+    "ads": {
+      "title": "العنوان",
+      "desc": "الوصف",
+      "link": "الرابط",
+      "twitter": "تويتر",
+      "github": "جيت هب",
+      "image": "الصورة",
+      "date": "التاريخ"
+    },
+    "notif": {
+      "title": "العنوان",
+      "desc": "الوصف",
+      "type": "النوع",
+      "date": "التاريخ"
+    },
+    "contact": {
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "msg": "الرسالة",
+      "date": "التاريخ"
+    },
+    "rpc": {
+      "blacklistgroup": "مجموعة الحظر",
+      "logo": "الشعار",
+      "blacklist": "القائمة السوداء",
+      "assetname": "اسم الأصل"
+    }
+  },
+  "pagination": {
+    "prev": "السابق",
+    "next": "التالي",
+    "page": "صفحة"
+  },
+  "dashboard": {
+    "contactmsg": "رسائل الاتصال",
+    "blacklistedassets": "الأصول المحظورة"
+  },
+  "ads": {
+    "newads": "إعلان جديد",
+    "editads": "تعديل الإعلان"
+  },
+  "notif": {
+    "newnotif": "إشعار جديد",
+    "editnotif": "تعديل الإشعار"
+  },
+  "contact": {
+    "contactmsg": "رسائل الاتصال"
+  },
+  "rpc": {
+    "assetslist": "قائمة الأصول",
+    "showall": "عرض الكل",
+    "showblacklisted": "عرض المحظورة",
+    "searchtitle": "اسم الأصل أو سلسلة الكتل",
+    "search": "بحث"
+  },
+  "settings": {
+    "title": "إعدادات المشرف",
+    "changepassword": "تغيير كلمة المرور",
+    "sitesettings": "إعدادات الموقع",
+    "newemail": "البريد الإلكتروني الجديد",
+    "newpassword": "كلمة المرور الجديدة",
+    "updating": "جارٍ التحديث ...",
+    "updateaccount": "تحديث الحساب",
+    "successupdate": "تم تحديث الحساب بنجاح.",
+    "faildupdate": "فشل التحديث.",
+    "filesize": "❌ يجب أن يكون حجم الملف أقل من 4 ميغابايت",
+    "pngfile": "يرجى اختيار ملف PNG أقل من 4 ميغابايت",
+    "successlogo": "✅ تم تحديث الشعار بنجاح!",
+    "faildlogo": "❌ فشل الرفع",
+    "logotitle": "رفع شعار جديد",
+    "preview": "معاينة",
+    "currentlogo": "الشعار الحالي",
+    "upload": "رفع",
+    "editmainapp": "تعديل التطبيق الرئيسي",
+    "mainapptitle": "العنوان",
+    "mainappsubtitle": "العنوان الفرعي",
+    "mainappimgurl": "رابط الصورة",
+    "mainapptwitterurl": "رابط تويتر",
+    "mainappexternalurl": "رابط خارجي",
+    "mainappmediumurl": "رابط Medium",
+    "mainappgiturl": "رابط GitHub",
+    "save": "حفظ"
+  }
+}

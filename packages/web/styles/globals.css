@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -361,4 +363,23 @@ body {
 
 .breakspaces {
   white-space-collapse: break-spaces;
+}
+
+.admin-dashboard-nnx {
+  font-family: "Roboto", sans-serif;
+}
+.admin-dashboard-nnx[dir="rtl"] {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+.admin-dashboard-nnx[dir="rtl"] .drawer-side > *:not(.drawer-overlay) {
+  transform: translateX(100%);
+}
+
+.admin-dashboard-nnx .drawer-toggle:checked ~ .drawer-side > *:not(.drawer-overlay) {
+  transform: translateX(0%) !important;
+}
+
+.admin-dashboard-nnx[dir="rtl"] .menu :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
+.menu :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+  text-align: right;
 }

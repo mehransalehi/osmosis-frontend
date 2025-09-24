@@ -61,13 +61,15 @@ export const AppStore: React.FC<AppStoreProps> = ({ apps }) => {
   }, [applications]);
 
   const [ads, setAds] = useState<any[]>([]);
+  const [mainapp, setMainapp] = useState<App | null>(null);
 
   useEffect(() => {
     async function loadAds() {
       try {
         const res = await fetch("/api/ads/public");
         const data = await res.json();
-        setAds(data);
+        setAds(data.ads);
+        setMainapp(data.mainApp);
       } catch (err) {
         console.error("Failed to load ads", err);
       }
@@ -96,9 +98,11 @@ export const AppStore: React.FC<AppStoreProps> = ({ apps }) => {
   }));
 
   // Combine
-  const combinedApps = [...adsAsApps, ...nonFeaturedApps];
+  // const combinedApps = [...adsAsApps, ...nonFeaturedApps]; // Comment here for comunity apps
+  const combinedApps = [...adsAsApps];
 
-  featuredApp = featuredApp ? featuredApp : nonFeaturedApps[0];
+  // featuredApp = featuredApp ? featuredApp : nonFeaturedApps[0]; // comment here for main comunity app
+  featuredApp = mainapp || undefined;
 
   const handleApplyClick = () => {
     logEvent([EventName.AppStore.applyClicked]);
@@ -148,19 +152,21 @@ export const AppStore: React.FC<AppStoreProps> = ({ apps }) => {
           />
         </div>
       </div>
-      <HeroCard
-        title={featuredApp.title}
-        subtitle={featuredApp.subtitle}
-        imageUrl={
-          width <= Breakpoint.sm
-            ? featuredApp.thumbnail_image_URL
-            : featuredApp.hero_image_URL
-        }
-        githubUrl={featuredApp.github_URL}
-        twitterUrl={featuredApp.twitter_URL}
-        externalUrl={featuredApp.external_URL}
-        mediumUrl={featuredApp.medium_URL}
-      />
+      {featuredApp && (
+        <HeroCard
+          title={featuredApp.title}
+          subtitle={featuredApp.subtitle}
+          imageUrl={
+            width <= Breakpoint.sm
+              ? featuredApp.thumbnail_image_URL
+              : featuredApp.hero_image_URL
+          }
+          githubUrl={featuredApp.github_URL}
+          twitterUrl={featuredApp.twitter_URL}
+          externalUrl={featuredApp.external_URL}
+          mediumUrl={featuredApp.medium_URL}
+        />
+      )}
 
       <div className="body2 mb-2 pl-6 pt-7 font-bold text-osmoverse-200">
         {t("store.allAppsHeader")}
@@ -206,7 +212,7 @@ export const AppStore: React.FC<AppStoreProps> = ({ apps }) => {
         </div>
       </div>
       <div className="flex w-full items-center overflow-x-auto rounded-2xl bg-osmoverse-1000 px-8 py-6 text-osmoverse-400 2xl:gap-4 xl:gap-3 1.5lg:px-4 md:flex-col md:items-start md:gap-3 md:px-5 md:py-5">
-        <span className="text-xs">{t("store.storeDisclaimer")}</span>
+        {/* <span className="text-xs">{t("store.storeDisclaimer")}</span> */}
       </div>
     </main>
   );

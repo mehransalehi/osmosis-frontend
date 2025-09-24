@@ -2,6 +2,9 @@
 import { useEffect, useState, useCallback } from "react";
 import Head from "next/head";
 
+import { useAdminLanguage } from "~/utils/admin-language-context";
+import { getLocale } from "~/utils/i18n";
+
 interface Asset {
   id: number;
   chainName: string;
@@ -18,6 +21,8 @@ export default function AssetsAdmin() {
   const [total, setTotal] = useState(0);
   const [showBlacklisted, setShowBlacklisted] = useState(false);
   const limit = 10;
+  const { lang } = useAdminLanguage();
+  const t = getLocale(lang);
 
   const fetchAssets = useCallback(async () => {
     const query = new URLSearchParams({
@@ -66,26 +71,28 @@ export default function AssetsAdmin() {
   return (
     <>
       <Head>
-        <title>Admin RPC | NNX</title>
+        <title>{t.titles.rpc}</title>
       </Head>
       <div className="p-4 lg:p-0">
         <div className="flex justify-between items-center mb-4 lg:flex-col lg:items-start">
-          <h1 className="text-xl font-bold mb-4 flex-1">Assets List</h1>
+          <h1 className="text-xl font-bold mb-4 flex-1">{t.rpc.assetslist}</h1>
           <div className="lg:flex lg:justify-between lg:w-full md:flex-col">
             <button
-              className={`btn btn-primary ${showBlacklisted ? "active" : ""}`}
+              className={`btn btn-primary  mx-6 ${
+                showBlacklisted ? "active" : ""
+              }`}
               onClick={() => {
                 setShowBlacklisted((prev) => !prev);
                 setPage(1);
               }}
             >
-              {showBlacklisted ? "Show All" : "Show Blacklisted"}
+              {showBlacklisted ? t.rpc.showall : t.rpc.showblacklisted}
             </button>
 
-            <div className="join ml-6 md:ml-0 md:mt-4 overflow-hidden">
+            <div className="join md:ml-0 md:mt-4 overflow-hidden">
               <input
                 className="input input-bordered join-item md:flex-1 caret-base-content"
-                placeholder="Asset or Blockchain name"
+                placeholder={t.rpc.searchtitle}
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
                 onKeyDown={(e) => {
@@ -102,7 +109,7 @@ export default function AssetsAdmin() {
                   setPage(1);
                 }}
               >
-                search
+                {t.rpc.search}
               </button>
             </div>
           </div>
@@ -114,7 +121,7 @@ export default function AssetsAdmin() {
               <div className="flex justify-between items-center p-2 bg-gray-100 font-semibold">
                 <span>{chain}</span>
                 <label className="flex items-center space-x-2">
-                  <span>Blacklist Group</span>
+                  <span className="mx-2">{t.tables.rpc.blacklistgroup}</span>
                   <input
                     type="checkbox"
                     checked={groupedAssets[chain].every((a) => a.isBlackList)}
@@ -126,9 +133,9 @@ export default function AssetsAdmin() {
                 <table className="table table-zebra w-full">
                   <thead>
                     <tr>
-                      <th>Logo</th>
-                      <th className="text-left">Asset Name</th>
-                      <th>Blacklist</th>
+                      <th>{t.tables.rpc.logo}</th>
+                      <th className="text-left">{t.tables.rpc.assetname}</th>
+                      <th>{t.tables.rpc.blacklist}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -170,9 +177,10 @@ export default function AssetsAdmin() {
             className="px-3 py-1 border rounded disabled:opacity-50"
             onClick={() => setPage((p) => p - 1)}
           >
-            Previous
+            {t.pagination.prev}
           </button>
           <span className="px-3 py-1">
+            <span className="mx-2">{t.pagination.page}</span>
             {page} / {totalPages}
           </span>
           <button
@@ -180,7 +188,7 @@ export default function AssetsAdmin() {
             className="px-3 py-1 border rounded disabled:opacity-50"
             onClick={() => setPage((p) => p + 1)}
           >
-            Next
+            {t.pagination.next}
           </button>
         </div>
       </div>

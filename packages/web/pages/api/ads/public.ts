@@ -11,10 +11,39 @@ export default async function handler(
 ) {
   try {
     if (req.method === "GET") {
+      // Fetch ads
       const ads = await prisma.ads.findMany({
         orderBy: { createdAt: "desc" },
       });
-      return res.status(200).json(ads);
+
+      // Fetch herocard
+      const herocardSetting = await prisma.settings.findUnique({
+        where: { key: "herocard" },
+      });
+
+      let mainApp = null;
+      if (herocardSetting?.value) {
+        try {
+          const parsed = JSON.parse(herocardSetting.value);
+          mainApp = {
+            title: parsed.title || "",
+            subtitle: parsed.subtitle || "",
+            thumbnail_image_URL: parsed.imageUrl || "",
+            hero_image_URL: parsed.imageUrl || "",
+            github_URL: parsed.github || "",
+            twitter_URL: parsed.twitter || "",
+            external_URL: parsed.external || "",
+            medium_URL: parsed.medium || "",
+          };
+        } catch {
+          mainApp = null; // fallback
+        }
+      }
+
+      return res.status(200).json({
+        ads,
+        mainApp,
+      });
     }
 
     return res.status(405).json({ error: "Method not allowed" });

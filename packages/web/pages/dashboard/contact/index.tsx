@@ -2,6 +2,9 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 
+import { useAdminLanguage } from "~/utils/admin-language-context";
+import { getLocale } from "~/utils/i18n";
+
 type Contact = {
   id: number;
   name: string;
@@ -18,6 +21,8 @@ export default function ContactsPage() {
 
   const pageSize = 20;
   const totalPages = Math.ceil(total / pageSize);
+  const { lang } = useAdminLanguage();
+  const t = getLocale(lang);
 
   async function fetchContacts(p: number) {
     setLoading(true);
@@ -41,22 +46,22 @@ export default function ContactsPage() {
   return (
     <>
       <Head>
-        <title>Admin Contact | NNX</title>
+        <title>{t.titles.contact}</title>
       </Head>
       <div className="p-6 lg:p-0">
-        <h1 className="text-xl font-bold mb-4">Contact Messages</h1>
+        <h1 className="text-xl font-bold mb-4">{t.contact.contactmsg}</h1>
 
         {loading ? (
-          <p>Loading...</p>
+          <p>{t.loading}</p>
         ) : (
           <div className="overflow-x-auto">
             <table className="table table-zebra w-full">
               <thead>
-                <tr className="md:hidden">
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Message</th>
-                  <th>Date</th>
+                <tr className="md:hidden text-center">
+                  <th>{t.tables.contact.name}</th>
+                  <th>{t.tables.contact.email}</th>
+                  <th>{t.tables.contact.msg}</th>
+                  <th>{t.tables.contact.date}</th>
                   <th></th>
                 </tr>
               </thead>
@@ -64,24 +69,32 @@ export default function ContactsPage() {
                 {contacts.map((c) => (
                   <tr
                     key={c.id}
-                    className="md:flex md:flex-col md:w-full md:mb-5 md:text-lg sm:text-sm"
+                    className="md:flex md:flex-col md:w-full md:mb-5 md:text-lg sm:text-sm text-center"
                   >
                     <td className="md:flex justify-between md:border-b border-base-200">
-                      <span className="hidden md:block font-bold">Name :</span>
+                      <span className="hidden md:block font-bold">
+                        {t.tables.contact.name} :
+                      </span>
                       {c.name}
                     </td>
                     <td className="md:flex justify-between md:border-b border-base-200">
-                      <span className="hidden md:block font-bold">Email :</span>
+                      <span className="hidden md:block font-bold">
+                        {t.tables.contact.email} :
+                      </span>
                       {c.userEmail}
                     </td>
 
                     <td title={c.text} className="md:border-b border-base-200">
-                      <span className="hidden md:block font-bold">Text :</span>
+                      <span className="hidden md:block font-bold">
+                        {t.tables.contact.msg} :
+                      </span>
                       <span className="md:hidden block">...</span>
                       <span className="hidden md:block mt-4">{c.text}</span>
                     </td>
                     <td className="md:flex justify-between md:border-b border-base-200">
-                      <span className="hidden md:block font-bold">Date :</span>
+                      <span className="hidden md:block font-bold">
+                        {t.tables.contact.date} :
+                      </span>
                       {new Date(c.createdAt).toLocaleDateString()}
                     </td>
                     <td>
@@ -106,17 +119,18 @@ export default function ContactsPage() {
             disabled={page === 1}
             onClick={() => setPage((p) => p - 1)}
           >
-            Prev
+            {t.pagination.prev}
           </button>
           <span>
-            Page {page} / {totalPages || 1}
+            <span className="mx-2">{t.pagination.page}</span> {page} /{" "}
+            {totalPages || 1}
           </span>
           <button
             className="btn btn-sm"
             disabled={page === totalPages}
             onClick={() => setPage((p) => p + 1)}
           >
-            Next
+            {t.pagination.next}
           </button>
         </div>
       </div>
